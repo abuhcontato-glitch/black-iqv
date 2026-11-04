@@ -1,3 +1,11 @@
+# BLACK IQV — Director’s Cut
+
+A página ativa agora apresenta a campanha BLACK IQV do projeto enviado pelo usuário, com cinco filmes e storyboards cinematográficos. Consulte [os detalhes de organização e desenvolvimento](docs/BLACK-IQV-STORYBOARDS.md).
+
+O código anterior da Construcel permanece no repositório como histórico; sua documentação original está abaixo.
+
+---
+
 # ABUHSCA × CONSTRUCEL
 
 Fase 01 da experiência comercial. React, TypeScript, Tailwind CSS e Vite.

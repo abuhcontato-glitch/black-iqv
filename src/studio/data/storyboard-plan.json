@@ -1,0 +1,1352 @@
+[
+  {
+    "film": 1,
+    "sequence": 1,
+    "title": "O dia não acabou",
+    "frames": [
+      "85mm extreme low-angle detail shot of the presenter’s retro basketball sneaker stepping into the entrance of a contemporary beauty clinic.",
+      "35mm medium shot of the presenter finishing a smartphone Story recording inside the clinic reception.",
+      "50mm close-up of her turning toward the camera with a confident, playful, mysterious expression and striking natural green eyes."
+    ],
+    "shots": [
+      {
+        "frame": "Detalhe",
+        "action": "Tênis cruza a entrada da clínica.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn finaliza um Story na recepção.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela vira para a câmera com um sorriso misterioso.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 1,
+    "sequence": 2,
+    "title": "A outra tela",
+    "frames": [
+      "35mm over-the-shoulder view of the presenter reviewing an abstract video editing timeline on a slim metallic laptop.",
+      "85mm macro insert of her gold-ringed hands arranging original planning papers on a walnut desk.",
+      "50mm profile close-up with her gaze shifting from the papers to the screen, warm practical lamp in the background."
+    ],
+    "shots": [
+      {
+        "frame": "OTS",
+        "action": "Por cima do ombro, revisão de uma edição no notebook.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Mãos com anéis organizam o planejamento na mesa.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Close",
+        "action": "O olhar passa dos papéis para a tela.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 1,
+    "sequence": 3,
+    "title": "O universo da beleza",
+    "frames": [
+      "85mm macro shot of professional eyebrow-mapping and micropigmentation materials on a hygienic workstation.",
+      "50mm close action shot of an adult nail technician carefully finishing a manicure.",
+      "85mm close-up of lash-extension tools and trays being prepared in a contemporary Brazilian beauty studio. No main presenter in these three frames."
+    ],
+    "shots": [
+      {
+        "frame": "Detalhe",
+        "action": "Instrumentos de mapeamento e micropigmentação na bancada.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Uma profissional finaliza a manicure.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Pinças e bandejas para extensão de cílios são preparadas.",
+        "lens": "85mm"
+      }
+    ]
+  },
+  {
+    "film": 1,
+    "sequence": 4,
+    "title": "E depois da sexta?",
+    "frames": [
+      "macro shot of the presenter’s hand turning a page of a physical commercial planner.",
+      "35mm lateral medium shot of her studying a planning notebook beside her smartphone in the clinic reception.",
+      "50mm frontal close-up of her looking directly into the lens with a questioning, friendly raised eyebrow."
+    ],
+    "shots": [
+      {
+        "frame": "Detalhe",
+        "action": "A mão vira uma página do planejamento.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn estuda o caderno ao lado do celular.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela encara a lente com uma expressão de pergunta.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 1,
+    "sequence": 5,
+    "title": "O que ninguém vê",
+    "frames": [
+      "extreme close-up of a professional cinema camera recording indicator lighting up.",
+      "35mm side-angle medium shot of the presenter recording an educational lesson in a compact production studio.",
+      "50mm close-up of her reviewing playback on a professional monitor, with her green eyes reflecting the screen."
+    ],
+    "shots": [
+      {
+        "frame": "Close extremo",
+        "action": "O indicador de gravação da câmera acende.",
+        "lens": "100mm macro"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn grava uma aula no estúdio compacto.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela confere o resultado no monitor.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 1,
+    "sequence": 6,
+    "title": "A Evellyn de verdade",
+    "frames": [
+      "ground-level close-up of her unbranded retro basketball sneakers walking across a clinic corridor.",
+      "35mm full American shot of her confidently walking through the contemporary corridor, entire fashion silhouette visible.",
+      "intimate 50mm close-up as she stops and speaks directly to the camera."
+    ],
+    "shots": [
+      {
+        "frame": "Close",
+        "action": "Os tênis atravessam o corredor da clínica.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Caminhada com o figurino completo em evidência.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela para e fala diretamente para a câmera.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 1,
+    "sequence": 7,
+    "title": "Um método por trás",
+    "frames": [
+      "24mm wide establishing shot of the presenter standing in her authentic educational video studio.",
+      "35mm over-the-shoulder view of her demonstrating a generic social-media content workflow on a laptop, no readable interface text.",
+      "85mm macro insert of original educational papers and planning materials arranged neatly on the desk."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Plano aberto do estúdio com Evellyn.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "OTS",
+        "action": "No notebook, ela demonstra um fluxo de conteúdo.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Papéis e materiais de planejamento sobre a mesa.",
+        "lens": "85mm"
+      }
+    ]
+  },
+  {
+    "film": 1,
+    "sequence": 8,
+    "title": "Ela quase revela",
+    "frames": [
+      "35mm medium shot of the presenter in the studio, leaning slightly toward the camera as if about to share a secret.",
+      "50mm close-up of her stopping herself mid-revelation with a spontaneous playful smile.",
+      "85mm extreme close-up of her natural green eyes and subtle amused expression."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Ela se aproxima como quem vai contar um segredo.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Um sorriso interrompe a revelação.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Close extremo",
+        "action": "Os olhos verdes sustentam a cumplicidade.",
+        "lens": "85mm"
+      }
+    ]
+  },
+  {
+    "film": 1,
+    "sequence": 9,
+    "title": "A promessa de amanhã",
+    "frames": [
+      "24mm wide shot of the intimate production studio showing the presenter beside a cinema camera and warm practical lights.",
+      "35mm action shot of her switching off the camera after recording.",
+      "50mm medium close-up of her looking into the lens from behind the edge of the recording monitor."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "O estúdio reúne apresentadora, câmera e luzes práticas.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn desliga a câmera após gravar.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela olha para a lente por trás do monitor.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 1,
+    "sequence": 10,
+    "title": "O gancho final",
+    "frames": [
+      "35mm action shot of the presenter walking out of the recording room toward the clinic corridor.",
+      "85mm close-up insert of her hand dimming a practical wall light.",
+      "50mm dramatic close-up of her facing the camera, green eyes illuminated by a soft remaining light, with a confident mysterious expression."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn sai da sala em direção ao corredor.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "A mão reduz a intensidade de uma luz.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Close",
+        "action": "O rosto permanece iluminado pela última luz suave.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 2,
+    "sequence": 1,
+    "title": "O trabalho continua",
+    "frames": [
+      "wide shot of an elegant Brazilian creative studio early in the morning, with the presenter arriving.",
+      "close-up of her placing a notebook and smartphone on the desk.",
+      "medium portrait of her looking at the camera with an energetic smile, ready to work."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Evellyn chega ao estúdio criativo pela manhã.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Caderno e celular são colocados sobre a mesa.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Ela sorri para a câmera, pronta para trabalhar.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 2,
+    "sequence": 2,
+    "title": "Muito além de um post",
+    "frames": [
+      "over-the-shoulder view of the presenter studying a physical content-planning board.",
+      "macro insert of neatly arranged original lesson notes and visual diagrams.",
+      "side-profile close-up of her considering the material thoughtfully."
+    ],
+    "shots": [
+      {
+        "frame": "OTS",
+        "action": "Por cima do ombro, ela observa um quadro de conteúdo.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Anotações e diagramas organizam o planejamento.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Close",
+        "action": "De perfil, ela considera o material.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 2,
+    "sequence": 3,
+    "title": "Bastidores reais",
+    "frames": [
+      "wide establishing shot of a small professional filming set with camera, lighting and backdrop.",
+      "close detail of the presenter adjusting her wireless microphone.",
+      "medium shot of her rehearsing a lesson in front of the recording camera."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Plano aberto do set com câmera e iluminação.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Evellyn ajusta o microfone sem fio.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Ela ensaia uma aula diante da câmera.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 2,
+    "sequence": 4,
+    "title": "Quem está do outro lado",
+    "frames": [
+      "wide shot of a female beauty professional preparing her workstation.",
+      "close-up of her checking a content calendar on her phone.",
+      "emotional medium close-up of her thoughtfully reviewing the next steps for her business."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Uma profissional da beleza prepara sua bancada.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela consulta um calendário de conteúdo no celular.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Close",
+        "action": "A profissional reflete sobre os próximos passos do negócio.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 2,
+    "sequence": 5,
+    "title": "Construindo cada detalhe",
+    "frames": [
+      "macro insert of hands marking changes on original educational material.",
+      "over-the-shoulder shot of the presenter reviewing a lesson recording on a laptop.",
+      "close-up of her making a satisfied approving gesture."
+    ],
+    "shots": [
+      {
+        "frame": "Detalhe",
+        "action": "As mãos marcam ajustes no material didático.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "OTS",
+        "action": "Evellyn revisa a gravação de uma aula no notebook.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela demonstra satisfação com o resultado.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 2,
+    "sequence": 6,
+    "title": "O ritmo aumenta",
+    "frames": [
+      "low-angle fashion shot of the presenter walking across the production room.",
+      "dynamic lateral medium shot of her discussing a storyboard with a small creative crew.",
+      "close-up of her animated expression during a production decision."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn atravessa a sala de produção.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Ela conversa sobre o storyboard com a equipe.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Uma decisão de produção anima sua expressão.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 2,
+    "sequence": 7,
+    "title": "A estrutura invisível",
+    "frames": [
+      "overhead composition of organized educational materials, production notes and a laptop.",
+      "close detail of a lesson outline with unreadable placeholder text.",
+      "medium shot of the presenter standing beside the teaching setup, confident and focused."
+    ],
+    "shots": [
+      {
+        "frame": "Vista superior",
+        "action": "Vista superior de materiais, anotações e notebook.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Detalhe da estrutura de uma aula, sem texto legível.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Ela se posiciona ao lado do cenário de ensino.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 2,
+    "sequence": 8,
+    "title": "Quase pronto",
+    "frames": [
+      "close-up of the camera recording light.",
+      "side medium shot of the presenter finishing an educational take.",
+      "intimate close-up of her looking at the finished recording with a subtle proud smile."
+    ],
+    "shots": [
+      {
+        "frame": "Close",
+        "action": "A luz de gravação da câmera está acesa.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn conclui uma tomada da aula.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela assiste ao take com um sorriso discreto.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 2,
+    "sequence": 9,
+    "title": "Falta pouco",
+    "frames": [
+      "wide shot of the studio at dusk with warm lights on.",
+      "medium shot of the presenter closing her notebook after reviewing the material.",
+      "close-up of her looking directly into the camera with anticipation."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "O estúdio ao entardecer, com luzes quentes.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn fecha o caderno após a revisão.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Seu olhar direto transmite antecipação.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 2,
+    "sequence": 10,
+    "title": "Amanhã tem spoiler",
+    "frames": [
+      "close detail of her hand hovering above a covered presentation folder.",
+      "medium shot of her moving the folder slightly toward the camera without revealing its contents.",
+      "playful close-up as she signals that a first preview is coming tomorrow."
+    ],
+    "shots": [
+      {
+        "frame": "Detalhe",
+        "action": "A mão paira sobre uma pasta ainda fechada.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Ela aproxima a pasta sem revelar o conteúdo.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Um sorriso promete a prévia do dia seguinte.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 3,
+    "sequence": 1,
+    "title": "Uma pequena amostra",
+    "frames": [
+      "extreme close-up of the presenter opening a laptop in a dim warm studio.",
+      "over-the-shoulder shot revealing blurred lesson thumbnails on the screen.",
+      "close-up of the presenter turning to camera with a playful expression."
+    ],
+    "shots": [
+      {
+        "frame": "Close extremo",
+        "action": "Evellyn abre o notebook no estúdio em penumbra.",
+        "lens": "100mm macro"
+      },
+      {
+        "frame": "OTS",
+        "action": "Por cima do ombro, aparecem miniaturas abstratas de aulas.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela vira para a câmera com uma expressão divertida.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 3,
+    "sequence": 2,
+    "title": "Mentalidade",
+    "frames": [
+      "medium shot of the presenter recording an educational lesson.",
+      "macro detail of handwritten planning notes and simple diagrams.",
+      "frontal close-up of her speaking with conviction about business mindset."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn grava uma aula sobre mentalidade.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Anotações e diagramas ilustram o planejamento.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela fala com convicção para a câmera.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 3,
+    "sequence": 3,
+    "title": "Posicionamento",
+    "frames": [
+      "wide shot of a professional beauty entrepreneur standing confidently in her studio.",
+      "close-up of her preparing a vertical video on her smartphone.",
+      "medium shot of the presenter coaching her through camera framing."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Uma empreendedora da beleza em seu ambiente de trabalho.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Close",
+        "action": "A profissional prepara um vídeo vertical no celular.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn orienta o enquadramento da gravação.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 3,
+    "sequence": 4,
+    "title": "Conteúdo com intenção",
+    "frames": [
+      "over-the-shoulder view of a content-planning board on a desk.",
+      "close-up of a smartphone recording a beauty professional demonstrating her work.",
+      "medium shot of the presenter discussing the recording with the professional."
+    ],
+    "shots": [
+      {
+        "frame": "OTS",
+        "action": "Um planejamento de conteúdo visto por cima do ombro.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Close",
+        "action": "O celular registra uma demonstração profissional.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn e a profissional conversam sobre o vídeo.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 3,
+    "sequence": 5,
+    "title": "Venda nos Stories",
+    "frames": [
+      "detail shot of a phone displaying generic vertical content placeholders without readable text.",
+      "over-the-shoulder shot of a beauty entrepreneur planning a sequence of short videos.",
+      "close-up of the presenter emphasizing the importance of clear communication."
+    ],
+    "shots": [
+      {
+        "frame": "Detalhe",
+        "action": "Conteúdos verticais abstratos na tela de um celular.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "OTS",
+        "action": "Uma empreendedora planeja uma sequência de vídeos.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Evellyn enfatiza a clareza da comunicação.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 3,
+    "sequence": 6,
+    "title": "Aulas de verdade",
+    "frames": [
+      "wide establishing shot of a professional lesson recording set.",
+      "medium side shot of the presenter explaining a concept with expressive gestures.",
+      "macro insert of original supporting course materials on the desk."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Plano aberto do set de gravação de aulas.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn explica um conceito com gestos expressivos.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Materiais de apoio sobre a mesa.",
+        "lens": "85mm"
+      }
+    ]
+  },
+  {
+    "film": 3,
+    "sequence": 7,
+    "title": "Organização",
+    "frames": [
+      "overhead shot of neatly organized lesson sheets, notebooks and content cards.",
+      "close-up of hands arranging the materials in sequence.",
+      "side portrait of the presenter reviewing the completed structure."
+    ],
+    "shots": [
+      {
+        "frame": "Vista superior",
+        "action": "Folhas, cadernos e cartões vistos de cima.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "As mãos organizam os materiais em sequência.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn revisa a estrutura final de perfil.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 3,
+    "sequence": 8,
+    "title": "O primeiro spoiler",
+    "frames": [
+      "close detail of a presentation screen partly obscured by the camera foreground.",
+      "medium shot of the presenter gesturing toward the screen.",
+      "close-up of her smiling at the viewer as she deliberately holds back the full reveal."
+    ],
+    "shots": [
+      {
+        "frame": "Detalhe",
+        "action": "Uma tela de apresentação parcialmente encoberta pela câmera.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn aponta para a tela.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela sorri sem entregar a revelação completa.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 3,
+    "sequence": 9,
+    "title": "O que vem amanhã",
+    "frames": [
+      "low-angle fashion shot of the presenter walking toward the recording set.",
+      "side tracking medium shot as she stops next to a large covered display.",
+      "close-up of her making eye contact with the camera."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn caminha em direção ao set.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Ela para ao lado de um painel coberto.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Seu olhar encontra a câmera.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 3,
+    "sequence": 10,
+    "title": "Amanhã eu conto",
+    "frames": [
+      "macro insert of her hand resting on the covered display.",
+      "medium shot of her stepping away from it.",
+      "dramatic close-up of her eyes and confident smile, with the background falling into darkness."
+    ],
+    "shots": [
+      {
+        "frame": "Detalhe",
+        "action": "A mão repousa sobre o painel coberto.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn se afasta do painel.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Olhos e sorriso em destaque contra o fundo escuro.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 4,
+    "sequence": 1,
+    "title": "Chegou a hora de contar",
+    "frames": [
+      "cinematic wide shot of the presenter entering a beautifully lit educational studio.",
+      "medium shot as she turns to face the camera.",
+      "direct close-up of her confident smile, ready to reveal the project."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Evellyn entra no estúdio de ensino iluminado.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Ela se vira para encarar a câmera.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Um sorriso confiante prepara a revelação.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 4,
+    "sequence": 2,
+    "title": "O nome da metodologia",
+    "frames": [
+      "close detail of an original presentation display before activation.",
+      "medium shot of the presenter standing beside the display, leaving clean negative space for the official IQV logo in post-production.",
+      "frontal portrait of her presenting the course with pride."
+    ],
+    "shots": [
+      {
+        "frame": "Detalhe",
+        "action": "Detalhe de uma tela ainda inativa.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn ao lado da tela, com espaço para o logo oficial.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Retrato frontal apresentando a metodologia.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 4,
+    "sequence": 3,
+    "title": "Por que eu criei",
+    "frames": [
+      "medium shot of the presenter at a desk with educational notes.",
+      "close-up of hands opening the original course planning folder.",
+      "emotional close-up of her speaking directly to beauty professionals."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn à mesa com anotações do projeto.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "As mãos abrem a pasta de planejamento.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela conversa com emoção com as profissionais da beleza.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 4,
+    "sequence": 4,
+    "title": "Para quem é",
+    "frames": [
+      "professional nail technician at her workstation.",
+      "lash and eyebrow professional preparing an appointment.",
+      "beauty studio owner creating content on her smartphone, all in authentic Brazilian work environments."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Uma nail designer em sua bancada de trabalho.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Uma profissional de cílios e sobrancelhas prepara o atendimento.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Uma dona de estúdio cria conteúdo no celular.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 4,
+    "sequence": 5,
+    "title": "O que você aprende",
+    "frames": [
+      "over-the-shoulder view of the presenter browsing real course materials on a laptop.",
+      "close-up of an original educational worksheet with unreadable placeholders.",
+      "medium shot of her explaining the relationship between content, positioning and selling."
+    ],
+    "shots": [
+      {
+        "frame": "OTS",
+        "action": "Por cima do ombro, Evellyn navega por materiais no notebook.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Detalhe de uma folha didática sem texto legível.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Ela explica a relação entre conteúdo, posicionamento e vendas.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 4,
+    "sequence": 6,
+    "title": "A experiência",
+    "frames": [
+      "wide shot of the actual course recording environment.",
+      "close-up of the presenter teaching in front of the camera.",
+      "detail shot of the course platform with neutral placeholders, intended for replacement with real screenshots."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Plano aberto do ambiente de gravação do curso.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Evellyn ensina diante da câmera.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Uma tela neutra reserva o lugar da plataforma real.",
+        "lens": "85mm"
+      }
+    ]
+  },
+  {
+    "film": 4,
+    "sequence": 7,
+    "title": "Aplicação prática",
+    "frames": [
+      "adult beauty entrepreneur preparing a content idea at her workstation.",
+      "close-up of her recording a short service-related video.",
+      "medium shot of her reviewing the recording with a thoughtful smile, no fabricated sales results."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Uma empreendedora prepara uma ideia de conteúdo.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela grava um vídeo curto sobre o serviço.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "A profissional revisa a gravação, concentrada.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 4,
+    "sequence": 8,
+    "title": "O próximo passo",
+    "frames": [
+      "medium portrait of the presenter in the production studio.",
+      "slow-dolly-inspired close composition as she leans forward to emphasize the next step.",
+      "detail shot of her pointing toward an event calendar with no generated readable dates."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Retrato de Evellyn no estúdio de produção.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela se aproxima para enfatizar o próximo passo.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "A mão aponta para um calendário sem datas legíveis.",
+        "lens": "85mm"
+      }
+    ]
+  },
+  {
+    "film": 4,
+    "sequence": 9,
+    "title": "O encontro de sexta",
+    "frames": [
+      "wide shot of a prepared online class recording space with camera and warm lights.",
+      "medium shot of the presenter rehearsing a direct invitation to the closing class.",
+      "intimate close-up emphasizing her genuine connection with the audience."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "O espaço de aula online está pronto para a gravação.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn ensaia o convite para a aula de encerramento.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Um olhar próximo reforça a conexão com a audiência.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 4,
+    "sequence": 10,
+    "title": "Amanhã é o dia",
+    "frames": [
+      "full-body fashion portrait of the presenter in the studio.",
+      "medium shot with a clean background reserved for the real event details in post-production.",
+      "confident frontal close-up, with an inviting expression and restrained cinematic lighting."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Retrato de corpo inteiro com o figurino da campanha.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Plano médio com espaço livre para os dados reais do evento.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Evellyn encara a câmera com uma expressão de convite.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 5,
+    "sequence": 1,
+    "title": "Chegou o momento",
+    "frames": [
+      "dramatic wide shot of the educational studio illuminated for the campaign reveal.",
+      "stylish low-angle shot of the presenter walking confidently toward the camera.",
+      "strong close-up of her smiling directly at the viewer."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "O estúdio iluminado está pronto para a revelação.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn avança em direção à câmera.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela sorri diretamente para quem assiste.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 5,
+    "sequence": 2,
+    "title": "A Black IQV",
+    "frames": [
+      "wide frontal portrait of the presenter against a clean black and warm bronze set.",
+      "medium shot with elegant empty negative space reserved for the official BLACK IQV title in post-production.",
+      "close-up of the presenter announcing the campaign with excitement."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Retrato aberto sobre o cenário preto e bronze.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Plano médio com espaço reservado para o título oficial.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela anuncia a campanha com entusiasmo.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 5,
+    "sequence": 3,
+    "title": "O curso completo",
+    "frames": [
+      "over-the-shoulder view of the actual course platform on a laptop, or neutral placeholder to be replaced.",
+      "close detail of original learning materials.",
+      "medium shot of the presenter describing the methodology confidently."
+    ],
+    "shots": [
+      {
+        "frame": "OTS",
+        "action": "Por cima do ombro, uma representação neutra da plataforma.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Detalhe dos materiais de aprendizagem.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn apresenta a metodologia com confiança.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 5,
+    "sequence": 4,
+    "title": "A metodologia",
+    "frames": [
+      "overhead arrangement of educational worksheets and content-planning materials.",
+      "close shot of the presenter teaching in her studio.",
+      "medium shot of an adult beauty professional practicing content creation in a real work environment."
+    ],
+    "shots": [
+      {
+        "frame": "Vista superior",
+        "action": "Folhas e planejamento de conteúdo vistos de cima.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Evellyn ensina no estúdio.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Uma profissional pratica a criação de conteúdo no trabalho.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 5,
+    "sequence": 5,
+    "title": "A profissional que aprende",
+    "frames": [
+      "beauty entrepreneur preparing a client-facing content video.",
+      "close-up of her reviewing the recording on her phone.",
+      "medium shot of her confidently continuing her work, without fabricated testimonials or results."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Uma empreendedora prepara um vídeo sobre seus serviços.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela revisa a gravação no celular.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "A profissional retoma o trabalho com confiança.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 5,
+    "sequence": 6,
+    "title": "A condição especial",
+    "frames": [
+      "cinematic medium portrait of the presenter in the warm bronze studio.",
+      "elegant clean product-display composition with blank space for the verified promotional price in post-production.",
+      "confident close-up of the presenter delivering the offer announcement."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Retrato de Evellyn no estúdio bronze.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Uma composição vazia reserva espaço para o preço confirmado.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela faz o anúncio da oferta, sem valores inventados.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 5,
+    "sequence": 7,
+    "title": "O que está incluído",
+    "frames": [
+      "top-down shot of the real educational materials and laptop.",
+      "close-up of course platform lesson tiles with unreadable placeholders.",
+      "medium shot of the presenter explaining the confirmed inclusions, leaving space for later graphic overlays."
+    ],
+    "shots": [
+      {
+        "frame": "Vista superior",
+        "action": "Materiais didáticos e notebook vistos de cima.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Miniaturas abstratas de aulas na plataforma.",
+        "lens": "50mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn explica as inclusões, com espaço para grafismos posteriores.",
+        "lens": "35mm"
+      }
+    ]
+  },
+  {
+    "film": 5,
+    "sequence": 8,
+    "title": "É a sua vez",
+    "frames": [
+      "cinematic medium shot of the presenter addressing the camera with warmth.",
+      "close detail of her hand gesturing toward the viewer.",
+      "intimate close-up with natural green eyes and an encouraging smile."
+    ],
+    "shots": [
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn conversa com a câmera de forma acolhedora.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "A mão faz um gesto em direção a quem assiste.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Olhos verdes e um sorriso de incentivo.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 5,
+    "sequence": 9,
+    "title": "Inscrições abertas",
+    "frames": [
+      "wide hero composition of the presenter in the fully lit studio.",
+      "clean fashion portrait with large negative space for official offer details and purchase CTA.",
+      "close-up of the presenter delivering the invitation to enroll."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Evellyn no centro do estúdio plenamente iluminado.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Detalhe",
+        "action": "Retrato com espaço para a oferta e o CTA oficiais.",
+        "lens": "85mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Ela convida a audiência para a inscrição.",
+        "lens": "50mm"
+      }
+    ]
+  },
+  {
+    "film": 5,
+    "sequence": 10,
+    "title": "Assinatura final",
+    "frames": [
+      "dramatic full-body portrait of the presenter wearing the consistent campaign wardrobe.",
+      "medium shot of her turning slightly toward the studio lights, with cinematic depth.",
+      "powerful frontal close-up and a clean dark background suitable for the official IQV logo and closing CTA in post-production."
+    ],
+    "shots": [
+      {
+        "frame": "Plano geral",
+        "action": "Retrato de corpo inteiro com o figurino consistente.",
+        "lens": "24mm"
+      },
+      {
+        "frame": "Plano médio",
+        "action": "Evellyn se vira levemente em direção às luzes.",
+        "lens": "35mm"
+      },
+      {
+        "frame": "Close",
+        "action": "Retrato frontal forte sobre um fundo escuro para a assinatura oficial.",
+        "lens": "50mm"
+      }
+    ]
+  }
+]
