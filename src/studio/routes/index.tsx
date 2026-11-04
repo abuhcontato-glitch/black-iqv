@@ -6,11 +6,11 @@ import { SiteFooter } from "../components/site-header";
 
 
 const days: [string, string][] = [
-  ["Segunda", "a curiosidade"],
-  ["Terça", "a antecipação"],
-  ["Quarta", "o spoiler"],
-  ["Quinta", "a revelação"],
-  ["Sexta", "o grande lançamento"],
+  ["No domingo", "a curiosidade"],
+  ["Na segunda-feira", "a antecipação"],
+  ["Na terça-feira", "o spoiler"],
+  ["Na quarta-feira", "a revelação"],
+  ["Na quinta-feira", "o grande lançamento"],
 ];
 
 export default function Index() {
@@ -56,7 +56,7 @@ export default function Index() {
             {days.map(([d, s], i) => (
               <li key={d} className="flex items-baseline gap-6 py-4">
                 <span className="font-mono text-xs text-primary">0{i + 1}</span>
-                <span className="text-muted-foreground">Na {d.toLowerCase()}-feira,</span>
+                <span className="text-muted-foreground">{d},</span>
                 <span className="font-display text-2xl">{s}.</span>
               </li>
             ))}
@@ -71,8 +71,8 @@ export default function Index() {
           </div>
           <div className="bg-secondary p-8">
             <p className="eyebrow text-primary">Esta campanha</p>
-            <h3 className="mt-3 font-display text-3xl">BLACK IQV — 23 a 27/11</h3>
-            <p className="mt-3 text-foreground/80">Lançamento cinematográfico da metodologia completa. Grande aulão de encerramento e abertura do carrinho do IQV em 27/11.</p>
+            <h3 className="mt-3 font-display text-3xl">BLACK IQV — {CAMPAIGN.dates}</h3>
+            <p className="mt-3 text-foreground/80">Lançamento cinematográfico da metodologia completa. Grande aulão de encerramento e abertura do carrinho do IQV em 26/11.</p>
           </div>
         </div>
       </section>

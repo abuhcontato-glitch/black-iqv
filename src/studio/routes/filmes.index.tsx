@@ -1,5 +1,5 @@
 import { Link, useParams } from "../router";
-import { FILMS } from "../data/campaign";
+import { CAMPAIGN, FILMS } from "../data/campaign";
 import { FilmCard } from "../components/film-card";
 import { SiteFooter } from "../components/site-header";
 
@@ -8,7 +8,7 @@ export default function Films() {
   return (
     <main className="pt-14">
       <section className="mx-auto max-w-7xl px-5 py-20">
-        <p className="eyebrow">23—27 NOV 2026</p>
+        <p className="eyebrow">{CAMPAIGN.dates}</p>
         <h1 className="mt-4 font-display text-6xl sm:text-8xl">Cinco atos.</h1>
         <p className="mt-6 max-w-xl text-muted-foreground">
           Cada filme tem 80 segundos, dividido em dez sequências de planejamento com três quadros de storyboard cada. Os Filmes 02 a 05 são propostas criativas para revisão.

@@ -8,7 +8,7 @@ const pending = [
   "Fotografias autorizadas da protagonista",
   "Logotipo oficial IQV",
   "Telas reais da plataforma do curso",
-  "Horário e link do grande aulão (27/11)",
+  "Horário e link do grande aulão (26/11)",
   "Preço original, preço promocional e condições de pagamento",
   "Bônus confirmados e prazo real da oferta",
   "Link de compra",
