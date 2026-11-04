@@ -25,7 +25,7 @@ npm run build
 
 Os testes de assets verificam as 50 sequências, seus 150 descritores e a existência das imagens PNG associadas. As telas de sequência e storyboard completo permitem abrir um quadro e navegar com as setas; Escape fecha a ampliação. Fontes e imagens são locais. Aprovação e comentários continuam sem persistência, conforme o projeto recebido.
 
-O workflow de Pages deriva a base do nome atual do repositório (`github.event.repository.name`), mantendo compatibilidade antes e depois da renomeação. O nome desejado é `black-iqv`; a URL de destino após renomear e republicar será `https://abuhcontato-glitch.github.io/black-iqv/`. A renomeação no GitHub exige acesso administrativo e não é feita pelo workflow.
+O workflow de Pages deriva a base do nome atual do repositório (`github.event.repository.name`), mantendo compatibilidade antes e depois da renomeação. O repositório foi renomeado no GitHub para `black-iqv`; a URL de destino é `https://abuhcontato-glitch.github.io/black-iqv/`. Uma nova execução após a renomeação recebe o nome atualizado no evento de publicação.
 
 Para conferir esse destino localmente, use `npm run build -- --base=/black-iqv/` e depois `npm run preview -- --base=/black-iqv/ --port 4173 --strictPort`. A base do preview precisa coincidir com a do build.
 
