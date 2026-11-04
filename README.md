@@ -2,6 +2,8 @@
 
 A página ativa agora apresenta a campanha BLACK IQV do projeto enviado pelo usuário, com cinco filmes e storyboards cinematográficos. Consulte [os detalhes de organização e desenvolvimento](docs/BLACK-IQV-STORYBOARDS.md).
 
+O endereço desejado para esta campanha é `https://abuhcontato-glitch.github.io/black-iqv/`, após renomear o repositório no GitHub e executar a publicação. O workflow já usa o nome do repositório automaticamente.
+
 O código anterior da Construcel permanece no repositório como histórico; sua documentação original está abaixo.
 
 ---
