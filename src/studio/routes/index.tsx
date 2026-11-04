@@ -6,11 +6,11 @@ import { SiteFooter } from "../components/site-header";
 
 
 const days: [string, string][] = [
-  ["No domingo", "a curiosidade"],
-  ["Na segunda-feira", "a antecipação"],
-  ["Na terça-feira", "o spoiler"],
-  ["Na quarta-feira", "a revelação"],
-  ["Na quinta-feira", "o grande lançamento"],
+  ["Na segunda-feira", "a curiosidade"],
+  ["Na terça-feira", "a antecipação"],
+  ["Na quarta-feira", "o spoiler"],
+  ["Na quinta-feira", "a revelação"],
+  ["Na sexta-feira", "o grande lançamento"],
 ];
 
 export default function Index() {
@@ -72,7 +72,7 @@ export default function Index() {
           <div className="bg-secondary p-8">
             <p className="eyebrow text-primary">Esta campanha</p>
             <h3 className="mt-3 font-display text-3xl">BLACK IQV — {CAMPAIGN.dates}</h3>
-            <p className="mt-3 text-foreground/80">Lançamento cinematográfico da metodologia completa. Grande aulão de encerramento e abertura do carrinho do IQV em 26/11.</p>
+            <p className="mt-3 text-foreground/80">Lançamento cinematográfico da metodologia completa. Grande aulão de encerramento e abertura do carrinho do IQV em 27/11.</p>
           </div>
         </div>
       </section>
