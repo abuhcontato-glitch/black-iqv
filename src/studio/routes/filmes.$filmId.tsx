@@ -15,30 +15,31 @@ const VIEWS = [
 ] as const;
 type View = (typeof VIEWS)[number][0];
 
-export default function FilmPage() {
-  const film = getFilm(useParams().filmId ?? "")!;
+export default function FilmPage({ selectedFilm, films = FILMS, routeBase = "/filmes", optionB = false }: { selectedFilm?: Film; films?: Film[]; routeBase?: string; optionB?: boolean } = {}) {
+  const routeId = useParams().filmId;
+  const film = selectedFilm ?? getFilm(routeId ?? "")!;
   const [view, setView] = useState<View>("sequencias");
   const [active, setActive] = useState(1);
-  const { open, viewer } = useViewer(film);
-  const idx = FILMS.findIndex((f) => f.id === film.id);
-  const prev = FILMS[idx - 1];
-  const next = FILMS[idx + 1];
+  const { open, viewer } = useViewer(film, optionB);
+  const idx = films.findIndex((f) => f.id === film.id);
+  const prev = films[idx - 1];
+  const next = films[idx + 1];
 
   return (
     <main className="pt-14" key={film.id}>
       <section className="border-b border-border px-5 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl">
-          <Link to="/filmes" className="eyebrow inline-flex items-center gap-2 hover:text-primary"><ArrowLeft className="size-3" /> Todos os filmes</Link>
+          <Link to={optionB ? "/opcao-b" : routeBase} className="eyebrow inline-flex items-center gap-2 hover:text-primary"><ArrowLeft className="size-3" /> Todos os filmes</Link>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <span className="eyebrow text-primary">Filme {film.number} · {film.stage}</span>
+            <span className="eyebrow text-primary">{optionB && "Opção B · "}Filme {film.number} · {film.stage}</span>
             <span className="font-mono text-xs text-muted-foreground">{film.weekday} — {film.date} · 80s · 9:16 · {film.version}</span>
             <StatusPill status={film.status} />
           </div>
           <h1 className="animate-rise mt-6 max-w-5xl font-display text-5xl leading-[0.95] sm:text-8xl">{film.title}</h1>
-          <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">Pranchas de pré-produção · imagens conceituais geradas por IA. Planejamento visual e roteiro sujeitos à revisão criativa.</p>
+          <p className="mt-6 max-w-2xl text-sm leading-relaxed text-muted-foreground">{optionB ? "Roteiro literário enviado · dez cenas de oito segundos. Enquadramentos e lentes são sugestões de pré-produção. Pranchas conceituais geradas por IA para visualizar esta segunda ideia." : "Pranchas de pré-produção · imagens conceituais geradas por IA. Planejamento visual e roteiro sujeitos à revisão criativa."}</p>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
             <Spec k="Objetivo" v={film.objective} />
-            <Spec k="Sinopse" v={film.synopsis} />
+            <Spec k={optionB ? "Referência cinematográfica" : "Sinopse"} v={film.synopsis} />
             <Spec k="Figurino" v={film.wardrobe} />
           </div>
         </div>
@@ -55,8 +56,8 @@ export default function FilmPage() {
       </div>
 
       <section className="mx-auto max-w-7xl px-5 py-12">
-        {view === "sequencias" && <SequenceView film={film} active={active} setActive={setActive} open={open} />}
-        {view === "quadros" && <GridView film={film} open={open} />}
+        {view === "sequencias" && <SequenceView sceneOnly={optionB} film={film} active={active} setActive={setActive} open={open} />}
+        {view === "quadros" && <GridView sceneOnly={optionB} film={film} open={open} />}
         {view === "roteiro" && <ScriptView film={film} />}
         {view === "tecnico" && <TechView film={film} />}
       </section>
@@ -72,13 +73,13 @@ export default function FilmPage() {
 
       <nav className="mx-auto grid max-w-7xl grid-cols-2 border-t border-border">
         {prev ? (
-          <Link to="/filmes/$filmId" params={{ filmId: prev.id }} className="group p-6 hover:bg-card">
+          <Link to={`${routeBase}/$filmId`} params={{ filmId: prev.id }} className="group p-6 hover:bg-card">
             <span className="eyebrow inline-flex items-center gap-2"><ArrowLeft className="size-3" /> Filme {prev.number}</span>
             <p className="mt-2 font-display text-lg group-hover:text-primary">{prev.title}</p>
           </Link>
         ) : <span />}
         {next ? (
-          <Link to="/filmes/$filmId" params={{ filmId: next.id }} className="group p-6 text-right hover:bg-card">
+          <Link to={`${routeBase}/$filmId`} params={{ filmId: next.id }} className="group p-6 text-right hover:bg-card">
             <span className="eyebrow inline-flex items-center gap-2">Filme {next.number} <ArrowRight className="size-3" /></span>
             <p className="mt-2 font-display text-lg group-hover:text-primary">{next.title}</p>
           </Link>
@@ -90,7 +91,7 @@ export default function FilmPage() {
   );
 }
 
-function SequenceView({ film, active, setActive, open }: { film: Film; active: number; setActive: (n: number) => void; open: (s: number, p: number) => void }) {
+function SequenceView({ film, active, setActive, open, sceneOnly = false }: { sceneOnly?: boolean; film: Film; active: number; setActive: (n: number) => void; open: (s: number, p: number) => void }) {
   const seq = film.sequences[active - 1] ?? film.sequences[0]!;
   return (
     <div>
@@ -102,22 +103,22 @@ function SequenceView({ film, active, setActive, open }: { film: Film; active: n
           </button>
         ))}
       </div>
-      <SequencePanel key={seq.n} seq={seq} open={open} />
+      <SequencePanel sceneOnly={sceneOnly} key={seq.n} seq={seq} open={open} />
     </div>
   );
 }
 
-function SequencePanel({ seq, open }: { seq: Sequence; open: (s: number, p: number) => void }) {
+function SequencePanel({ seq, open, sceneOnly = false }: { sceneOnly?: boolean; seq: Sequence; open: (s: number, p: number) => void }) {
   return (
     <article className="animate-rise mt-10 grid gap-10 lg:grid-cols-[1fr_1.1fr]">
       <div>
         <p className="font-mono text-xs text-primary">SEQ {String(seq.n).padStart(2, "0")} · {seqRange(seq.n)}</p>
         <h2 className="mt-3 font-display text-4xl uppercase">{seq.storyboardTitle ?? seq.title}</h2>
         {seq.storyboardTitle !== seq.title && <p className="mt-3 text-xs text-muted-foreground">No roteiro: {seq.title}</p>}
-        <blockquote className="mt-8 border-l-2 border-primary pl-5 font-display text-2xl italic leading-snug">
+        <blockquote className="mt-8 border-l-2 border-primary pl-5 whitespace-pre-line font-display text-2xl italic leading-snug">
           “{seq.line.text}”
           <span className="mt-2 block font-mono text-[0.6rem] not-italic uppercase tracking-[0.2em] text-muted-foreground">
-            {seq.line.kind === "off" ? "Narração em off" : seq.line.kind === "texto" ? "Texto em tela" : "Fala"}
+            {seq.line.speaker ?? (seq.line.kind === "off" ? "Narração em off" : seq.line.kind === "texto" ? "Texto em tela" : "Fala")}
           </span>
         </blockquote>
         <dl className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2">
@@ -131,8 +132,8 @@ function SequencePanel({ seq, open }: { seq: Sequence; open: (s: number, p: numb
           <Spec k="Observações de produção" v={seq.notes} />
         </dl>
       </div>
-      <div className="grid grid-cols-3 gap-3">
-        {seq.shots.map((sh) => (
+      <div className={sceneOnly ? "grid grid-cols-1 gap-3" : "grid grid-cols-3 gap-3"}>
+        {(sceneOnly ? seq.shots.slice(0, 1) : seq.shots).map((sh) => (
           <button key={sh.n} onClick={() => open(seq.n, sh.n)} className="group text-left">
             <Frame seq={seq} shot={sh} className="transition group-hover:border-primary" />
             <p className="mt-3 font-mono text-[0.6rem] text-primary">P{sh.n} · {sh.visual?.lens ?? sh.lens}</p>
@@ -146,11 +147,11 @@ function SequencePanel({ seq, open }: { seq: Sequence; open: (s: number, p: numb
   );
 }
 
-function GridView({ film, open }: { film: Film; open: (s: number, p: number) => void }) {
+function GridView({ film, open, sceneOnly = false }: { sceneOnly?: boolean; film: Film; open: (s: number, p: number) => void }) {
   return (
-    <div className="grid grid-cols-3 gap-3 sm:grid-cols-6">
+    <div className={sceneOnly ? "grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5" : "grid grid-cols-3 gap-3 sm:grid-cols-6"}>
       {film.sequences.flatMap((s) =>
-        s.shots.map((sh) => (
+        (sceneOnly ? s.shots.slice(0, 1) : s.shots).map((sh) => (
           <button key={`${s.n}-${sh.n}`} onClick={() => open(s.n, sh.n)} className="group text-left">
             <Frame seq={s} shot={sh} className="transition group-hover:border-primary" />
             <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{sh.visual?.action ?? sh.action}</p>
@@ -167,13 +168,15 @@ function ScriptView({ film }: { film: Film }) {
       {film.status === "proposta" && <p className="eyebrow text-center text-primary">Proposta criativa — sujeita à revisão</p>}
       {film.sequences.map((s) => (
         <div key={s.n}>
-          <p className="font-bold uppercase">{String(s.n).padStart(2, "0")}. INT. {s.location.toUpperCase()} — {seqRange(s.n)}</p>
+          <p className="font-bold uppercase">{s.literaryScript ? `CENA ${String(s.n).padStart(2, "0")} — ${s.title} — ${seqRange(s.n)}` : `${String(s.n).padStart(2, "0")}. INT. ${s.location.toUpperCase()} — ${seqRange(s.n)}`}</p>
+          {s.literaryScript ? <p className="mt-4 whitespace-pre-line text-foreground/90">{s.literaryScript}</p> : <>
           <p className="mt-3 text-foreground/80">{s.action}</p>
           <div className="mx-auto mt-4 max-w-md text-center">
             <p className="uppercase">{s.line.kind === "texto" ? "TEXTO EM TELA" : `EVELLYN${s.line.kind === "off" ? " (OFF)" : ""}`}</p>
             <p className="mt-1 text-foreground/90">{s.line.text}</p>
           </div>
           <p className="mt-4 text-right uppercase text-muted-foreground">{s.transition}</p>
+          </>}
         </div>
       ))}
       <p className="text-center font-display text-3xl not-italic">{film.closing}</p>

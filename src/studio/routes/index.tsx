@@ -44,7 +44,7 @@ export default function Index() {
 
       <section className="border-y border-border bg-secondary px-5 py-16">
         <div className="mx-auto grid max-w-7xl items-center gap-8 md:grid-cols-[1fr_auto]">
-          <div><p className="eyebrow text-primary">Segunda ideia · Opção B</p><h2 className="mt-4 font-display text-4xl sm:text-6xl">A Operação IQV</h2><p className="mt-4 max-w-xl text-muted-foreground">Uma segunda direção para os cinco filmes cinematográficos. Entre na preparação de uma grande virada, começando por O Despertar.</p></div>
+          <div><p className="eyebrow text-primary">Segunda ideia · Opção B</p><h2 className="mt-4 font-display text-4xl sm:text-6xl">A Saga dos 5 Filmes</h2><p className="mt-4 max-w-xl text-muted-foreground">Uma segunda direção para os cinco filmes cinematográficos. Do Funeral da Black Friday à grande Estreia, com Evellyn como protagonista.</p></div>
           <Link to="/opcao-b" className="inline-block border border-primary px-6 py-4 font-mono text-xs uppercase tracking-[0.2em] text-primary hover:bg-background">Acessar Opção B →</Link>
         </div>
       </section>

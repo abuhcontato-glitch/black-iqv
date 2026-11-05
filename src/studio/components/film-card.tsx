@@ -1,17 +1,17 @@
 import { Link } from "../router";
-import type { Film } from "../data/campaign";
-import { StatusPill } from "./storyboard";
+import type { Film, Shot } from "../data/campaign";
+import { SheetImage, StatusPill } from "./storyboard";
 
-export function FilmCard({ film }: { film: Film }) {
-  const cover = film.sequences[0]?.shots[1];
+export function FilmCard({ film, routeBase = "/filmes", coverShot }: { film: Film; routeBase?: string; coverShot?: Shot }) {
+  const cover = coverShot ?? film.sequences[0]?.shots[1];
   return (
     <Link
-      to="/filmes/$filmId"
+      to={`${routeBase}/$filmId`}
       params={{ filmId: film.id }}
       className="group grain relative flex aspect-[9/14] flex-col justify-between overflow-hidden border border-border bg-card p-5 transition duration-500 hover:-translate-y-1 hover:border-primary"
     >
       {cover?.image && <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <img src={cover.image} alt="" loading="lazy" decoding="async" className="storyboard-panel opacity-55" style={{ left: '-100%' }} />
+        {cover.imageGrid ? <SheetImage shot={cover} label={film.title} className="size-full opacity-70"/> : <img src={cover.image} alt="" loading="lazy" decoding="async" className="storyboard-panel opacity-55" style={{ left: '-100%' }} />}
         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20" />
       </div>}
       <div className="relative flex items-start justify-between">

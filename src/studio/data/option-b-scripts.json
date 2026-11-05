@@ -1,0 +1,644 @@
+[
+  {
+    "id": "02",
+    "title": "O CASTING IMPOSSÍVEL",
+    "reference": "O Diabo Veste Prada + a dinâmica de seleção de um reality show, em uma linguagem original de comédia fashion.",
+    "concept": "depois do funeral das vendas, surge uma seleção misteriosa. Profissionais da beleza chegam a um casting para provar que estão prontas para algo maior. Só que os critérios não são beleza, seguidores ou fama.",
+    "direction": "cortes rápidos nas respostas desconcertadas, zooms discretos de comédia, figurinos fashion, uma sala de avaliação elegante e pausas de silêncio calculadas.",
+    "scenes": [
+      {
+        "n": 1,
+        "title": "A FILA",
+        "range": "00:00–00:08",
+        "script": "Uma fila de profissionais da beleza impecavelmente produzidas. Cada uma segura um portfólio.\n\nUma assistente anuncia:\n\nASSISTENTE: Próxima candidata!\n\nUma mulher entra em uma sala sofisticada.",
+        "action": "Uma fila de profissionais da beleza impecavelmente produzidas. Cada uma segura um portfólio.\n\nUma assistente anuncia:\n\nUma mulher entra em uma sala sofisticada.",
+        "dialogue": [
+          {
+            "speaker": "ASSISTENTE",
+            "text": "Próxima candidata!"
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 2,
+        "title": "A BANCA",
+        "range": "00:08–00:16",
+        "script": "Evellyn está sentada à frente de uma mesa de avaliação, usando seu look marrom-chocolate.\n\nEla observa a candidata.\n\nEVELLYN: Me conta uma coisa. Quantos seguidores você tem?\n\nCANDIDATA: Quarenta mil!",
+        "action": "Evellyn está sentada à frente de uma mesa de avaliação, usando seu look marrom-chocolate.\n\nEla observa a candidata.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Me conta uma coisa. Quantos seguidores você tem?"
+          },
+          {
+            "speaker": "CANDIDATA",
+            "text": "Quarenta mil!"
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 3,
+        "title": "A PRIMEIRA PERGUNTA",
+        "range": "00:16–00:24",
+        "script": "Evellyn se inclina para a frente.\n\nEVELLYN: E quantos viram clientes?\n\nA candidata congela.\n\nSom de grilo.\n\nCANDIDATA: Próxima pergunta?",
+        "action": "Evellyn se inclina para a frente.\n\nA candidata congela.\n\nSom de grilo.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "E quantos viram clientes?"
+          },
+          {
+            "speaker": "CANDIDATA",
+            "text": "Próxima pergunta?"
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 4,
+        "title": "A SEGUNDA CANDIDATA",
+        "range": "00:24–00:32",
+        "script": "Outra profissional entra confiante.\n\nCANDIDATA 02: Eu posto todos os dias!\n\nEVELLYN: E qual é a estratégia?\n\nA candidata sorri, desconcertada.\n\nCANDIDATA 02: Postar… todos os dias?",
+        "action": "Outra profissional entra confiante.\n\nA candidata sorri, desconcertada.",
+        "dialogue": [
+          {
+            "speaker": "CANDIDATA 02",
+            "text": "Eu posto todos os dias!"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "E qual é a estratégia?"
+          },
+          {
+            "speaker": "CANDIDATA 02",
+            "text": "Postar… todos os dias?"
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 5,
+        "title": "A TERCEIRA CANDIDATA",
+        "range": "00:32–00:40",
+        "script": "Uma terceira profissional apresenta uma pasta com fotos belíssimas de seu trabalho.\n\nCANDIDATA 03: Meu trabalho é impecável!\n\nEvellyn analisa as imagens.\n\nEVELLYN: Eu tô vendo. Mas suas futuras clientes também estão?",
+        "action": "Uma terceira profissional apresenta uma pasta com fotos belíssimas de seu trabalho.\n\nEvellyn analisa as imagens.",
+        "dialogue": [
+          {
+            "speaker": "CANDIDATA 03",
+            "text": "Meu trabalho é impecável!"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "Eu tô vendo. Mas suas futuras clientes também estão?"
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 6,
+        "title": "O RESULTADO",
+        "range": "00:40–00:48",
+        "script": "As três candidatas aguardam o resultado.\n\nA assistente entrega uma ficha à Evellyn.\n\nEla olha para as mulheres.\n\nEVELLYN: Senhoras… nenhuma de vocês passou.\n\nAs candidatas reagem indignadas.",
+        "action": "As três candidatas aguardam o resultado.\n\nA assistente entrega uma ficha à Evellyn.\n\nEla olha para as mulheres.\n\nAs candidatas reagem indignadas.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Senhoras… nenhuma de vocês passou."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 7,
+        "title": "A REVIRAVOLTA",
+        "range": "00:48–00:56",
+        "script": "Uma candidata se levanta.\n\nCANDIDATA: Mas a gente precisa fazer o quê pra passar?\n\nEvellyn sorri.\n\nEVELLYN: Vocês estão tentando passar na prova errada.",
+        "action": "Uma candidata se levanta.\n\nEvellyn sorri.",
+        "dialogue": [
+          {
+            "speaker": "CANDIDATA",
+            "text": "Mas a gente precisa fazer o quê pra passar?"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "Vocês estão tentando passar na prova errada."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 8,
+        "title": "A LIÇÃO",
+        "range": "00:56–01:04",
+        "script": "Evellyn caminha entre as candidatas.\n\nEVELLYN: Não é sobre parecer famosa. É sobre saber transformar o que você faz em um negócio que vende.",
+        "action": "Evellyn caminha entre as candidatas.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Não é sobre parecer famosa. É sobre saber transformar o que você faz em um negócio que vende."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 9,
+        "title": "A ANTECIPAÇÃO",
+        "range": "01:04–01:12",
+        "script": "A assistente se aproxima.\n\nASSISTENTE: Então… quem foi aprovada?\n\nEvellyn pega um carimbo, mas não o utiliza.\n\nEVELLYN: Ainda não é uma seleção. É uma preparação.",
+        "action": "A assistente se aproxima.\n\nEvellyn pega um carimbo, mas não o utiliza.",
+        "dialogue": [
+          {
+            "speaker": "ASSISTENTE",
+            "text": "Então… quem foi aprovada?"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "Ainda não é uma seleção. É uma preparação."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 10,
+        "title": "O GANCHO",
+        "range": "01:12–01:20",
+        "script": "Evellyn olha diretamente para a câmera.\n\nEVELLYN: Amanhã eu vou mostrar uma parte do que preparei. E aí vocês vão entender.\n\nCORTE PARA PRETO.\n\nLETTERING: AMANHÃ: O PRIMEIRO SPOILER.",
+        "action": "Evellyn olha diretamente para a câmera.\n\nCORTE PARA PRETO.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Amanhã eu vou mostrar uma parte do que preparei. E aí vocês vão entender."
+          }
+        ],
+        "lettering": "AMANHÃ: O PRIMEIRO SPOILER."
+      }
+    ]
+  },
+  {
+    "id": "03",
+    "title": "O SHOW QUE NÃO COMEÇOU",
+    "reference": "O Show de Truman pela relação entre apresentação e bastidores, com o espetáculo teatral de Moulin Rouge!. Sem reproduzir cenas dos filmes.",
+    "concept": "um grande palco está preparado para uma apresentação. A plateia espera um espetáculo de transformação instantânea. Evellyn interrompe tudo e revela que o verdadeiro segredo está nos bastidores — na estratégia.",
+    "direction": "começar com grandiosidade teatral e terminar com um ambiente real de trabalho. A mudança visual reforça que a metodologia tem mais valor que qualquer promessa de mágica.",
+    "scenes": [
+      {
+        "n": 1,
+        "title": "O PALCO",
+        "range": "00:00–00:08",
+        "script": "Cortinas de veludo. Luzes dramáticas. Música de espetáculo.\n\nUma voz anuncia:\n\nLOCUTOR: Senhoras e senhores… preparem-se para o segredo das vendas!\n\nA plateia aplaude.",
+        "action": "Cortinas de veludo. Luzes dramáticas. Música de espetáculo.\n\nUma voz anuncia:\n\nA plateia aplaude.",
+        "dialogue": [
+          {
+            "speaker": "LOCUTOR",
+            "text": "Senhoras e senhores… preparem-se para o segredo das vendas!"
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 2,
+        "title": "A GRANDE REVELAÇÃO",
+        "range": "00:08–00:16",
+        "script": "Um refletor ilumina o centro do palco.\n\nEvellyn surge usando sua jaqueta bomber marrom.\n\nEla observa a plateia.\n\nEVELLYN: Vocês vieram ver um truque?",
+        "action": "Um refletor ilumina o centro do palco.\n\nEvellyn surge usando sua jaqueta bomber marrom.\n\nEla observa a plateia.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Vocês vieram ver um truque?"
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 3,
+        "title": "O TRUQUE",
+        "range": "00:16–00:24",
+        "script": "Uma assistente apresenta uma caixa elegante.\n\nNa frente, um letreiro: \"VENDAS\".\n\nASSISTENTE: É só postar e esperar a mágica acontecer!\n\nEvellyn olha para a câmera, incrédula.",
+        "action": "Uma assistente apresenta uma caixa elegante.\n\nNa frente, um letreiro: \"VENDAS\".\n\nEvellyn olha para a câmera, incrédula.",
+        "dialogue": [
+          {
+            "speaker": "ASSISTENTE",
+            "text": "É só postar e esperar a mágica acontecer!"
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 4,
+        "title": "O FRACASSO",
+        "range": "00:24–00:32",
+        "script": "A assistente abre a caixa.\n\nEstá vazia.\n\nSilêncio.\n\nAlguém na plateia tosse.\n\nEVELLYN: Pois é. Não funciona assim.",
+        "action": "A assistente abre a caixa.\n\nEstá vazia.\n\nSilêncio.\n\nAlguém na plateia tosse.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Pois é. Não funciona assim."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 5,
+        "title": "A INTERRUPÇÃO",
+        "range": "00:32–00:40",
+        "script": "Evellyn desce do palco e caminha até os bastidores.\n\nEVELLYN: Querem ver onde a venda começa de verdade?\n\nA câmera a acompanha.",
+        "action": "Evellyn desce do palco e caminha até os bastidores.\n\nA câmera a acompanha.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Querem ver onde a venda começa de verdade?"
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 6,
+        "title": "PRIMEIRO SPOILER",
+        "range": "00:40–00:48",
+        "script": "Ela abre uma porta.\n\nDo outro lado: um estúdio de produção, uma bancada com planejamento e uma aula em preparação.\n\nEVELLYN: Começa antes de apertar o botão de publicar.",
+        "action": "Ela abre uma porta.\n\nDo outro lado: um estúdio de produção, uma bancada com planejamento e uma aula em preparação.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Começa antes de apertar o botão de publicar."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 7,
+        "title": "SEGUNDO SPOILER",
+        "range": "00:48–00:56",
+        "script": "Montagem cinematográfica de três elementos: posicionamento, conteúdo e comunicação comercial.\n\nEVELLYN (OFF): Você precisa saber com quem fala, o que mostrar e como conduzir uma conversa de venda.",
+        "action": "Montagem cinematográfica de três elementos: posicionamento, conteúdo e comunicação comercial.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN (OFF)",
+            "text": "Você precisa saber com quem fala, o que mostrar e como conduzir uma conversa de venda."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 8,
+        "title": "TERCEIRO SPOILER",
+        "range": "00:56–01:04",
+        "script": "Evellyn aparece gravando uma aula. A câmera revela apenas fragmentos do material didático.\n\nEVELLYN: E isso aqui é só uma pequena parte do que eu preparei.",
+        "action": "Evellyn aparece gravando uma aula. A câmera revela apenas fragmentos do material didático.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "E isso aqui é só uma pequena parte do que eu preparei."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 9,
+        "title": "A PERGUNTA",
+        "range": "01:04–01:12",
+        "script": "A assistente aparece na porta dos bastidores.\n\nASSISTENTE: Mas então… qual é o grande segredo?\n\nEvellyn olha para ela e depois para a câmera.\n\nEVELLYN: Não é um segredo. É uma metodologia.",
+        "action": "A assistente aparece na porta dos bastidores.\n\nEvellyn olha para ela e depois para a câmera.",
+        "dialogue": [
+          {
+            "speaker": "ASSISTENTE",
+            "text": "Mas então… qual é o grande segredo?"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "Não é um segredo. É uma metodologia."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 10,
+        "title": "O GANCHO",
+        "range": "01:12–01:20",
+        "script": "Evellyn retorna ao palco.\n\nAs luzes se apagam, exceto um refletor sobre ela.\n\nEVELLYN: Amanhã eu vou contar exatamente o que é.\n\nCORTE PARA PRETO.\n\nLETTERING: AMANHÃ: A REVELAÇÃO.",
+        "action": "Evellyn retorna ao palco.\n\nAs luzes se apagam, exceto um refletor sobre ela.\n\nCORTE PARA PRETO.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Amanhã eu vou contar exatamente o que é."
+          }
+        ],
+        "lettering": "AMANHÃ: A REVELAÇÃO."
+      }
+    ]
+  },
+  {
+    "id": "04",
+    "title": "A COLETIVA DE IMPRENSA",
+    "reference": "o universo editorial de O Diabo Veste Prada e a energia de coletivas de imprensa de grandes lançamentos.",
+    "concept": "o mistério cresceu tanto que uma coletiva de imprensa foi convocada. Repórteres querem saber o que Evellyn está preparando. Cada pergunta ajuda a revelar uma parte do IQV.",
+    "direction": "flashs, enquadramentos de teleobjetiva, microfones, cortes de reação e uma revelação com identidade visual forte. O preço permanece reservado para o aulão.",
+    "scenes": [
+      {
+        "n": 1,
+        "title": "O ANÚNCIO",
+        "range": "00:00–00:08",
+        "script": "Flashes. Microfones. Uma sala cheia de jornalistas.\n\nNo centro, uma cadeira vazia.\n\nUma assessora anuncia:\n\nASSESSORA: Senhoras, a Evellyn vai responder às perguntas agora.",
+        "action": "Flashes. Microfones. Uma sala cheia de jornalistas.\n\nNo centro, uma cadeira vazia.\n\nUma assessora anuncia:",
+        "dialogue": [
+          {
+            "speaker": "ASSESSORA",
+            "text": "Senhoras, a Evellyn vai responder às perguntas agora."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 2,
+        "title": "A ENTRADA",
+        "range": "00:08–00:16",
+        "script": "Evellyn entra com seu figurino marrom-chocolate.\n\nSenta-se diante dos microfones.\n\nEVELLYN: Hello, Senhoras! Podem perguntar.",
+        "action": "Evellyn entra com seu figurino marrom-chocolate.\n\nSenta-se diante dos microfones.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Hello, Senhoras! Podem perguntar."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 3,
+        "title": "A PRIMEIRA PERGUNTA",
+        "range": "00:16–00:24",
+        "script": "Uma repórter se levanta.\n\nREPÓRTER 01: É verdade que você tá preparando alguma coisa para as profissionais da beleza?\n\nEVELLYN: É verdade.",
+        "action": "Uma repórter se levanta.",
+        "dialogue": [
+          {
+            "speaker": "REPÓRTER 01",
+            "text": "É verdade que você tá preparando alguma coisa para as profissionais da beleza?"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "É verdade."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 4,
+        "title": "A SEGUNDA PERGUNTA",
+        "range": "00:24–00:32",
+        "script": "Outra repórter se adianta.\n\nREPÓRTER 02: É mais uma promoção de Black Friday?\n\nEvellyn sorri.\n\nEVELLYN: Não. É uma forma de aprender a vender muito além dela.",
+        "action": "Outra repórter se adianta.\n\nEvellyn sorri.",
+        "dialogue": [
+          {
+            "speaker": "REPÓRTER 02",
+            "text": "É mais uma promoção de Black Friday?"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "Não. É uma forma de aprender a vender muito além dela."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 5,
+        "title": "A TERCEIRA PERGUNTA",
+        "range": "00:32–00:40",
+        "script": "Uma terceira repórter fala rapidamente.\n\nREPÓRTER 03: Então é um treinamento?\n\nEVELLYN: É uma metodologia completa.",
+        "action": "Uma terceira repórter fala rapidamente.",
+        "dialogue": [
+          {
+            "speaker": "REPÓRTER 03",
+            "text": "Então é um treinamento?"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "É uma metodologia completa."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 6,
+        "title": "A REVELAÇÃO",
+        "range": "00:40–00:48",
+        "script": "Evellyn se levanta.\n\nAtrás dela, uma tela acende com a identidade oficial:\n\nIQV — INSTA QUE VENDE\n\nEVELLYN: Senhoras… eu apresento a vocês o IQV. Insta Que Vende.\n\nFlashes.",
+        "action": "Evellyn se levanta.\n\nAtrás dela, uma tela acende com a identidade oficial:\n\nIQV — INSTA QUE VENDE\n\nFlashes.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Senhoras… eu apresento a vocês o IQV. Insta Que Vende."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 7,
+        "title": "O QUE É",
+        "range": "00:48–00:56",
+        "script": "Cortes de aulas, planejamento e materiais do curso.\n\nEVELLYN (OFF): Um curso para você aprender a usar o Instagram com estratégia, conteúdo e foco em vendas.",
+        "action": "Cortes de aulas, planejamento e materiais do curso.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN (OFF)",
+            "text": "Um curso para você aprender a usar o Instagram com estratégia, conteúdo e foco em vendas."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 8,
+        "title": "PARA QUEM É",
+        "range": "00:56–01:04",
+        "script": "Imagens de profissionais da beleza em seus ambientes de trabalho.\n\nEVELLYN (OFF): Pra quem sabe fazer um trabalho incrível, mas quer aprender a comunicar e vender melhor.",
+        "action": "Imagens de profissionais da beleza em seus ambientes de trabalho.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN (OFF)",
+            "text": "Pra quem sabe fazer um trabalho incrível, mas quer aprender a comunicar e vender melhor."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 9,
+        "title": "A PERGUNTA FINAL",
+        "range": "01:04–01:12",
+        "script": "Uma repórter levanta a mão.\n\nREPÓRTER 04: E quando a gente vai poder entrar?\n\nEvellyn olha para a câmera.\n\nEVELLYN: Amanhã, no nosso aulão de encerramento, eu vou apresentar a condição especial da Black IQV.",
+        "action": "Uma repórter levanta a mão.\n\nEvellyn olha para a câmera.",
+        "dialogue": [
+          {
+            "speaker": "REPÓRTER 04",
+            "text": "E quando a gente vai poder entrar?"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "Amanhã, no nosso aulão de encerramento, eu vou apresentar a condição especial da Black IQV."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 10,
+        "title": "O GANCHO",
+        "range": "01:12–01:20",
+        "script": "Evellyn se levanta e começa a sair.\n\nUm jornalista grita:\n\nJORNALISTA: Mas e o preço?\n\nEla para, vira lentamente e sorri.\n\nEVELLYN: Isso é assunto pra amanhã, Senhora.\n\nCORTE SECO.\n\nLETTERING: SEXTA-FEIRA. 27 DE NOVEMBRO.",
+        "action": "Evellyn se levanta e começa a sair.\n\nUm jornalista grita:\n\nEla para, vira lentamente e sorri.\n\nCORTE SECO.",
+        "dialogue": [
+          {
+            "speaker": "JORNALISTA",
+            "text": "Mas e o preço?"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "Isso é assunto pra amanhã, Senhora."
+          }
+        ],
+        "lettering": "SEXTA-FEIRA. 27 DE NOVEMBRO."
+      }
+    ]
+  },
+  {
+    "id": "05",
+    "title": "A ESTREIA",
+    "reference": "a atmosfera de premiação de La La Land e as grandes estreias cinematográficas de Hollywood.",
+    "concept": "a BLACK IQV não é apresentada como uma simples promoção. É tratada como uma grande estreia. Evellyn chega ao tapete vermelho, mas a estrela da noite não é ela — são as profissionais da beleza que vão aprender a vender com estratégia.",
+    "direction": "Tapete vermelho, flashes, chegada em carro executivo e enquadramento final com as profissionais da beleza.",
+    "scenes": [
+      {
+        "n": 1,
+        "title": "O TAPETE VERMELHO",
+        "range": "00:00–00:08",
+        "script": "Flashes. Um tapete vermelho. Câmeras e jornalistas.\n\nUm letreiro anuncia:\n\nBLACK IQV — ESTREIA OFICIAL\n\nUma limousine ou carro executivo para diante da entrada.",
+        "action": "Flashes. Um tapete vermelho. Câmeras e jornalistas.\n\nUm letreiro anuncia:\n\nBLACK IQV — ESTREIA OFICIAL\n\nUma limousine ou carro executivo para diante da entrada.",
+        "dialogue": [],
+        "lettering": ""
+      },
+      {
+        "n": 2,
+        "title": "A PROTAGONISTA",
+        "range": "00:08–00:16",
+        "script": "A porta se abre.\n\nPrimeiro, o tênis retrô da Evellyn.\n\nDepois, a jaqueta marrom, os acessórios e o rosto.\n\nREPÓRTER: Evellyn! Qual é a sensação dessa grande estreia?",
+        "action": "A porta se abre.\n\nPrimeiro, o tênis retrô da Evellyn.\n\nDepois, a jaqueta marrom, os acessórios e o rosto.",
+        "dialogue": [
+          {
+            "speaker": "REPÓRTER",
+            "text": "Evellyn! Qual é a sensação dessa grande estreia?"
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 3,
+        "title": "A RESPOSTA",
+        "range": "00:16–00:24",
+        "script": "Evellyn para diante das câmeras.\n\nEVELLYN: A melhor parte? É que a estrela dessa história não sou eu.\n\nOs fotógrafos se entreolham.",
+        "action": "Evellyn para diante das câmeras.\n\nOs fotógrafos se entreolham.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "A melhor parte? É que a estrela dessa história não sou eu."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 4,
+        "title": "QUEM SÃO AS ESTRELAS?",
+        "range": "00:24–00:32",
+        "script": "A repórter se aproxima.\n\nREPÓRTER: Então quem são as estrelas?\n\nEvellyn aponta para a entrada.\n\nEVELLYN: Elas.",
+        "action": "A repórter se aproxima.\n\nEvellyn aponta para a entrada.",
+        "dialogue": [
+          {
+            "speaker": "REPÓRTER",
+            "text": "Então quem são as estrelas?"
+          },
+          {
+            "speaker": "EVELLYN",
+            "text": "Elas."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 5,
+        "title": "A ENTRADA DAS PROFISSIONAIS",
+        "range": "00:32–00:40",
+        "script": "Profissionais da beleza entram no tapete vermelho, cada uma com elementos que representam sua profissão.\n\nUma nail designer, uma lash designer, uma especialista em sobrancelhas e uma empreendedora da beleza.\n\nCâmeras acompanham a entrada.",
+        "action": "Profissionais da beleza entram no tapete vermelho, cada uma com elementos que representam sua profissão.\n\nUma nail designer, uma lash designer, uma especialista em sobrancelhas e uma empreendedora da beleza.\n\nCâmeras acompanham a entrada.",
+        "dialogue": [],
+        "lettering": ""
+      },
+      {
+        "n": 6,
+        "title": "A GRANDE MENSAGEM",
+        "range": "00:40–00:48",
+        "script": "Evellyn caminha entre as profissionais.\n\nEVELLYN: Vocês já têm talento. Agora é hora de aprender a transformar esse talento em posicionamento, conteúdo e vendas.",
+        "action": "Evellyn caminha entre as profissionais.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "Vocês já têm talento. Agora é hora de aprender a transformar esse talento em posicionamento, conteúdo e vendas."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 7,
+        "title": "A REVELAÇÃO DA OFERTA",
+        "range": "00:48–00:56",
+        "script": "Uma tela cinematográfica revela a identidade:\n\nBLACK IQV — INSCRIÇÕES ABERTAS\n\nEvellyn apresenta a oferta.\n\nEVELLYN: O IQV está oficialmente aberto, com uma condição especial de Black Friday.\n\nInserir na edição o preço e as condições aprovadas.",
+        "action": "Uma tela cinematográfica revela a identidade:\n\nBLACK IQV — INSCRIÇÕES ABERTAS\n\nEvellyn apresenta a oferta.\n\nInserir na edição o preço e as condições aprovadas.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "O IQV está oficialmente aberto, com uma condição especial de Black Friday."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 8,
+        "title": "O CONVITE",
+        "range": "00:56–01:04",
+        "script": "Montagem dos materiais reais do curso, aulas e plataforma.\n\nEVELLYN (OFF): Eu preparei essa metodologia para ajudar você a parar de depender de uma única data para vender.",
+        "action": "Montagem dos materiais reais do curso, aulas e plataforma.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN (OFF)",
+            "text": "Eu preparei essa metodologia para ajudar você a parar de depender de uma única data para vender."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 9,
+        "title": "A DECISÃO",
+        "range": "01:04–01:12",
+        "script": "Evellyn retorna à frente das câmeras.\n\nEVELLYN: A oportunidade tá aberta. Agora a decisão é sua, Senhora.\n\nEla olha diretamente para o espectador.",
+        "action": "Evellyn retorna à frente das câmeras.\n\nEla olha diretamente para o espectador.",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "A oportunidade tá aberta. Agora a decisão é sua, Senhora."
+          }
+        ],
+        "lettering": ""
+      },
+      {
+        "n": 10,
+        "title": "O ENCERRAMENTO",
+        "range": "01:12–01:20",
+        "script": "Plano geral do tapete vermelho com as profissionais da beleza.\n\nEvellyn caminha em direção à câmera.\n\nEVELLYN: A Black passa. O método fica. Te espero no IQV.\n\nCORTE PARA PRETO.\n\nLETTERING:\n\nBLACK IQV\nINSCRIÇÕES ABERTAS\n[PREÇO PROMOCIONAL APROVADO]\n[LINK OFICIAL DE COMPRA]",
+        "action": "Plano geral do tapete vermelho com as profissionais da beleza.\n\nEvellyn caminha em direção à câmera.\n\nCORTE PARA PRETO.\n\nBLACK IQV\nINSCRIÇÕES ABERTAS\n[PREÇO PROMOCIONAL APROVADO]\n[LINK OFICIAL DE COMPRA]",
+        "dialogue": [
+          {
+            "speaker": "EVELLYN",
+            "text": "A Black passa. O método fica. Te espero no IQV."
+          }
+        ],
+        "lettering": "BLACK IQV\nINSCRIÇÕES ABERTAS\n[PREÇO PROMOCIONAL APROVADO]\n[LINK OFICIAL DE COMPRA]"
+      }
+    ]
+  }
+]
