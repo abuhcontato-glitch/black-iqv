@@ -36,3 +36,11 @@ Não alterados: valores, entregas, condições e meios de cobrança dos planos. 
 ## Validação
 
 23 testes passaram. Build com duas entradas (campanha e proposta) aprovado. Chromium: rotas diretas bloqueadas sem expor planos/preços, seis etapas, resumo, pausa sem apresentação, download, confirmações finais, liberação, recarga, aba nova sem liberação, revogação por edição, cancelamento/confirmação de limpeza e quatro larguras (320/390/768/1440). Luxuosa e BLACK IQV preservadas. Inspeção visual de desktop e celular.
+
+## Atualização — navegação livre
+
+A pedido do usuário, retiradas as travas de preenchimento e sequência. As seis etapas ficam disponíveis desde o início; Próxima etapa funciona sem respostas ou confirmações. Ler roteiro completo apresenta todas as perguntas em uma única leitura. Ver proposta agora permite consulta imediata, preservando as anotações sem marcar confirmações inexistentes.
+
+A consulta manual é guardada separadamente em sessionStorage (`construcel-discovery-v1-view`). O aviso da proposta distingue consulta livre de diagnóstico realmente confirmado. Nova conversa limpa também essa liberação. A etapa escolhida é retomada mesmo quando incompleta. As validações do diagnóstico confirmado permanecem para não registrar um acordo que não ocorreu.
+
+23 testes e build aprovados. Chromium verificou acesso livre às etapas, navegação vazia, retomada no resumo, seis blocos do roteiro completo, quatro larguras, abertura manual dos cinco planos, aviso sem confirmação falsa, recarga e limpeza.
