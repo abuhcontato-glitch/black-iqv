@@ -44,3 +44,13 @@ A pedido do usuário, retiradas as travas de preenchimento e sequência. As seis
 A consulta manual é guardada separadamente em sessionStorage (`construcel-discovery-v1-view`). O aviso da proposta distingue consulta livre de diagnóstico realmente confirmado. Nova conversa limpa também essa liberação. A etapa escolhida é retomada mesmo quando incompleta. As validações do diagnóstico confirmado permanecem para não registrar um acordo que não ocorreu.
 
 23 testes e build aprovados. Chromium verificou acesso livre às etapas, navegação vazia, retomada no resumo, seis blocos do roteiro completo, quatro larguras, abertura manual dos cinco planos, aviso sem confirmação falsa, recarga e limpeza.
+
+## Ditado de voz por campo
+
+Botão Ditar resposta em cada campo de anotação. Usa SpeechRecognition/webkitSpeechRecognition do navegador, com `pt-BR`, resultados parciais e modo contínuo. Não usa API de transcrição da OpenAI nem grava arquivo de áudio. Disponibilidade, precisão e continuidade dependem do navegador, microfone, permissões e serviço de voz. O navegador pode processar áudio externamente; o aviso orienta combinar o uso com Ana Paula.
+
+O texto anterior é preservado; resultados parciais são atualizados em vez de concatenados repetidamente. Ao parar e reiniciar, o novo ditado acrescenta ao texto atual. Digitar manualmente encerra o ditado para evitar sobrescrever correções. Apenas um campo pode usar voz por vez. Mudar de etapa, abrir leitura completa/nova conversa, ocultar a página ou sair do componente encerra a captura. Não há início automático. Limite por resposta ampliado para 12.000 caracteres, consistente entre teclado, voz e persistência.
+
+Erros de permissão, ausência de microfone, rede, silêncio e idioma têm mensagens de recuperação; o texto existente permanece. Em ambiente sem suporte ou sem contexto seguro, o microfone fica indisponível e o teclado continua funcionando, com orientação para o ditado do próprio celular.
+
+Validação: build e 27 testes unitários. Chromium com API de voz simulada: português, resultados parciais/finais sem duplicação, preservação, um campo ativo, reinício, edição manual, permissão negada, troca de etapa/leitura, recarga sem captura, fallback e quatro larguras. Fluxo de navegação livre também verificado. Acesso a microfone físico e serviço externo não foi exercitado no ambiente; fazer teste no dispositivo e navegador da reunião.
