@@ -1,7 +1,7 @@
 export const sprint90 = {
  monthly: 2500, total: 7500, days: 90, installments: 3,
  monthlyPosts: 12, monthlyPieces: 100,
- pixKey: '04284996193', payee: 'MIKE CHRISTIAN', city: 'BRASILIA',
+ pixKey: '04284996193', payee: 'MAIKE CHRISTIAN', city: 'BRASILIA',
 };
 export function pixPayload(amount = sprint90.monthly) {
  if (!Number.isFinite(amount) || amount <= 0) throw new Error('Valor Pix inválido.');
