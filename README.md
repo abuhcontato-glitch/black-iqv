@@ -4,7 +4,9 @@ A página ativa agora apresenta a campanha BLACK IQV do projeto enviado pelo usu
 
 O repositório agora se chama `black-iqv`. O endereço de destino da campanha é `https://abuhcontato-glitch.github.io/black-iqv/`. O workflow usa o nome atual do repositório automaticamente; o deploy após a renomeação atualiza os arquivos nesse caminho.
 
-O código anterior da Construcel permanece no repositório como histórico; sua documentação original está abaixo.
+A apresentação da Construcel foi restaurada em uma entrada própria, com o novo **ONBOARDING do SPRINT contratado**. Reunião inicial: **09/11/2026 às 11h, online pelo Google Meet, horário de Brasília**. [Abrir onboarding](https://abuhcontato-glitch.github.io/black-iqv/construcel/onboarding/) · [Documentação](docs/ONBOARDING-CONSTRUCEL.md). As demais datas são propostas para alinhamento.
+
+A documentação original da Construcel está abaixo.
 
 ---
 

@@ -1,0 +1,157 @@
+import { useEffect, useMemo, useState, type ReactNode } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowUpRight, ArrowRight, ArrowDown, CalendarDays, Clock3, Video, Check, CheckCircle2, Download, Copy, Menu, X, Target, Megaphone, LayoutTemplate, MessagesSquare, FolderCheck, ChevronRight, FileCheck2, ListChecks, BarChart3, ExternalLink, UsersRound } from 'lucide-react';
+import { SectionLink } from './Presentation';
+import { onboarding, cycles, meetings, publications, campaigns, milestones, captureWindows, accessItems, materialItems, meetingAgenda, workflow, dateLabel, weekdayLabel, kickoffCalendar, scheduleCsv, downloadText } from './onboardingData';
+import '@fontsource/manrope/400.css';
+import '@fontsource/manrope/600.css';
+import './Onboarding.css';
+
+const asset = (file: string) => `${import.meta.env.BASE_URL}media/construcel/${file}`;
+const storageKey = 'construcel-sprint-onboarding-checks-v1';
+const currency = (value: number) => value.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', maximumFractionDigits: 0 });
+const navigation = [['O início', 'inicio'], ['As entregas', 'entregas'], ['O cronograma', 'cronograma'], ['Os acessos', 'acessos'], ['A agenda', 'agenda']];
+const faq = [
+  ['O contrato já está assinado?', 'Sim. Este é o onboarding do SPRINT contratado pela Construcel. Agora organizamos os acessos, materiais e próximos passos para a execução.'],
+  ['Qual é a primeira reunião?', 'Segunda-feira, 09 de novembro de 2026, às 11h, online pelo Google Meet. O link será acrescentado assim que estiver disponível. A duração ainda será combinada.'],
+  ['Os outros horários já estão fechados?', 'Não. As demais reuniões, gravações pela cliente, publicações e ativações de anúncios são propostas de agenda para alinharmos no primeiro encontro. Todos os horários estão no fuso de Brasília.'],
+  ['Quem grava os materiais?', 'No SPRINT, a Construcel fornece fotos e vídeos. A ABUHSCA utiliza esses arquivos para produzir as peças e edições simples previstas. As janelas sugeridas nesta página são para a equipe da Construcel organizar seus materiais; não representam uma visita de gravação da agência.'],
+  ['São oito criativos mais oito peças novas?', 'São oito criativos publicitários por ciclo mensal e oito publicações no Instagram com reaproveitamento desses materiais. Não são dezesseis produções originais independentes.'],
+  ['Quando os anúncios começam?', 'A primeira janela sugerida é 16/11, condicionada à disponibilidade dos acessos, verba, criativos e destino aprovados. A confirmação acontece no alinhamento; não há ativação automática por esta página.'],
+  ['Como compartilho os acessos?', 'Por convite e permissões nas próprias plataformas, usando o contato da agência definido na reunião. Esta página não recebe senhas, códigos de autenticação ou credenciais.'],
+  ['A conferência é compartilhada com a agência?', 'As marcações da checklist ficam somente neste navegador, quando o armazenamento estiver disponível. As anotações ficam apenas na aba aberta. Baixe ou copie o resumo para compartilhar pelo canal combinado com a ABUHSCA.'],
+];
+
+function Badge({ confirmed = false, children }: { confirmed?: boolean; children?: ReactNode }) {
+  return <span className={`cn-badge ${confirmed ? 'cn-badge-confirmed' : ''}`}><span/>{children ?? (confirmed ? 'Confirmado' : 'Proposto · a confirmar')}</span>;
+}
+function Chapter({ number, label, title, text, light = false }: { number: string; label: string; title: ReactNode; text?: string; light?: boolean }) {
+  return <div className={`cn-chapter ${light ? 'cn-chapter-light' : ''}`}><p className="cn-overline"><span>{number}</span>{label}</p><h2>{title}</h2>{text && <p className="cn-intro">{text}</p>}</div>;
+}
+function ConceptImage({ file, alt, caption }: { file: string; alt: string; caption: string }) {
+  return <figure className="cn-concept-image"><img src={asset(file)} alt={alt} loading="lazy" decoding="async"/><figcaption>{caption} · imagem conceitual da apresentação</figcaption></figure>;
+}
+
+export function ConstrucelOnboarding() {
+  const [menu, setMenu] = useState(false);
+  const [cycle, setCycle] = useState(1);
+  const [checked, setChecked] = useState<Record<string, boolean>>(() => {
+    try { const data = JSON.parse(localStorage.getItem(storageKey) ?? '{}'); return Object.fromEntries(accessItems.map(item => [item.id, data?.[item.id] === true])); }
+    catch { return {}; }
+  });
+  const [canSave, setCanSave] = useState(true);
+  const [notes, setNotes] = useState({ goal: '', products: '', approver: '' });
+  const [showSummary, setShowSummary] = useState(false);
+  const [feedback, setFeedback] = useState('');
+  const completed = accessItems.filter(item => checked[item.id]).length;
+  useEffect(() => { try { localStorage.setItem(storageKey, JSON.stringify(checked)); } catch { setCanSave(false); } }, [checked]);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const summary = useMemo(() => [
+    'ONBOARDING — ABUHSCA × CONSTRUCEL',
+    'SPRINT contratado e assinado · 90 dias · R$ 2.500/mês · R$ 7.500 em honorários.',
+    'Início confirmado: 09/11/2026 às 11h (Brasília), online pelo Google Meet.',
+    onboarding.meetUrl ? `Meet: ${onboarding.meetUrl}` : 'Link do Meet: a enviar. Duração da reunião: a combinar.',
+    '', 'ESCOPO', '8 criativos + 8 publicações Instagram por ciclo, com reaproveitamento. Até 2 campanhas ativas por plataforma (Meta Ads e Google Ads). Landing pages simples conforme escopo, Google Perfil da Empresa, WhatsApp Business organizado, CRM básico e uma reunião mensal. Verba de mídia e custos externos separados.',
+    '', 'CICLOS DE EXECUÇÃO — CRONOGRAMA PROPOSTO',
+    ...cycles.map(item => `${item.number}. ${item.title} ${dateLabel(item.start, true)} a ${dateLabel(item.end, true)} — ${item.items.join(' ')}`),
+    '', 'PRÓXIMAS REUNIÕES — PROPOSTAS', ...meetings.slice(1).map(item => `${dateLabel(item.date, true)} às ${item.time}: ${item.title}. A confirmar.`),
+    '', 'CONFERÊNCIA LOCAL DE ACESSOS', ...accessItems.map(item => `${checked[item.id] ? '[x]' : '[ ]'} ${item.title}`),
+    '', 'ANOTAÇÕES DO ALINHAMENTO', `Objetivo: ${notes.goal || 'A definir'}`, `Produtos prioritários: ${notes.products || 'A definir'}`, `Responsável pelas aprovações: ${notes.approver || 'A definir'}`,
+    '', 'As marcações não comprovam concessão de acesso. Apenas a reunião inicial tem data e horário confirmados. Demais janelas são propostas e não representam agendamentos externos. A Construcel atende, orça e fecha as vendas. Não há garantia de leads, vendas ou faturamento.',
+  ].join('\n'), [checked, notes]);
+  async function copySummary() {
+    setShowSummary(true);
+    try { if (!navigator.clipboard) throw new Error('Clipboard unavailable'); await navigator.clipboard.writeText(summary); setFeedback('Resumo copiado. Compartilhe pelo canal combinado com a ABUHSCA.'); }
+    catch { setFeedback('O resumo está aberto abaixo. Selecione o texto para copiar manualmente.'); }
+  }
+
+  return <div className="cn-onboarding">
+    <header className="cn-header">
+      <Link className="cn-wordmark" to="/construcel" aria-label="Voltar à apresentação da Construcel">abuhsca<span>®</span><small>AGÊNCIA CRIATIVA</small></Link>
+      <nav className={`cn-nav ${menu ? 'cn-nav-open' : ''}`} aria-label="Seções do onboarding">{navigation.map(([label, id]) => <SectionLink key={id} id={id} onNavigate={() => setMenu(false)}>{label}</SectionLink>)}</nav>
+      <SectionLink id="reuniao" className="cn-header-cta">09 NOV · 11H <ArrowUpRight size={15}/></SectionLink>
+      <button className="cn-menu-button" type="button" aria-label={menu ? 'Fechar menu do onboarding' : 'Abrir menu do onboarding'} aria-expanded={menu} onClick={() => setMenu(!menu)}>{menu ? <X/> : <Menu/>}</button>
+    </header>
+
+    <main id="conteudo">
+      <section className="cn-hero" id="inicio">
+        <div className="cn-hero-top"><span>CONSTRUCEL <span>×</span> ABUHSCA</span><Badge confirmed>SPRINT contratado · contrato assinado</Badge></div>
+        <div className="cn-hero-grid">
+          <div><p className="cn-overline">BEM-VINDA À PRÓXIMA FASE, ANA PAULA.</p><h1>ONBOARDING<span>Vamos colocar<br/>o SPRINT em ação.</span></h1><p className="cn-hero-copy">O contrato está assinado. Agora, vamos conectar prioridades, materiais, acessos e pessoas para começar uma operação organizada, do anúncio ao orçamento.</p><div className="cn-hero-actions"><SectionLink id="reuniao" className="cn-button cn-button-yellow">Nosso primeiro encontro <ArrowUpRight size={18}/></SectionLink><SectionLink id="cronograma" className="cn-text-link">Explorar os 90 dias <ArrowDown size={16}/></SectionLink></div></div>
+          <aside className="cn-start-card" aria-label="Reunião inicial confirmada"><p className="cn-overline">O PONTO DE PARTIDA</p><div className="cn-date-display"><strong>09</strong><div><span>NOVEMBRO</span><span>SEGUNDA-FEIRA · 2026</span></div></div><div className="cn-start-time"><Clock3 size={24}/><strong>11h</strong><span>horário de Brasília</span></div><div className="cn-start-online"><Video size={19}/><div><strong>Online · Google Meet</strong><span>Ana Paula + Maike Christian</span></div></div><p className="cn-meet-pending">{onboarding.meetUrl ? 'Link do encontro disponível abaixo.' : 'O link do Meet será acrescentado aqui.'}</p><button type="button" className="cn-button cn-button-blue" onClick={() => downloadText('reuniao-onboarding-construcel.ics', kickoffCalendar(), 'text/calendar;charset=utf-8')}>Adicionar à minha agenda <CalendarDays size={17}/></button></aside>
+        </div>
+        <div className="cn-hero-bottom"><span>UMA OPERAÇÃO. UM CAMINHO CLARO.</span><span>ESTRATÉGIA <i/> CRIAÇÃO <i/> PERFORMANCE</span><span>09 NOV 2026 → 90 DIAS</span></div>
+      </section>
+
+      <div className="cn-contract-strip"><div><FileCheck2/><span>Contrato <strong>assinado</strong></span></div><div><CalendarDays/><span>Execução <strong>90 dias</strong></span></div><div><Target/><span>Honorários <strong>{currency(onboarding.monthly)}/mês</strong></span></div><div><CheckCircle2/><span>Investimento total <strong>{currency(onboarding.total)}</strong></span></div></div>
+
+      <section className="cn-section" id="reuniao">
+        <Chapter number="01" label="NOSSO PRIMEIRO ENCONTRO" title={<>Alinhar o começo.<br/><em>Dar direção ao próximo passo.</em></>} text="No dia 09/11, às 11h, vamos definir as prioridades comerciais e sair com um responsável e um prazo para cada próximo passo."/>
+        <div className="cn-meeting-grid"><div><ConceptImage file="reuniao-alinhamento-maike-ana.png" alt="Ilustração conceitual de Maike e Ana Paula alinhando prioridades da Construcel" caption="Uma direção compartilhada"/><div className="cn-meeting-meta"><Badge confirmed>09/11/2026 · 11h · Brasília</Badge><span><Video size={15}/> Google Meet</span></div>{onboarding.meetUrl ? <a href={onboarding.meetUrl} target="_blank" rel="noopener noreferrer" className="cn-button cn-button-blue">Abrir Google Meet <ExternalLink size={17}/></a> : <p className="cn-note">Link do Meet a enviar. Duração do encontro a combinar.</p>}</div><div className="cn-agenda-card"><div className="cn-card-heading"><ListChecks/><div><h3>O que vamos conversar</h3><p>Pauta sugerida · até 60 minutos, a confirmar</p></div></div><ol className="cn-meeting-agenda">{meetingAgenda.map(([duration, title, text]) => <li key={title}><span>{duration}</span><div><h4>{title}</h4><p>{text}</p></div></li>)}</ol></div></div>
+      </section>
+
+      <section className="cn-section cn-section-soft" id="entregas">
+        <Chapter number="02" label="O SPRINT QUE VAMOS ENTREGAR" title={<>Aquisição com foco.<br/><em>Execução com clareza.</em></>} text="Três ciclos de trabalho para conectar campanhas, conteúdo, captação e organização comercial. Produção remota com os materiais da Construcel."/>
+        <div className="cn-deliveries"><article><Megaphone/><span className="cn-card-number">01</span><h3>Meta + Google Ads</h3><p>Até <strong>2 campanhas ativas por plataforma</strong>, com monitoramento e otimização semanal. A verba de mídia é aprovada e paga separadamente.</p></article><article><FolderCheck/><span className="cn-card-number">02</span><h3>8 criativos por ciclo</h3><p>Estáticos, carrosséis ou edições simples dos vídeos enviados pela Construcel, orientados às prioridades comerciais.</p></article><article><CalendarDays/><span className="cn-card-number">03</span><h3>8 publicações Instagram</h3><p>Publicações com reaproveitamento dos materiais das campanhas. Não são dezesseis produções originais independentes.</p></article><article><LayoutTemplate/><span className="cn-card-number">04</span><h3>Páginas para captar</h3><p>Landing pages simples e padronizadas, direcionadas ao orçamento pelo WhatsApp. Primeira estrutura no mês inicial; quantidade e cronograma no alinhamento.</p></article><article><MessagesSquare/><span className="cn-card-number">05</span><h3>WhatsApp + CRM</h3><p>Catálogo prioritário, mensagens rápidas e etiquetas, conectados a um CRM básico para acompanhar contatos e orçamentos.</p></article><article><BarChart3/><span className="cn-card-number">06</span><h3>Medir e acompanhar</h3><p>Otimização inicial e acompanhamento básico do Perfil da Empresa no Google, indicadores e <strong>uma reunião por ciclo mensal</strong>.</p></article></div>
+        <p className="cn-note">Sem taxa adicional de implantação para o escopo simples e padronizado incluído. Domínio, hospedagem, licenças e outras despesas externas aplicáveis são dimensionados e aprovados separadamente.</p>
+      </section>
+
+      <section className="cn-section" id="cronograma">
+        <Chapter number="03" label="O PLANO DOS 90 DIAS" title={<>Primeiro a base.<br/><em>Depois, evolução contínua.</em></>} text="Planejamento proposto a partir de 09/11. Os ciclos abaixo têm 30 dias corridos cada e organizam as entregas; não representam vencimentos financeiros."/>
+        <div className="cn-timeline">{cycles.map(item => <article key={item.id}><div className="cn-cycle-top"><span>0{item.number}</span><p>{dateLabel(item.start, true)}<br/><strong>a {dateLabel(item.end, true)}</strong></p></div><div className="cn-timeline-line"><i/></div><p className="cn-overline">DIAS {item.number * 30 - 29}–{item.number * 30}</p><h3>{item.title}</h3><p className="cn-cycle-subtitle">{item.subtitle}</p><ul>{item.items.map(text => <li key={text}><Check size={14}/>{text}</li>)}</ul><div className="cn-cycle-deliveries"><strong>8 criativos + 8 publicações</strong><span>Otimização semanal · 1 reunião</span></div></article>)}</div>
+        <div className="cn-info-bar"><CalendarDays/><p><strong>09/11/2026 a 06/02/2027.</strong> Janela operacional estimada de 90 dias, incluindo a data inicial. Marcos e dependências serão alinhados no primeiro encontro.</p></div>
+        <div className="cn-milestones"><div className="cn-milestones-title"><p className="cn-overline">MARCOS PROPOSTOS DE ENTREGA</p><h3>O que deve avançar. E quando.</h3><p>Janelas para revisão, sujeitas a acessos, materiais e disponibilidade. Não são entregas já aprovadas.</p></div>{milestones.map(item => <article key={item.title}><div><strong>{dateLabel(item.date)}</strong><span>{item.time} · Brasília</span></div><div><h4>{item.title}</h4><p>{item.owner}</p></div><Badge/></article>)}</div>
+      </section>
+
+      <section className="cn-section cn-flow-section" id="processo">
+        <Chapter number="04" label="DO PRIMEIRO CLIQUE AO ORÇAMENTO" light title={<>Uma oportunidade.<br/><em>Um próximo passo.</em></>} text="A ABUHSCA organiza a captação e o acompanhamento. A equipe da Construcel atende, atualiza os orçamentos e conduz a negociação e o fechamento."/>
+        <ol className="cn-flow" aria-label="Fluxo da oportunidade comercial">{workflow.map((step, index) => <li key={step.title}><span className="cn-flow-index">0{index + 1}</span><h3>{step.title}</h3><p>{step.text}</p><small>{step.owner}</small>{index < workflow.length - 1 && <ChevronRight className="cn-flow-arrow" aria-hidden="true"/>}</li>)}</ol>
+      </section>
+
+      <section className="cn-section" id="acessos">
+        <Chapter number="05" label="O QUE PRECISAMOS PARA COMEÇAR" title={<>Os acessos certos.<br/><em>As pessoas responsáveis.</em></>} text="Vamos conferir o que já está disponível e quem poderá liberar cada plataforma. Os convites são feitos nas próprias ferramentas, pelo contato da agência definido no alinhamento."/>
+        <div className="cn-access-grid"><div className="cn-check-panel"><div className="cn-progress-head"><div><p className="cn-overline">CONFERÊNCIA DE ACESSOS</p><strong>{completed}<span> / {accessItems.length}</span></strong></div><span><FolderCheck/>Conferir, organizar e avançar.</span></div><progress value={completed} max={accessItems.length} aria-label={`${completed} de ${accessItems.length} acessos conferidos`}/><div className="cn-checks">{accessItems.map(item => <label key={item.id} className={checked[item.id] ? 'cn-is-checked' : ''}><input type="checkbox" checked={!!checked[item.id]} onChange={event => setChecked(previous => ({ ...previous, [item.id]: event.target.checked }))}/><span><strong>{item.title}</strong><small>{item.text}</small></span><CheckCircle2 aria-hidden="true"/></label>)}</div><p className="cn-note">{canSave ? 'Sua conferência fica salva somente neste navegador. Marcar não concede acesso e não envia dados à agência.' : 'Este navegador não permitiu salvar a conferência. Baixe o resumo antes de fechar a página.'}</p><button type="button" className="cn-text-button" onClick={() => setChecked({})}>Limpar minha conferência</button></div><aside className="cn-access-aside"><div className="cn-access-symbol"><UsersRound/></div><p className="cn-overline">CADA UM COM SEU PAPEL</p><h3>Permissão por convite.<br/>Responsabilidade por etapa.</h3><p>Na reunião, combinamos quais acessos a ABUHSCA precisa e quem da Construcel ficará responsável por disponibilizá-los.</p><div><strong>Não envie senhas por esta página.</strong><p>Ela não recebe credenciais, códigos de autenticação ou arquivos de acesso.</p></div><SectionLink id="alinhamento" className="cn-text-link">Preparar o resumo <ArrowUpRight size={16}/></SectionLink></aside></div>
+      </section>
+
+      <section className="cn-section cn-section-soft" id="materiais">
+        <Chapter number="06" label="MATERIAIS E GRAVAÇÕES DA CLIENTE" title={<>A Construcel tem a história.<br/><em>Vamos organizar os materiais.</em></>} text="O SPRINT utiliza fotos e vídeos fornecidos pela Construcel. A ABUHSCA planeja e produz as peças e edições simples previstas, de forma remota."/>
+        <div className="cn-materials-grid"><div><h3>O que separar para o primeiro ciclo</h3><ul className="cn-material-list">{materialItems.map(text => <li key={text}><CheckCircle2 size={19}/>{text}</li>)}</ul><p className="cn-note">Enviar pelo canal ou pasta combinado no alinhamento. Esta página não faz upload de arquivos.</p></div><div className="cn-capture-list">{captureWindows.map(item => <article key={item.cycle}><div><span className="cn-overline">CICLO 0{item.cycle}</span><Badge/></div><h3>{item.label}</h3><p><Video size={16}/><strong>{dateLabel(item.date, true)} · {item.time}</strong></p><small>Janela sugerida para a equipe da Construcel gravar e separar os materiais. Recebimento proposto: {item.receipt}, até 17h.</small></article>)}</div></div>
+        <div className="cn-info-bar"><Video/><p><strong>Gravações pela equipe da Construcel.</strong> As janelas são sugestões, no horário de Brasília, a confirmar com Ana Paula. Não representam captação presencial da ABUHSCA agendada ou incluída no SPRINT.</p></div>
+      </section>
+
+      <section className="cn-section" id="agenda">
+        <Chapter number="07" label="CALENDÁRIO DE CONTEÚDO E DIVULGAÇÃO" title={<>Uma agenda visível.<br/><em>Antes de cada publicação.</em></>} text="Janelas editoriais sugeridas para alinharmos na reunião. Temas, datas e horários dependem dos materiais e da aprovação da Construcel. Horário de Brasília."/>
+        <div className="cn-calendar-toolbar"><div className="cn-cycle-tabs" role="group" aria-label="Escolher ciclo de publicações">{cycles.map(item => <button type="button" key={item.number} aria-pressed={cycle === item.number} className={cycle === item.number ? 'cn-active-tab' : ''} onClick={() => setCycle(item.number)}>Ciclo 0{item.number}<small>{dateLabel(item.start)}–{dateLabel(item.end)}</small></button>)}</div><button type="button" className="cn-button cn-button-outline" onClick={() => downloadText('cronograma-proposto-construcel.csv', scheduleCsv(), 'text/csv;charset=utf-8')}><Download size={16}/>Baixar cronograma</button></div>
+        <div className="cn-calendar-heading"><div><span className="cn-overline">INSTAGRAM · PROPOSTA EDITORIAL</span><h3>8 publicações neste ciclo.</h3></div><Badge>Datas e horários a confirmar</Badge></div>
+        <p className="cn-swipe-hint">Deslize a tabela para ver os horários e os temas →</p>
+        <div className="cn-table-wrap"><table className="cn-publication-table"><caption className="cn-sr-only">Publicações propostas para o ciclo {cycle}, horário de Brasília</caption><thead><tr><th>Peça</th><th>Data</th><th>Horário</th><th>Direção do conteúdo</th><th>Situação</th></tr></thead><tbody>{publications.filter(item => item.cycle === cycle).map(item => <tr key={item.id}><td><span className="cn-piece-number">{String(item.number).padStart(2, '0')}</span></td><td><strong>{dateLabel(item.date)}</strong><small>{weekdayLabel(item.date)}</small></td><td>{item.time}<small>Brasília</small></td><td>{item.theme}</td><td><span className="cn-table-status">Proposto</span></td></tr>)}</tbody></table></div>
+        <p className="cn-note">24 publicações planejadas nos três ciclos, com reaproveitamento dos 24 criativos previstos. Não há publicação automática. As janelas de dezembro e janeiro também serão revistas conforme feriados e funcionamento da loja.</p>
+        <div className="cn-ads-heading"><Megaphone/><div><p className="cn-overline">ATIVAÇÃO DAS CAMPANHAS</p><h3>Preparar. Aprovar. Colocar no ar.</h3></div></div><div className="cn-ad-windows">{campaigns.map(item => <article key={item.id}><Badge/><h4>{item.platform}</h4><p>{dateLabel(item.date, true)} <strong>· {item.time}</strong></p><small>{item.description}</small></article>)}<article className="cn-weekly-card"><p className="cn-overline">ROTINA INTERNA PROPOSTA</p><h4>Segundas · 09h</h4><p>Análise e otimização semanal.</p><small>Revisão dos indicadores e ajustes das campanhas. Até duas campanhas ativas por plataforma; verba aprovada à parte.</small></article></div>
+      </section>
+
+      <section className="cn-section cn-section-soft" id="reunioes">
+        <Chapter number="08" label="ENCONTROS PARA ACOMPANHAR" title={<>Conversar. Medir.<br/><em>Decidir o próximo passo.</em></>} text="Uma reunião por ciclo mensal. O encontro de abertura é o primeiro dos três; os próximos dois estão propostos para confirmação de disponibilidade."/>
+        <div className="cn-meeting-cards">{meetings.map((meeting, index) => <article key={meeting.id} className={meeting.status === 'confirmed' ? 'cn-meeting-confirmed' : ''}><div><span className="cn-overline">ENCONTRO 0{index + 1}</span><Badge confirmed={meeting.status === 'confirmed'}/></div><p className="cn-meeting-date">{dateLabel(meeting.date)}<span>{meeting.time}</span></p><p className="cn-meeting-weekday">{weekdayLabel(meeting.date)} · Brasília</p><h3>{meeting.title}</h3><p>{meeting.description}</p></article>)}</div>
+      </section>
+
+      <section className="cn-section" id="responsabilidades">
+        <Chapter number="09" label="QUEM FAZ O QUÊ" title={<>Dois lados.<br/><em>Uma operação conectada.</em></>}/>
+        <div className="cn-responsibilities"><article><span className="cn-overline">ABUHSCA · DIREÇÃO DE MAIKE CHRISTIAN</span><h3>Planejar e executar<br/>a aquisição.</h3><ul>{['Estratégia e organização do trabalho.', 'Criação, edição simples e calendário de conteúdo.', 'Landing pages, campanhas e mensuração aplicável.', 'Organização inicial do WhatsApp e CRM básico.', 'Indicadores, otimizações e reunião mensal.'].map(text => <li key={text}><Check/>{text}</li>)}</ul></article><article><span className="cn-overline">CONSTRUCEL · ALINHAMENTO COM ANA PAULA</span><h3>Dar continuidade<br/>a cada oportunidade.</h3><ul>{['Fornecer informações, materiais e acessos.', 'Aprovar conteúdos, ofertas e investimento em mídia.', 'Atender os contatos e preparar os orçamentos.', 'Atualizar as oportunidades e próximos passos no CRM.', 'Negociar, fechar e informar os resultados comerciais.'].map(text => <li key={text}><Check/>{text}</li>)}</ul></article></div>
+        <div className="cn-image-pair"><ConceptImage file="meta-ads-construcel.png" alt="Referência conceitual de campanhas Meta Ads para a Construcel" caption="Campanhas conectadas aos objetivos"/><ConceptImage file="crm-kanban-construcel.png" alt="Referência conceitual de organização de oportunidades em CRM" caption="Cada orçamento com um próximo passo"/></div>
+      </section>
+
+      <section className="cn-section cn-alignment" id="alinhamento">
+        <Chapter number="10" label="LEVAR PARA A REUNIÃO" title={<>As prioridades de vocês.<br/><em>O nosso ponto de partida.</em></>} text="Use este espaço para preparar o encontro. As anotações ficam apenas nesta aba; copie ou baixe o resumo para guardá-las e compartilhar pelo canal combinado."/>
+        <div className="cn-note-fields"><label>Qual é a prioridade comercial agora?<textarea rows={3} maxLength={1500} value={notes.goal} onChange={event => { setNotes({ ...notes, goal: event.target.value }); setFeedback(''); }} placeholder="Ex.: destacar uma linha de produtos, aumentar pedidos de orçamento..."/></label><label>Quais produtos e ofertas vamos priorizar?<textarea rows={3} maxLength={1500} value={notes.products} onChange={event => { setNotes({ ...notes, products: event.target.value }); setFeedback(''); }} placeholder="Produtos, disponibilidade e condições que podem ser divulgadas."/></label><label>Quem aprova os materiais e acompanha os contatos?<textarea rows={3} maxLength={1500} value={notes.approver} onChange={event => { setNotes({ ...notes, approver: event.target.value }); setFeedback(''); }} placeholder="Responsáveis da Construcel e melhor canal de alinhamento."/></label></div>
+        <div className="cn-summary-actions"><button type="button" className="cn-button cn-button-blue" onClick={copySummary}><Copy size={16}/>Copiar resumo do onboarding</button><button type="button" className="cn-button cn-button-outline" onClick={() => downloadText('onboarding-construcel-sprint.txt', summary, 'text/plain;charset=utf-8')}><Download size={16}/>Baixar resumo</button><button type="button" className="cn-text-button" onClick={() => setShowSummary(!showSummary)}>{showSummary ? 'Recolher resumo' : 'Revisar resumo'} <ArrowRight size={15}/></button></div>
+        {showSummary && <label className="cn-summary-label">Resumo para compartilhar<textarea className="cn-summary-text" value={summary} readOnly rows={14} onFocus={event => event.currentTarget.select()}/></label>}<p className="cn-feedback" role="status" aria-live="polite">{feedback}</p>
+      </section>
+
+      <section className="cn-section cn-faq" id="duvidas"><Chapter number="11" label="ANTES DE COMEÇAR" title={<>Tudo alinhado.<br/><em>Sem pontas soltas.</em></>}/><div>{faq.map(([question, answer]) => <details key={question}><summary>{question}<span>+</span></summary><p>{answer}</p></details>)}</div></section>
+      <section className="cn-closing"><p className="cn-overline">09 DE NOVEMBRO · 11H · ONLINE</p><h2>Agora é colocar<br/><span>o plano em movimento.</span></h2><p>Ana Paula, nos vemos no primeiro alinhamento.<br/>Vamos construir os próximos 90 dias, um passo de cada vez.</p><SectionLink id="reuniao" className="cn-button cn-button-yellow">Voltar ao nosso encontro <ArrowUpRight size={18}/></SectionLink><small>Sem promessa de volume de leads, vendas ou faturamento. O acompanhamento orienta os ajustes da operação.</small></section>
+    </main>
+    <footer className="cn-footer"><Link className="cn-wordmark" to="/construcel">abuhsca<span>®</span><small>AGÊNCIA CRIATIVA</small></Link><p>CONSTRUCEL × ABUHSCA<span>Do branding à performance.</span></p><Link to="/construcel">Voltar à apresentação <ArrowUpRight size={15}/></Link></footer>
+  </div>;
+}

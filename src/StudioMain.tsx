@@ -19,5 +19,12 @@ import './studio/styles.css';
 function FilmRoute() { const {filmId} = useParams(); return getFilm(filmId ?? '') ? <FilmPage key={filmId}/> : <NotFound/>; }
 function NotFound() { return <main className="mx-auto min-h-screen max-w-7xl px-5 pt-32"><h1 className="font-display text-5xl">Página não encontrada.</h1><Link to="/" className="mt-8 inline-block text-primary">Voltar à campanha</Link></main>; }
 function ScrollReset() { const {pathname} = useLocation(); useEffect(()=>{ window.scrollTo(0,0); document.title = 'BLACK IQV — Director’s Cut | ABUHSCA × E3'; },[pathname]); return null; }
+function ConstrucelEntry({ onboarding = false }: { onboarding?: boolean }) {
+  const { pathname } = useLocation();
+  const route = pathname.replace(/\/$/, '');
+  const destination = `${import.meta.env.BASE_URL}construcel/${onboarding || route === '/construcel/onboarding' ? 'onboarding/' : route === '/construcel' ? '' : `#${pathname}`}`;
+  useEffect(() => { window.location.replace(destination); }, [destination]);
+  return <main className="mx-auto min-h-screen max-w-7xl px-5 pt-32"><p>Abrindo a Construcel… <a className="text-primary" href={destination}>Acessar apresentação</a></p></main>;
+}
 const Router = import.meta.env.BASE_URL === '/' ? BrowserRouter : HashRouter;
-createRoot(document.getElementById('root')!).render(<React.StrictMode><Router><ScrollReset/><SiteHeader/><Routes><Route path="/" element={<Index/>}/><Route path="/construcel" element={<Index/>}/><Route path="/filmes" element={<Films/>}/><Route path="/filmes/:filmId" element={<FilmRoute/>}/><Route path="/linguagem-visual" element={<Visual/>}/><Route path="/producao" element={<Production/>}/><Route path="*" element={<NotFound/>}/></Routes></Router></React.StrictMode>);
+createRoot(document.getElementById('root')!).render(<React.StrictMode><Router><ScrollReset/><SiteHeader/><Routes><Route path="/" element={<Index/>}/><Route path="/construcel/*" element={<ConstrucelEntry/>}/><Route path="/onboarding" element={<ConstrucelEntry onboarding/>}/><Route path="/filmes" element={<Films/>}/><Route path="/filmes/:filmId" element={<FilmRoute/>}/><Route path="/linguagem-visual" element={<Visual/>}/><Route path="/producao" element={<Production/>}/><Route path="*" element={<NotFound/>}/></Routes></Router></React.StrictMode>);
