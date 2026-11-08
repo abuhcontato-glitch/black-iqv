@@ -19,14 +19,16 @@ export function addDays(iso: string, days: number): string {
   return date.toISOString().slice(0, 10);
 }
 export function dateLabel(iso: string, year = false): string {
+  if (!iso) return 'A aprovar';
   return new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: '2-digit', ...(year ? { year: 'numeric' as const } : {}), timeZone: onboarding.timeZone }).format(new Date(`${iso}T12:00:00Z`));
 }
 export function weekdayLabel(iso: string): string {
+  if (!iso) return 'Produção no mês 1 · veiculação a alinhar';
   return new Intl.DateTimeFormat('pt-BR', { weekday: 'long', timeZone: onboarding.timeZone }).format(new Date(`${iso}T12:00:00Z`));
 }
 export const cycles = [
-  { id: 'cycle-1', number: 1, title: 'Implantar.', subtitle: 'A base para começar direito.', start: onboarding.startDate, end: addDays(onboarding.startDate, 29), items: ['Diagnóstico, acessos e prioridades comerciais.', 'Landing page inicial, WhatsApp e CRM básico.', 'Primeiras campanhas e calendário de conteúdo.'] },
-  { id: 'cycle-2', number: 2, title: 'Otimizar.', subtitle: 'Aprender com cada oportunidade.', start: addDays(onboarding.startDate, 30), end: addDays(onboarding.startDate, 59), items: ['Analisar contatos e andamento dos orçamentos.', 'Ajustar públicos, criativos e ofertas.', 'Evoluir a captação e a rotina comercial.'] },
+  { id: 'cycle-1', number: 1, title: 'Estruturar.', subtitle: 'Mês 1 · organizar antes de veicular.', start: onboarding.startDate, end: addDays(onboarding.startDate, 29), items: ['Receber acessos, acervo e dados comerciais; diagnosticar a operação.', 'Estratégia, planejamento, cronograma, landing page, WhatsApp e CRM.', 'Visita de captação a alinhar, ilha de edição e materiais para aprovação.'] },
+  { id: 'cycle-2', number: 2, title: 'Veicular.', subtitle: 'Mês 2 · colocar o plano aprovado no ar.', start: addDays(onboarding.startDate, 30), end: addDays(onboarding.startDate, 59), items: ['Social media e tráfego pago previstos no ar após conferência técnica.', 'Acompanhar leads, atendimento, vendas e mensuração.', 'Otimizar públicos, criativos e ofertas com os primeiros dados.'] },
   { id: 'cycle-3', number: 3, title: 'Consolidar.', subtitle: 'Transformar os aprendizados em direção.', start: addDays(onboarding.startDate, 60), end: addDays(onboarding.startDate, 89), items: ['Priorizar as campanhas mais promissoras.', 'Revisar o funil e a evolução dos indicadores.', 'Entregar o fechamento e os próximos passos.'] },
 ];
 export const meetings: { id: string; date: string; time: string; title: string; description: string; status: ScheduleStatus }[] = [
@@ -45,7 +47,7 @@ export const contentDistribution = [
 const publicationOffsets = [[7, 8, 10, 14, 15, 17, 18, 21, 22, 24, 25, 28], [5, 6, 8, 9, 12, 13, 15, 19, 20, 22, 26, 29], [6, 7, 10, 11, 13, 14, 17, 18, 20, 24, 25, 27]];
 export const publications = cycles.flatMap((cycle, cycleIndex) => publicationOffsets[cycleIndex].map((offset, index) => ({
   id: `pauta-${cycle.number}-${index + 1}`, cycle: cycle.number, number: index + 1,
-  date: addDays(cycle.start, offset), time: index % 3 === 2 ? '18:00' : '12:00',
+  date: cycle.number === 1 ? '' : addDays(cycle.start, offset), time: cycle.number === 1 ? 'A definir' : index % 3 === 2 ? '18:00' : '12:00',
   channel: index % 3 === 2 ? 'Reels Instagram' : 'Feed Instagram',
   theme: themes[index], status: 'proposed' as const,
 })));
@@ -55,44 +57,64 @@ export const pieceSchedule = cycles.flatMap(cycle => {
     const times = day === 0 ? ['14:00', '16:00', '17:00'] : day < 24 ? ['09:00', '13:00', '17:00'] : ['09:00', '17:00'];
     for (const [index, time] of times.entries()) pieces.push({
       id: `story-${cycle.number}-${day}-${index}`, cycle: cycle.number, number: 0,
-      date: addDays(cycle.start, day), time, channel: 'Stories Instagram',
+      date: cycle.number === 1 ? '' : addDays(cycle.start, day), time: cycle.number === 1 ? 'A definir' : time, channel: 'Stories Instagram',
       theme: `${themes[Math.floor(day * 12 / 30)]} · desdobramento com a equipe da loja`, status: 'proposed',
     });
   }
   for (const [index, offset] of [8, 15, 22, 28].entries()) {
     let date = addDays(cycle.start, offset);
     while ([0, 6].includes(new Date(`${date}T12:00:00Z`).getUTCDay())) date = addDays(date, 1);
-    pieces.push({ id: `google-${cycle.number}-${index}`, cycle: cycle.number, number: 0, date, time: '10:00', channel: 'Google Perfil da Empresa', theme: themes[index * 3], status: 'proposed' });
+    pieces.push({ id: `google-${cycle.number}-${index}`, cycle: cycle.number, number: 0, date: cycle.number === 1 ? '' : date, time: cycle.number === 1 ? 'A definir' : '10:00', channel: 'Google Perfil da Empresa', theme: themes[index * 3], status: 'proposed' });
   }
   return pieces.sort((a, b) => `${a.date}T${a.time}`.localeCompare(`${b.date}T${b.time}`)).map((piece, index) => ({ ...piece, number: index + 1 }));
 });
 export const milestones = [
-  { date: '2026-11-10', time: '16:00', title: 'Prioridades e acessos conferidos', owner: 'ABUHSCA + Construcel' },
-  { date: '2026-11-11', time: '16:00', title: 'Organização inicial do WhatsApp', owner: 'ABUHSCA + equipe de atendimento' },
-  { date: '2026-11-12', time: '16:00', title: 'CRM básico em conferência', owner: 'ABUHSCA + responsáveis pelos orçamentos' },
-  { date: '2026-11-13', time: '16:00', title: 'Primeira versão da landing page e primeiro lote de criativos para revisão', owner: 'ABUHSCA · revisão da Construcel' },
+  { date: '2026-11-13', time: '17:00', title: 'Recebimento inicial de acessos, acervo e relatórios comerciais', owner: 'Construcel · prazo proposto' },
+  { date: '2026-11-20', time: '16:00', title: 'Diagnóstico dos números, estratégia e planejamento para revisão', owner: 'ABUHSCA · validação da Construcel' },
+  { date: '2026-11-27', time: '16:00', title: 'Ilha de edição, criativos, landing page e configuração das campanhas', owner: 'ABUHSCA · após materiais e captação acordada' },
+  { date: '2026-12-04', time: '16:00', title: 'Aprovação editorial e conferência técnica para entrada no ar', owner: 'ABUHSCA + Construcel' },
+  { date: '2026-12-09', time: '09:00', title: 'Início previsto da veiculação do segundo mês', owner: 'ABUHSCA · condicionado à liberação da operação' },
   { date: '2027-02-05', time: '16:00', title: 'Fechamento do ciclo e relatório final', owner: 'ABUHSCA' },
 ];
 export const campaigns = [
-  { id: 'meta-start', platform: 'Meta Ads', date: '2026-11-16', time: '09:00', description: 'Primeira janela sugerida de ativação, após revisão e aprovação.', status: 'proposed' as const },
-  { id: 'google-start', platform: 'Google Ads', date: '2026-11-16', time: '09:30', description: 'Ativação condicionada a acessos, verba, criativos e destino aprovados.', status: 'proposed' as const },
+  { id: 'meta-start', platform: 'Meta Ads', date: '2026-12-09', time: '09:00', description: 'Entrada no ar prevista no mês 2, após planejamento, conferência técnica, acessos, verba e aprovação.', status: 'proposed' as const },
+  { id: 'google-start', platform: 'Google Ads', date: '2026-12-09', time: '09:30', description: 'Janela proposta no mês 2; liberação e análise da plataforma também são necessárias.', status: 'proposed' as const },
 ];
 export const captureWindows = [
-  { cycle: 1, date: '2026-11-12', time: '09:00–10:00', receipt: '10 a 12/11', label: 'Primeiro lote de materiais' },
-  { cycle: 2, date: '2026-12-10', time: '09:00–10:00', receipt: '09 a 11/12', label: 'Materiais do segundo ciclo' },
-  { cycle: 3, date: '2027-01-12', time: '09:00–10:00', receipt: '08 a 12/01', label: 'Materiais do terceiro ciclo' },
+  { cycle: 1, date: '2026-11-23', time: '09:00–11:00', receipt: 'até 13/11 para acervo existente', label: 'Visita para fotos e vídeos · proposta a acordar', detail: 'ABUHSCA + Construcel: confirmar local, deslocamento, duração, roteiro, responsáveis, entregas e eventuais custos antes da visita. Não há visita já agendada nem pacote de captações recorrentes incluído por esta página.' },
+  { cycle: 2, date: '2026-12-10', time: '09:00–10:00', receipt: '09 a 11/12', label: 'Complementos do segundo ciclo', detail: 'Equipe Construcel: separar e gravar materiais complementares orientados pela ABUHSCA. Não é uma nova visita presencial.' },
+  { cycle: 3, date: '2027-01-12', time: '09:00–10:00', receipt: '08 a 12/01', label: 'Complementos do terceiro ciclo', detail: 'Equipe Construcel: atualizar fotos, vídeos, preços e estoque para o planejamento aprovado. Não é uma nova visita presencial.' },
 ];
 export const accessItems = [
-  { id: 'support-group', title: 'Grupo de suporte no WhatsApp', text: 'Organizar o grupo exclusivo com a ABUHSCA e os responsáveis da Construcel. Atendimento das 09h às 17h, horário de Brasília.' },
-  { id: 'meta', title: 'Meta Business e Instagram', text: 'Conferir acesso à página, ao perfil e à conta de anúncios. Conceder permissão à agência por convite.' },
-  { id: 'google-ads', title: 'Google Ads', text: 'Conferir conta e acesso da agência. Definir verba e forma de pagamento dos anúncios com Ana Paula.' },
-  { id: 'google-profile', title: 'Google Perfil da Empresa', text: 'Compartilhar a gestão do perfil para a otimização inicial e o acompanhamento básico.' },
-  { id: 'domain', title: 'Domínio e landing page', text: 'Identificar domínio, hospedagem e responsável técnico. Disponibilizar o acesso necessário à página de captação.' },
-  { id: 'whatsapp', title: 'WhatsApp Business', text: 'Definir responsável pelo atendimento e conferir catálogo, mensagens rápidas e etiquetas.' },
-  { id: 'crm', title: 'CRM e responsáveis', text: 'Definir a ferramenta, os usuários e quem registra os contatos e atualiza os orçamentos.' },
-  { id: 'metrics', title: 'Mensuração existente', text: 'Identificar GA4, Tag Manager e outras configurações já existentes, quando aplicáveis.' },
+  { id: 'support-group', title: 'Grupo de suporte no WhatsApp', text: 'Organizar o grupo exclusivo com os responsáveis. Atendimento das 09h às 17h, Brasília.' },
+  { id: 'domain', title: 'Domínio e DNS', text: 'Informar domínio, registrador, titular e responsável. Liberar a gestão necessária por usuário ou convite.' },
+  { id: 'hosting', title: 'Hospedagem e site atual', text: 'Informar provedor, endereço do site, painel/CMS, responsável técnico e situação de renovação. Acesso específico para implantação e diagnóstico.' },
+  { id: 'google-ads', title: 'Google Ads', text: 'Informar ID da conta, histórico de campanhas e conceder acesso à agência. Alinhar verba e pagamento.' },
+  { id: 'google-profile', title: 'Google Perfil da Empresa', text: 'Convidar para a gestão do perfil e informar verificação, unidades e responsável atual.' },
+  { id: 'metrics', title: 'Google Analytics, Tag Manager e Search Console', text: 'Compartilhar propriedades existentes e histórico de medição. Se não existirem, marcar como não possui.' },
+  { id: 'meta', title: 'Facebook e Meta Business', text: 'Identificar página, portfólio empresarial, conta de anúncios, pixel e titular. Adicionar a agência como parceira com as permissões necessárias.' },
+  { id: 'instagram', title: 'Instagram', text: 'Informar @perfil, vínculo com a página e acesso profissional pelo Meta. Conferir histórico e permissões de publicação.' },
+  { id: 'whatsapp', title: 'WhatsApp Business', text: 'Informar número comercial, responsável, aparelhos conectados, catálogo e etiquetas. Vinculação autorizada em conjunto, sem enviar códigos de verificação.' },
+  { id: 'tiktok', title: 'TikTok', text: 'Informar @perfil e Business Center, se houver. Acesso para diagnóstico e inventário; gestão/publicações/anúncios no TikTok dependem de escopo específico aprovado.' },
+  { id: 'crm', title: 'CRM e sistema de vendas', text: 'Informar ferramentas, usuários, etapas do funil e responsáveis. Disponibilizar acesso compatível ou relatórios exportados.' },
+  { id: 'drive', title: 'Pasta compartilhada do Google Drive', text: 'Reunir o acervo e os relatórios nas subpastas abaixo e compartilhar de forma restrita com o e-mail da agência.' },
 ];
-export const materialItems = ['Logo e identidade visual disponíveis', 'Fotos e vídeos dos produtos e da loja', 'Produtos e categorias prioritárias', 'Preços, estoque e condições comerciais', 'Diferenciais, dúvidas frequentes e áreas atendidas', 'Responsável por aprovar conteúdos e ofertas'];
+export const driveFolders = ['01_Identidade_e_logo', '02_Fotos/Produtos', '02_Fotos/Loja_e_equipe', '03_Videos/Brutos', '03_Videos/Editados', '04_Criativos_existentes', '05_Planejamentos_anteriores', '06_Relatorios/Comercial_2026_ate_outubro', '06_Relatorios/Ultimos_3_meses_Ago_Set_Out_2026', '06_Relatorios/Marketing_e_anuncios', '07_Produtos_precos_estoque', '08_Aprovacoes'];
+export const commercialRequests = [
+  ['Visão do ano', 'Faturamento, pedidos/vendas e ticket médio por mês, de janeiro a outubro de 2026 (últimos meses fechados). Se disponível, incluir 2025 para comparar sazonalidade. Novembro parcial em arquivo separado.'],
+  ['Últimos 3 meses fechados', 'Agosto, setembro e outubro de 2026, separados por mês: leads, orçamentos enviados, valor orçado, vendas, receita, descontos, margem disponível e motivos de perda.'],
+  ['Funil e atendimento', 'Equipe, horários, canais de entrada, tempo de resposta, acompanhamento dos orçamentos, taxa de conversão com denominador e capacidade de atendimento.'],
+  ['Produtos e oportunidades', 'Produtos mais vendidos, curva ABC se houver, margens, estoque, regiões, público e condições comerciais aprovadas.'],
+  ['Marketing existente', 'Investimento por canal, campanhas, públicos, criativos, alcance, cliques, contatos, custo por contato e vendas atribuídas, quando houver medição.'],
+];
+export const materialItems = ['Logo, identidade visual e arquivos editáveis disponíveis', 'Fotos e vídeos existentes: produtos, loja, equipe e obras autorizadas', 'Criativos, planejamentos e relatórios anteriores', 'Produtos, preços, estoque, margens e condições aprovadas', 'Relatórios comerciais do ano e dos últimos 3 meses fechados', 'Responsável pelos acessos, pelos dados e pelas aprovações'];
+export function handoverTemplate(): string {
+  return ['CONSTRUCEL — CENTRAL DE ENTREGA', 'Conceda permissões nas plataformas; não inclua senhas, tokens ou códigos de verificação neste resumo.', '', 'PASTA GOOGLE DRIVE (restrita ao e-mail da agência):', 'Link:', 'Responsável:', '', 'ESTRUTURA DA PASTA', ...driveFolders, '', 'ACESSOS / SITUAÇÃO / RESPONSÁVEL', ...accessItems.map(item => `${item.title}: pendente / convidado / não possui / precisa recuperar — responsável:`), '', 'RELATÓRIOS SOLICITADOS', ...commercialRequests.map(([title, text]) => `${title}: ${text}`), '', 'Se não houver algum dado, informar indisponível e a fonte existente. Não inventar números. Enviar o resumo no grupo exclusivo; a agência confirma o recebimento e testa cada acesso.'].join('\n');
+}
+export function commercialTemplateCsv(): string {
+  const rows = [['Mes', 'Faturamento_R$', 'Numero_vendas', 'Ticket_medio_R$', 'Leads', 'Orcamentos_enviados', 'Valor_orcado_R$', 'Investimento_midia_R$', 'Vendas_atribuidas_midia', 'Fonte_e_observacoes'], ...Array.from({ length: 10 }, (_, index) => [`2026-${String(index + 1).padStart(2, '0')}`, '', '', '', '', '', '', '', '', ''])];
+  return '\ufeff' + rows.map(row => row.join(';')).join('\r\n');
+}
 export const meetingAgenda = [
   ['10 min', 'Entender as prioridades', 'Produtos, objetivos, regiões atendidas e oportunidades comerciais.'],
   ['15 min', 'Conferir materiais e acessos', 'O que já existe, o que precisa chegar e quem vai disponibilizar.'],
@@ -127,10 +149,10 @@ export function scheduleCsv(): string {
   const rows: (string | number)[][] = [
     ['Categoria', 'Data', 'Horário de Brasília', 'Atividade', 'Situação'],
     ...meetings.map(m => ['Reunião', dateLabel(m.date, true), m.time, m.title, m.status === 'confirmed' ? 'Confirmada' : 'Proposta — a confirmar']),
-    ...pieceSchedule.map(p => [`Peça — ${p.channel}`, dateLabel(p.date, true), p.time, `${p.id} · Ciclo ${p.cycle} · ${p.theme}`, 'Proposta — depende de materiais e aprovação']),
+    ...pieceSchedule.map(p => [`Peça — ${p.channel}`, dateLabel(p.date, true), p.time, `${p.id} · Ciclo ${p.cycle} · ${p.theme}`, p.cycle === 1 ? 'Produção no mês 1 — veiculação sem data; alinhamento contratual necessário' : 'Proposta — depende de materiais e aprovação']),
     ...milestones.map(m => ['Marco de entrega', dateLabel(m.date, true), m.time, m.title, 'Proposta — depende de acessos, materiais e revisão']),
     ...campaigns.map(c => ['Anúncios', dateLabel(c.date, true), c.time, c.platform, 'Proposta — depende de acessos, verba e aprovação']),
-    ...captureWindows.map(c => ['Gravação pela cliente', dateLabel(c.date, true), c.time, c.label, 'Proposta — equipe da Construcel; não é captação presencial da agência']),
+    ...captureWindows.map(c => [c.cycle === 1 ? 'Visita a acordar' : 'Gravação pela cliente', dateLabel(c.date, true), c.time, c.label, c.detail]),
   ];
   return '\ufeff' + rows.map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(';')).join('\r\n');
 }

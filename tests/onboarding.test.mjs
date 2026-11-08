@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { onboarding, cycles, meetings, publications, pieceSchedule, contentDistribution, campaigns, milestones, captureWindows, addDays, kickoffCalendar, scheduleCsv, weekdayLabel } from '../src/onboardingData.ts';
+import { onboarding, cycles, meetings, publications, pieceSchedule, contentDistribution, campaigns, milestones, captureWindows, addDays, kickoffCalendar, scheduleCsv, weekdayLabel, commercialTemplateCsv, handoverTemplate, accessItems } from '../src/onboardingData.ts';
 
 test('kickoff is Monday November 9 at 11h Brasília and later meetings remain proposals', () => {
   assert.equal(weekdayLabel(onboarding.startDate), 'segunda-feira');
@@ -26,6 +26,10 @@ test('calendar covers the current contracted twelve official topics per cycle', 
   for (const cycle of cycles) {
     const posts = publications.filter(item => item.cycle === cycle.number);
     assert.equal(posts.length, 12);
+    if (cycle.number === 1) {
+      assert(posts.every(post => post.date === '' && post.time === 'A definir'));
+      continue;
+    }
     assert.equal(new Set(posts.map(item => item.date)).size, 12);
     assert(posts[0].date > captureWindows[cycle.number - 1].date, 'publication follows the proposed client capture window');
     for (const post of posts) {
@@ -58,8 +62,10 @@ test('CSV preserves proposed statuses and identifies client recordings as client
   const rows = csv.slice(1).split('\r\n');
   assert.equal(rows.length, 1 + meetings.length + pieceSchedule.length + campaigns.length + captureWindows.length + milestones.length);
   assert.equal(rows.filter(row => row.includes('"Confirmada"')).length, 1);
-  assert.equal(rows.filter(row => row.startsWith('"Gravação pela cliente"')).length, 3);
-  assert(csv.includes('não é captação presencial da agência'));
+  assert.equal(rows.filter(row => row.startsWith('"Gravação pela cliente"')).length, 2);
+  assert.equal(rows.filter(row => row.startsWith('"Visita a acordar"')).length, 1);
+  assert(csv.includes('Não há visita já agendada'));
+  assert(csv.includes('Produção no mês 1 — veiculação sem data'));
 });
 
 
@@ -70,9 +76,31 @@ test('100 shared pieces per cycle include 12 official topics and daily Stories w
   for (const cycle of cycles) {
     const pieces = pieceSchedule.filter(item => item.cycle === cycle.number);
     assert.equal(pieces.length, 100);
-    assert(pieces.every(piece => piece.date >= cycle.start && piece.date <= cycle.end && piece.status === 'proposed'));
+    assert(pieces.every(piece => piece.status === 'proposed'));
+    if (cycle.number === 1) assert(pieces.every(piece => piece.date === '' && piece.time === 'A definir'));
+    else assert(pieces.every(piece => piece.date >= cycle.start && piece.date <= cycle.end));
     assert.equal(pieces.filter(piece => ['Feed Instagram', 'Reels Instagram'].includes(piece.channel)).length, 12);
-    assert.equal(new Set(pieces.filter(piece => piece.channel === 'Stories Instagram').map(piece => piece.date)).size, 30);
+    if (cycle.number > 1) assert.equal(new Set(pieces.filter(piece => piece.channel === 'Stories Instagram').map(piece => piece.date)).size, 30);
     for (const channel of contentDistribution) assert.equal(pieces.filter(piece => piece.channel === channel.channel).length, channel.quantity);
   }
+});
+
+
+test('rephased operation does not promise November publication or advertising and preserves contracted production', () => {
+  assert.equal(pieceSchedule.filter(piece => piece.cycle === 1).length, 100);
+  assert(pieceSchedule.filter(piece => piece.cycle === 1).every(piece => !piece.date));
+  assert(campaigns.every(campaign => campaign.date >= cycles[1].start));
+  assert.equal(captureWindows[0].cycle, 1);
+  assert.match(captureWindows[0].detail, /acordar|confirmar/);
+});
+
+test('handover covers platforms and commercial template separates ten closed months without fabricated numbers', () => {
+  for (const id of ['domain', 'hosting', 'google-ads', 'google-profile', 'meta', 'instagram', 'whatsapp', 'tiktok', 'drive']) assert(accessItems.some(item => item.id === id));
+  const rows = commercialTemplateCsv().slice(1).split('\r\n').map(row => row.split(';'));
+  assert.equal(rows.length, 11);
+  assert.equal(rows[1][0], '2026-01');
+  assert.equal(rows.at(-1)[0], '2026-10');
+  assert(rows.slice(1).every(row => row.slice(1).every(cell => cell === '')));
+  assert.match(handoverTemplate(), /Agosto, setembro e outubro/);
+  assert.match(handoverTemplate(), /não inclua senhas/);
 });
