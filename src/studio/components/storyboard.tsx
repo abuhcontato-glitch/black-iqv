@@ -20,11 +20,17 @@ export function StatusPill({ status }: { status: ReviewStatus }) {
   );
 }
 
-export function Frame({ seq, shot, className }: { seq: Sequence; shot: Shot; className?: string }) {
+export function SheetImage({ shot, label, className }: { shot: Shot; label: string; className?: string }) {
+  const grid = shot.imageGrid!;
+  const width = grid.width / grid.columns, height = grid.height / grid.rows;
+  return <svg role="img" aria-label={label} data-storyboard-scene={grid.index + 1} viewBox={`${(grid.index % grid.columns) * width} ${Math.floor(grid.index / grid.columns) * height} ${width} ${height}`} preserveAspectRatio="xMidYMid slice" className={className}><image href={shot.image} width={grid.width} height={grid.height}/></svg>;
+}
+
+export function Frame({ seq, shot, className, hideTimecode = false }: { seq: Sequence; shot: Shot; className?: string; hideTimecode?: boolean }) {
   const code = `${String(seq.n).padStart(2, "0")}.${shot.n}`;
   return (
-    <div className={cn("grain relative aspect-[9/16] overflow-hidden border border-border bg-card", className)}>
-      {shot.image ? (
+    <div className={cn("grain relative aspect-[9/16] overflow-hidden border border-border bg-card", className)} style={shot.imageGrid ? { aspectRatio: (shot.imageGrid.width / shot.imageGrid.columns) / (shot.imageGrid.height / shot.imageGrid.rows) } : undefined}>
+      {shot.imageGrid && shot.image ? <SheetImage shot={shot} label={`Cena ${seq.n} — ${shot.action}`} className="size-full"/> : shot.image ? (
         <img
           src={shot.image}
           alt={`Plano ${code} — ${shot.visual?.action ?? shot.action}`}
@@ -41,19 +47,19 @@ export function Frame({ seq, shot, className }: { seq: Sequence; shot: Shot; cla
           <span className="mt-4 font-mono text-[0.6rem] uppercase tracking-[0.2em] text-primary">Imagem em preparação</span>
         </div>
       )}
-      <span className="absolute left-2 top-2 bg-black/65 px-1.5 py-1 font-mono text-[0.6rem] text-foreground">
+      {!hideTimecode && <span className="absolute left-2 top-2 bg-black/65 px-1.5 py-1 font-mono text-[0.6rem] text-foreground">
         {timecode(seq.n, Math.round((shot.n - 1) * 2.67))}
-      </span>
+      </span>}
     </div>
   );
 }
 
 type Item = { seq: Sequence; shot: Shot };
 
-export function useViewer(film: Film) {
-  const items: Item[] = film.sequences.flatMap((seq) => seq.shots.map((shot) => ({ seq, shot })));
+export function useViewer(film: Film, sceneOnly = false) {
+  const items: Item[] = film.sequences.flatMap((seq) => (sceneOnly ? seq.shots.slice(0, 1) : seq.shots).map((shot) => ({ seq, shot })));
   const [index, setIndex] = useState<number | null>(null);
-  const open = (seq: number, shot: number) => setIndex((seq - 1) * 3 + (shot - 1));
+  const open = (seq: number, shot: number) => setIndex(items.findIndex(item => item.seq.n === seq && item.shot.n === shot));
   const viewer = <ShotViewer items={items} index={index} setIndex={setIndex} />;
   return { open, viewer };
 }
@@ -101,11 +107,11 @@ function ShotViewer({ items, index, setIndex }: { items: Item[]; index: number |
               </dl>
               <Spec k="Quadro visual" v={current.shot.visual?.action ?? current.shot.action} />
               {current.shot.image && <a href={current.shot.image} target="_blank" rel="noopener noreferrer" className="inline-block border border-border px-4 py-3 font-mono text-xs text-primary hover:border-primary">Abrir prancha completa ↗</a>}
-              <p className="text-xs leading-relaxed text-muted-foreground">Imagem conceitual gerada por IA para pré-produção. As falas abaixo pertencem à versão do roteiro e podem ser ajustadas na revisão criativa.</p>
-              <blockquote className="border-l-2 border-primary pl-4 font-display text-xl italic leading-snug">
+              <p className="text-xs leading-relaxed text-muted-foreground">{current.shot.image ? "Imagem conceitual gerada por IA para pré-produção." : "Quadro visual em preparação. Enquadramento e lente sugeridos, sujeitos à decupagem definitiva."} As falas abaixo pertencem à versão do roteiro e podem ser ajustadas na revisão criativa.</p>
+              <blockquote className="border-l-2 border-primary pl-4 whitespace-pre-line font-display text-xl italic leading-snug">
                 “{current.seq.line.text}”
                 <span className="mt-2 block font-mono text-[0.6rem] not-italic uppercase tracking-[0.2em] text-muted-foreground">
-                  {current.seq.line.kind === "off" ? "Narração em off" : current.seq.line.kind === "texto" ? "Texto em tela" : "Fala"}
+                  {current.seq.line.speaker ?? (current.seq.line.kind === "off" ? "Narração em off" : current.seq.line.kind === "texto" ? "Texto em tela" : "Fala")}
                 </span>
               </blockquote>
             </div>

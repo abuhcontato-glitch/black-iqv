@@ -11,6 +11,7 @@ import { BrowserRouter, HashRouter, Routes, Route, useLocation, useParams, Link 
 import Index from './studio/routes/index';
 import Films from './studio/routes/filmes.index';
 import FilmPage from './studio/routes/filmes.$filmId';
+import { OptionB, OptionBFilm, DespertarReference } from './studio/routes/opcao-b';
 import Visual from './studio/routes/linguagem-visual';
 import Production from './studio/routes/producao';
 import { SiteHeader } from './studio/components/site-header';
@@ -27,4 +28,4 @@ function ConstrucelEntry({ onboarding = false }: { onboarding?: boolean }) {
   return <main className="mx-auto min-h-screen max-w-7xl px-5 pt-32"><p>Abrindo a Construcel… <a className="text-primary" href={destination}>Acessar apresentação</a></p></main>;
 }
 const Router = import.meta.env.BASE_URL === '/' ? BrowserRouter : HashRouter;
-createRoot(document.getElementById('root')!).render(<React.StrictMode><Router><ScrollReset/><SiteHeader/><Routes><Route path="/" element={<Index/>}/><Route path="/construcel/*" element={<ConstrucelEntry/>}/><Route path="/onboarding" element={<ConstrucelEntry onboarding/>}/><Route path="/filmes" element={<Films/>}/><Route path="/filmes/:filmId" element={<FilmRoute/>}/><Route path="/linguagem-visual" element={<Visual/>}/><Route path="/producao" element={<Production/>}/><Route path="*" element={<NotFound/>}/></Routes></Router></React.StrictMode>);
+createRoot(document.getElementById('root')!).render(<React.StrictMode><Router><ScrollReset/><SiteHeader/><Routes><Route path="/" element={<Index/>}/><Route path="/construcel/*" element={<ConstrucelEntry/>}/><Route path="/onboarding" element={<ConstrucelEntry onboarding/>}/><Route path="/opcao-b" element={<OptionB/>}/><Route path="/opcao-b/referencias/o-despertar" element={<DespertarReference/>}/><Route path="/opcao-b/filmes/:filmId" element={<OptionBFilm/>}/><Route path="/filmes" element={<Films/>}/><Route path="/filmes/:filmId" element={<FilmRoute/>}/><Route path="/linguagem-visual" element={<Visual/>}/><Route path="/producao" element={<Production/>}/><Route path="*" element={<NotFound/>}/></Routes></Router></React.StrictMode>);

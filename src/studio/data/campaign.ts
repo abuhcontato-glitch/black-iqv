@@ -14,6 +14,7 @@ export interface Shot {
   lens: string;
   image?: string; // arquivo real do storyboard, quando cadastrado
   imagePanel?: number; // índice do quadro na prancha: 0, 1 ou 2
+  imageGrid?: { columns: number; rows: number; index: number; width: number; height: number };
   visual?: { frame: string; action: string; lens: string };
 }
 
@@ -24,13 +25,14 @@ export interface Sequence {
   action: string;
   location: string;
   characters: string;
-  line: { kind: LineKind; text: string };
+  line: { kind: LineKind; text: string; speaker?: string };
   shots: [Shot, Shot, Shot];
   lighting: string;
   sound: string;
   transition: string;
   notes: string;
   storyboardTitle?: string;
+  literaryScript?: string;
 }
 
 export interface Film {

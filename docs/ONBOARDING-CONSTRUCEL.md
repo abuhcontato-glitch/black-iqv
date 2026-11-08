@@ -1,6 +1,6 @@
 # Onboarding Construcel — SPRINT contratado
 
-A contratação e assinatura do SPRINT foram confirmadas pelo usuário. Reunião inicial confirmada: **segunda-feira, 09/11/2026, às 11h, online pelo Google Meet**, horário de Brasília (`America/Sao_Paulo`). O link e a duração do encontro não foram informados. A página não presume pagamento confirmado.
+A contratação e assinatura do SPRINT foram confirmadas pelo usuário. Reunião inicial confirmada: **segunda-feira, 09/11/2026, às 11h, online pelo Google Meet**, horário de Brasília (`America/Sao_Paulo`). Meet confirmado: https://meet.google.com/dur-zzzs-mtj. Duração confirmada: 11h às 12h, Brasília. A página não presume pagamento confirmado.
 
 ## Páginas e implantação
 
@@ -15,7 +15,7 @@ No GitHub Pages atual, os endereços são:
 - Apresentação: `https://abuhcontato-glitch.github.io/black-iqv/construcel/`
 - Onboarding: `https://abuhcontato-glitch.github.io/black-iqv/construcel/onboarding/`
 
-Os documentos da Construcel inicializam a rota por hash correspondente a seu `data-entry-route`, preservando acesso direto e recarga no Pages. As rotas antigas `#/construcel/*` e `#/onboarding` da raiz redirecionam para a entrada própria da Construcel. A raiz continua carregando `StudioMain.tsx`; as entradas Construcel carregam `main.tsx`. Não trocar a raiz de um cliente para publicar outro.
+Os documentos da Construcel inicializam a rota por hash correspondente a seu `data-entry-route`, preservando acesso direto e recarga no Pages. As rotas antigas `#/construcel/*` e `#/onboarding` da raiz redirecionam para a entrada própria da Construcel. O diagnóstico comercial, o contrato SPRINT 90 e a opção B da campanha também são preservados. A rota de onboarding já contratado não exige refazer o diagnóstico pré-venda. A raiz continua carregando `StudioMain.tsx`; as entradas Construcel carregam `main.tsx`. Não trocar a raiz de um cliente para publicar outro.
 
 ## Conteúdo e calendário
 
@@ -32,9 +32,9 @@ São três ciclos de 30 dias corridos, totalizando 90 dias com contagem inclusiv
 
 **Somente a reunião inicial tem data e horário confirmados.** Marcos, recebimento de materiais, gravações pela equipe da cliente, reuniões seguintes, publicações e ativação dos anúncios são propostas explícitas para alinhamento, dependentes dos acessos, materiais, verba e aprovação. O contrato não foi modificado para incluir captação presencial da agência.
 
-Há exatamente oito publicações propostas por ciclo (24 no total), posteriores às respectivas janelas propostas de gravação pela cliente. As publicações reaproveitam os oito criativos mensais; não são 16 peças originais. As três reuniões incluem o kickoff, sem acrescentar reuniões semanais ao SPRINT.
+A fonte contratual mais recente é `src/sprint90.ts`, integrada do remoto antes da publicação: 12 pautas oficiais e 100 peças por ciclo (36 pautas e 300 peças em 90 dias), distribuídas entre Google Perfil da Empresa, Stories, Reels e feed do Instagram. Há também oito criativos de anúncios mensais, com possível reaproveitamento dos materiais. O calendário propõe 8 peças de feed, 4 Reels, 84 Stories e 4 publicações Google por ciclo; a divisão é proposta, não um desdobramento contratual fixo. As 12 pautas não são somadas às 100 peças. As pautas oficiais têm janelas posteriores às gravações propostas; os Stories diários usam materiais da equipe da loja, inclusive materiais existentes no começo. O suporte inclui grupo exclusivo WhatsApp das 09h às 17h, horário de Brasília. As três reuniões incluem o kickoff, sem acrescentar reuniões semanais ao SPRINT.
 
-A geração de `.ics` exporta apenas o kickoff confirmado, às 14h UTC / 11h de Brasília. Não inventa horário final nem duração. O texto segue CRLF e dobramento UTF-8 de linhas. O CSV inclui as propostas identificadas e não agenda ou publica nada externamente.
+A geração de `.ics` exporta apenas o kickoff confirmado, às 14h UTC / 11h de Brasília. Término confirmado às 15h UTC / 12h de Brasília e link do Meet incluídos. O texto segue CRLF e dobramento UTF-8 de linhas. O CSV inclui as propostas identificadas e não agenda ou publica nada externamente.
 
 Para inserir o link do Meet, atualizar `onboarding.meetUrl`. Não criar um código fictício. Se o link for informado, atualizar também a descrição do calendário e o FAQ correspondente.
 
@@ -44,7 +44,7 @@ A checklist guarda somente marcações booleanas neste navegador. Ela não compr
 
 ## Validação
 
-- `npm test`: 23 testes, incluindo cinco testes de calendário, escopo da agenda e exportações.
+- `npm test`: 38 testes, incluindo seis testes de calendário, escopo da agenda e exportações.
 - `npm run build -- --base=/black-iqv/`: build de todas as entradas.
-- Navegador: abertura direta, recarga, navegação desde a Construcel, preservação da BLACK IQV, imagens, checklist local, abas com oito publicações, downloads reais ICS/CSV, resumo, clipboard e menu móvel.
+- Navegador: abertura direta, recarga, navegação desde a Construcel, preservação da BLACK IQV, imagens, checklist local, abas com 12 pautas, 100 peças e filtros por canal, downloads reais ICS/CSV, resumo, clipboard e menu móvel.
 - Larguras de 320, 390, 768 e 1440px; tabela possui rolagem própria. Sem erros de JavaScript.
