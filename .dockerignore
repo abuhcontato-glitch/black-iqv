@@ -1,0 +1,8 @@
+.git
+node_modules
+dist
+public
+.env*
+onboarding-private.env
+onboarding-invites-private.txt
+*.zip

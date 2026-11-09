@@ -4,3 +4,10 @@ dist/
 .env
 .env.*
 !.env.example
+
+# Private onboarding runtime files
+onboarding-private.env
+onboarding-invites-private.txt
+.env.local
+.env.production.local
+/data/

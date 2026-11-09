@@ -44,18 +44,14 @@ A checklist guarda somente marcações booleanas neste navegador. Ela não compr
 
 ## Validação
 
-- `npm test`: 40 testes, incluindo oito testes de calendário, escopo da agenda e exportações.
+- `npm test`: 46 testes, incluindo calendário, aplicativo e servidor privado.
 - `npm run build -- --base=/black-iqv/`: build de todas as entradas.
 - Navegador: abertura direta, recarga, navegação desde a Construcel, preservação da BLACK IQV, imagens, checklist local, abas com 12 pautas, 100 peças e filtros por canal, downloads reais ICS/CSV, resumo, clipboard e menu móvel.
 - Larguras de 320, 390, 768 e 1440px; tabela possui rolagem própria. Sem erros de JavaScript.
 
-## Central de entrega e diagnóstico comercial
+## Aplicativo e recebimento
 
-`src/OnboardingHandover.tsx` orienta convites para **abuhoficial@gmail.com**, e-mail informado pelo usuário, e uma pasta restrita criada pela cliente no Drive. Não há pasta de destino fornecida nem upload/backend: o fluxo efetivo é convidar nas plataformas, compartilhar a pasta e preparar e-mail (`mailto`) ou copiar o resumo para o grupo. A página deixa explícito que só a conferência da agência comprova recebimento e acesso. A pasta não é tornada pública pelo aplicativo.
-
-Inclui domínio/DNS, hospedagem/CMS, Google Ads/Perfil/GA4/GTM/Search Console, Meta/Facebook, Instagram, WhatsApp, TikTok e CRM. TikTok entra como inventário/diagnóstico; sua gestão não é acrescida ao SPRINT. A estrutura Drive separa fotos, vídeos brutos/editados, criativos, planejamentos e relatórios. Dados solicitados: janeiro–outubro de 2026, últimos três meses fechados (agosto/setembro/outubro), novembro parcial separado, histórico 2025 se disponível, funil, receita, vendas, ticket, investimento, produtos, margem e capacidade de atendimento. CSV mensal vazio não inventa números. Solicita totais agregados sem dados pessoais de compradores.
-
-O formulário usa apenas memória da aba. Links e observações entram no resumo local, nunca na URL pública nem no armazenamento persistente. A abertura da pasta exige URL HTTPS de pasta `drive.google.com`; senhas/códigos não são solicitados. Botões copiam e-mail/resumo, baixam checklist e modelo CSV e preparam e-mail para revisão e envio pela cliente. Testado em navegador com downloads reais, preenchimento, estados de acesso, URL inválida, clipboard e larguras 320/390/768/1440px.
+O formulário simples foi substituído pelo aplicativo de dez etapas, com campos, anexos e links. Consulte [a implementação atual e seu estado de implantação](PLATAFORMA-ONBOARDING-CONSTRUCEL.md). O backend privado foi criado e testado; sua hospedagem pública ainda precisa ser ativada. O cronograma abaixo permanece vigente.
 
 ## Replanejamento de 15 dias
 

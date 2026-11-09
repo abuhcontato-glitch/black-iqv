@@ -1,0 +1,20 @@
+services:
+  onboarding:
+    build:
+      context: ../..
+      dockerfile: server/onboarding/Dockerfile
+    env_file: ../../onboarding-private.env
+    environment:
+      DATA_DIR: /data
+      PORT: 8080
+    ports:
+      - "127.0.0.1:8080:8080"
+    volumes:
+      - onboarding-data:/data
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+volumes:
+  onboarding-data:

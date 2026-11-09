@@ -62,3 +62,7 @@ As três propostas agora exibem apenas o plano fechado: entregas, condições, m
 Agora são cinco propostas individuais: BASE R$ 500/mês e ARRANQUE R$ 1.500/mês (ambos com ciclo inicial proposto de 30 dias), além de SPRINT, TRAÇÃO e MARATONA. Escopos atuais em `docs/PROPOSTAS-COMERCIAIS-ATUAIS.md`; a TRAÇÃO inclui site oficial e chatbot, e o SPRINT inclui landing pages conforme alinhamento de escopo.
 
 A MARATONA possui uma demonstração clicável de 11 módulos, acessível pelo menu “A operação”. CRM, atendimento, automação, chatbot, prévia de IA, conteúdo, landing page, formulário, agenda, segmentação e mapeamento funcionam com dados fictícios locais. Detalhes em `docs/DEMONSTRACAO-MODULOS.md`.
+
+### Aplicativo de onboarding Construcel
+
+O onboarding agora inclui dez etapas, anexos/links, salvamento local, revisão e exportação ZIP. [Documentação e estado da implantação](docs/PLATAFORMA-ONBOARDING-CONSTRUCEL.md). O [backend privado](server/onboarding/README.md) foi criado e testado; o recebimento em produção exige hospedá-lo e configurar `ONBOARDING_API_URL` no build do GitHub Pages. Sem essa configuração, a página informa o modo local e não simula envio.
