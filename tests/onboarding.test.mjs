@@ -27,7 +27,10 @@ test('calendar covers the current contracted twelve official topics per cycle', 
     const posts = publications.filter(item => item.cycle === cycle.number);
     assert.equal(posts.length, 12);
     if (cycle.number === 1) {
-      assert(posts.every(post => post.date === '' && post.time === 'A definir'));
+      assert.equal(posts.filter(post => post.date).length, 3);
+      assert.equal(posts[0].date, '2026-11-24');
+      assert(posts.filter(post => post.date).every(post => post.date >= '2026-11-24'));
+      assert(posts.filter(post => !post.date).every(post => post.time === 'A definir'));
       continue;
     }
     assert.equal(new Set(posts.map(item => item.date)).size, 12);
@@ -65,7 +68,8 @@ test('CSV preserves proposed statuses and identifies client recordings as client
   assert.equal(rows.filter(row => row.startsWith('"Gravação pela cliente"')).length, 2);
   assert.equal(rows.filter(row => row.startsWith('"Visita a acordar"')).length, 1);
   assert(csv.includes('Não há visita já agendada'));
-  assert(csv.includes('Produção no mês 1 — veiculação sem data'));
+  assert(csv.includes('Lote em produção — data de veiculação a alinhar'));
+  assert(csv.includes('24/11/2026'));
 });
 
 
@@ -77,7 +81,10 @@ test('100 shared pieces per cycle include 12 official topics and daily Stories w
     const pieces = pieceSchedule.filter(item => item.cycle === cycle.number);
     assert.equal(pieces.length, 100);
     assert(pieces.every(piece => piece.status === 'proposed'));
-    if (cycle.number === 1) assert(pieces.every(piece => piece.date === '' && piece.time === 'A definir'));
+    if (cycle.number === 1) {
+      assert(pieces.some(piece => piece.date === '2026-11-24'));
+      assert(pieces.every(piece => !piece.date || piece.date >= '2026-11-24'));
+    }
     else assert(pieces.every(piece => piece.date >= cycle.start && piece.date <= cycle.end));
     assert.equal(pieces.filter(piece => ['Feed Instagram', 'Reels Instagram'].includes(piece.channel)).length, 12);
     if (cycle.number > 1) assert.equal(new Set(pieces.filter(piece => piece.channel === 'Stories Instagram').map(piece => piece.date)).size, 30);
@@ -86,10 +93,13 @@ test('100 shared pieces per cycle include 12 official topics and daily Stories w
 });
 
 
-test('rephased operation does not promise November publication or advertising and preserves contracted production', () => {
+test('15-day preparation leads to proposed November 24 launch without changing contracted production', () => {
   assert.equal(pieceSchedule.filter(piece => piece.cycle === 1).length, 100);
-  assert(pieceSchedule.filter(piece => piece.cycle === 1).every(piece => !piece.date));
-  assert(campaigns.every(campaign => campaign.date >= cycles[1].start));
+  assert(campaigns.every(campaign => campaign.date === '2026-11-24' && campaign.time === 'A definir'));
+  assert.equal(captureWindows[0].date, '2026-11-17');
+  assert.equal(captureWindows[0].time, 'A combinar');
+  assert(milestones.some(milestone => milestone.date === '2026-11-23'));
+  assert(!milestones.some(milestone => milestone.date === '2026-11-20'));
   assert.equal(captureWindows[0].cycle, 1);
   assert.match(captureWindows[0].detail, /acordar|confirmar/);
 });

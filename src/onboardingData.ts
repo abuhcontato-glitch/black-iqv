@@ -23,12 +23,12 @@ export function dateLabel(iso: string, year = false): string {
   return new Intl.DateTimeFormat('pt-BR', { day: '2-digit', month: '2-digit', ...(year ? { year: 'numeric' as const } : {}), timeZone: onboarding.timeZone }).format(new Date(`${iso}T12:00:00Z`));
 }
 export function weekdayLabel(iso: string): string {
-  if (!iso) return 'Produção no mês 1 · veiculação a alinhar';
+  if (!iso) return 'Lote em produção · veiculação a alinhar';
   return new Intl.DateTimeFormat('pt-BR', { weekday: 'long', timeZone: onboarding.timeZone }).format(new Date(`${iso}T12:00:00Z`));
 }
 export const cycles = [
-  { id: 'cycle-1', number: 1, title: 'Estruturar.', subtitle: 'Mês 1 · organizar antes de veicular.', start: onboarding.startDate, end: addDays(onboarding.startDate, 29), items: ['Receber acessos, acervo e dados comerciais; diagnosticar a operação.', 'Estratégia, planejamento, cronograma, landing page, WhatsApp e CRM.', 'Visita de captação a alinhar, ilha de edição e materiais para aprovação.'] },
-  { id: 'cycle-2', number: 2, title: 'Veicular.', subtitle: 'Mês 2 · colocar o plano aprovado no ar.', start: addDays(onboarding.startDate, 30), end: addDays(onboarding.startDate, 59), items: ['Social media e tráfego pago previstos no ar após conferência técnica.', 'Acompanhar leads, atendimento, vendas e mensuração.', 'Otimizar públicos, criativos e ofertas com os primeiros dados.'] },
+  { id: 'cycle-1', number: 1, title: 'Estruturar.', subtitle: 'Mês 1 · preparar e iniciar a operação.', start: onboarding.startDate, end: addDays(onboarding.startDate, 29), items: ['Receber acessos, acervo e dados comerciais; diagnosticar a operação.', 'Estratégia, planejamento, cronograma, landing page, WhatsApp e CRM.', 'Preparação de 09 a 23/11; primeiro lote previsto no ar em 24/11 após aprovação.'] },
+  { id: 'cycle-2', number: 2, title: 'Otimizar.', subtitle: 'Mês 2 · dar continuidade e evoluir.', start: addDays(onboarding.startDate, 30), end: addDays(onboarding.startDate, 59), items: ['Continuidade de social media e tráfego pago iniciados no primeiro mês.', 'Acompanhar leads, atendimento, vendas e mensuração.', 'Otimizar públicos, criativos e ofertas com os primeiros dados.'] },
   { id: 'cycle-3', number: 3, title: 'Consolidar.', subtitle: 'Transformar os aprendizados em direção.', start: addDays(onboarding.startDate, 60), end: addDays(onboarding.startDate, 89), items: ['Priorizar as campanhas mais promissoras.', 'Revisar o funil e a evolução dos indicadores.', 'Entregar o fechamento e os próximos passos.'] },
 ];
 export const meetings: { id: string; date: string; time: string; title: string; description: string; status: ScheduleStatus }[] = [
@@ -47,7 +47,7 @@ export const contentDistribution = [
 const publicationOffsets = [[7, 8, 10, 14, 15, 17, 18, 21, 22, 24, 25, 28], [5, 6, 8, 9, 12, 13, 15, 19, 20, 22, 26, 29], [6, 7, 10, 11, 13, 14, 17, 18, 20, 24, 25, 27]];
 export const publications = cycles.flatMap((cycle, cycleIndex) => publicationOffsets[cycleIndex].map((offset, index) => ({
   id: `pauta-${cycle.number}-${index + 1}`, cycle: cycle.number, number: index + 1,
-  date: cycle.number === 1 ? '' : addDays(cycle.start, offset), time: cycle.number === 1 ? 'A definir' : index % 3 === 2 ? '18:00' : '12:00',
+  date: cycle.number === 1 ? (['2026-11-24', '2026-11-26', '2026-11-30'][index] ?? '') : addDays(cycle.start, offset), time: cycle.number === 1 && index > 2 ? 'A definir' : index % 3 === 2 ? '18:00' : '12:00',
   channel: index % 3 === 2 ? 'Reels Instagram' : 'Feed Instagram',
   theme: themes[index], status: 'proposed' as const,
 })));
@@ -57,31 +57,31 @@ export const pieceSchedule = cycles.flatMap(cycle => {
     const times = day === 0 ? ['14:00', '16:00', '17:00'] : day < 24 ? ['09:00', '13:00', '17:00'] : ['09:00', '17:00'];
     for (const [index, time] of times.entries()) pieces.push({
       id: `story-${cycle.number}-${day}-${index}`, cycle: cycle.number, number: 0,
-      date: cycle.number === 1 ? '' : addDays(cycle.start, day), time: cycle.number === 1 ? 'A definir' : time, channel: 'Stories Instagram',
+      date: cycle.number === 1 ? (day === 0 ? '2026-11-24' : '') : addDays(cycle.start, day), time: cycle.number === 1 && day > 0 ? 'A definir' : time, channel: 'Stories Instagram',
       theme: `${themes[Math.floor(day * 12 / 30)]} · desdobramento com a equipe da loja`, status: 'proposed',
     });
   }
   for (const [index, offset] of [8, 15, 22, 28].entries()) {
     let date = addDays(cycle.start, offset);
     while ([0, 6].includes(new Date(`${date}T12:00:00Z`).getUTCDay())) date = addDays(date, 1);
-    pieces.push({ id: `google-${cycle.number}-${index}`, cycle: cycle.number, number: 0, date: cycle.number === 1 ? '' : date, time: cycle.number === 1 ? 'A definir' : '10:00', channel: 'Google Perfil da Empresa', theme: themes[index * 3], status: 'proposed' });
+    pieces.push({ id: `google-${cycle.number}-${index}`, cycle: cycle.number, number: 0, date: cycle.number === 1 ? (index === 0 ? '2026-11-24' : '') : date, time: cycle.number === 1 && index > 0 ? 'A definir' : '10:00', channel: 'Google Perfil da Empresa', theme: themes[index * 3], status: 'proposed' });
   }
   return pieces.sort((a, b) => `${a.date}T${a.time}`.localeCompare(`${b.date}T${b.time}`)).map((piece, index) => ({ ...piece, number: index + 1 }));
 });
 export const milestones = [
   { date: '2026-11-13', time: '17:00', title: 'Recebimento inicial de acessos, acervo e relatórios comerciais', owner: 'Construcel · prazo proposto' },
-  { date: '2026-11-20', time: '16:00', title: 'Diagnóstico dos números, estratégia e planejamento para revisão', owner: 'ABUHSCA · validação da Construcel' },
-  { date: '2026-11-27', time: '16:00', title: 'Ilha de edição, criativos, landing page e configuração das campanhas', owner: 'ABUHSCA · após materiais e captação acordada' },
-  { date: '2026-12-04', time: '16:00', title: 'Aprovação editorial e conferência técnica para entrada no ar', owner: 'ABUHSCA + Construcel' },
-  { date: '2026-12-09', time: '09:00', title: 'Início previsto da veiculação do segundo mês', owner: 'ABUHSCA · condicionado à liberação da operação' },
+  { date: '2026-11-16', time: '17:00', title: 'Diagnóstico dos números, estratégia e planejamento para revisão', owner: 'ABUHSCA · validação da Construcel' },
+  { date: '2026-11-19', time: '17:00', title: 'Produção de 18 a 20/11: edição, primeiro lote, landing page e campanhas', owner: 'ABUHSCA · após materiais e captação acordada' },
+  { date: '2026-11-23', time: '16:00', title: 'Aprovação editorial e conferência técnica para entrada no ar', owner: 'ABUHSCA + Construcel' },
+  { date: '2026-11-24', time: 'A definir', title: 'Entrada no ar prevista do primeiro lote de social media e campanhas', owner: 'ABUHSCA · condicionado à liberação da operação' },
   { date: '2027-02-05', time: '16:00', title: 'Fechamento do ciclo e relatório final', owner: 'ABUHSCA' },
 ];
 export const campaigns = [
-  { id: 'meta-start', platform: 'Meta Ads', date: '2026-12-09', time: '09:00', description: 'Entrada no ar prevista no mês 2, após planejamento, conferência técnica, acessos, verba e aprovação.', status: 'proposed' as const },
-  { id: 'google-start', platform: 'Google Ads', date: '2026-12-09', time: '09:30', description: 'Janela proposta no mês 2; liberação e análise da plataforma também são necessárias.', status: 'proposed' as const },
+  { id: 'meta-start', platform: 'Meta Ads', date: '2026-11-24', time: 'A definir', description: 'Primeiro lote previsto em 24/11, após planejamento, conferência técnica, acessos, verba e aprovação. Horário no calendário aprovado.', status: 'proposed' as const },
+  { id: 'google-start', platform: 'Google Ads', date: '2026-11-24', time: 'A definir', description: 'Janela proposta em 24/11; horário a definir. A análise e liberação da plataforma podem afetar o início efetivo.', status: 'proposed' as const },
 ];
 export const captureWindows = [
-  { cycle: 1, date: '2026-11-23', time: '09:00–11:00', receipt: 'até 13/11 para acervo existente', label: 'Visita para fotos e vídeos · proposta a acordar', detail: 'ABUHSCA + Construcel: confirmar local, deslocamento, duração, roteiro, responsáveis, entregas e eventuais custos antes da visita. Não há visita já agendada nem pacote de captações recorrentes incluído por esta página.' },
+  { cycle: 1, date: '2026-11-17', time: 'A combinar', receipt: 'até 13/11 para acervo existente', label: 'Visita para fotos e vídeos · proposta a acordar', detail: 'ABUHSCA + Construcel: confirmar local, deslocamento, duração, roteiro, responsáveis, entregas e eventuais custos antes da visita. Não há visita já agendada nem pacote de captações recorrentes incluído por esta página.' },
   { cycle: 2, date: '2026-12-10', time: '09:00–10:00', receipt: '09 a 11/12', label: 'Complementos do segundo ciclo', detail: 'Equipe Construcel: separar e gravar materiais complementares orientados pela ABUHSCA. Não é uma nova visita presencial.' },
   { cycle: 3, date: '2027-01-12', time: '09:00–10:00', receipt: '08 a 12/01', label: 'Complementos do terceiro ciclo', detail: 'Equipe Construcel: atualizar fotos, vídeos, preços e estoque para o planejamento aprovado. Não é uma nova visita presencial.' },
 ];
@@ -149,7 +149,7 @@ export function scheduleCsv(): string {
   const rows: (string | number)[][] = [
     ['Categoria', 'Data', 'Horário de Brasília', 'Atividade', 'Situação'],
     ...meetings.map(m => ['Reunião', dateLabel(m.date, true), m.time, m.title, m.status === 'confirmed' ? 'Confirmada' : 'Proposta — a confirmar']),
-    ...pieceSchedule.map(p => [`Peça — ${p.channel}`, dateLabel(p.date, true), p.time, `${p.id} · Ciclo ${p.cycle} · ${p.theme}`, p.cycle === 1 ? 'Produção no mês 1 — veiculação sem data; alinhamento contratual necessário' : 'Proposta — depende de materiais e aprovação']),
+    ...pieceSchedule.map(p => [`Peça — ${p.channel}`, dateLabel(p.date, true), p.time, `${p.id} · Ciclo ${p.cycle} · ${p.theme}`, p.date ? 'Proposta — depende de materiais e aprovação' : 'Lote em produção — data de veiculação a alinhar; sem transferência automática de cotas']),
     ...milestones.map(m => ['Marco de entrega', dateLabel(m.date, true), m.time, m.title, 'Proposta — depende de acessos, materiais e revisão']),
     ...campaigns.map(c => ['Anúncios', dateLabel(c.date, true), c.time, c.platform, 'Proposta — depende de acessos, verba e aprovação']),
     ...captureWindows.map(c => [c.cycle === 1 ? 'Visita a acordar' : 'Gravação pela cliente', dateLabel(c.date, true), c.time, c.label, c.detail]),
