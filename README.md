@@ -66,3 +66,7 @@ A MARATONA possui uma demonstração clicável de 11 módulos, acessível pelo m
 ### Aplicativo de onboarding Construcel
 
 O onboarding agora inclui dez etapas, anexos/links, salvamento local, revisão e exportação ZIP. [Documentação e estado da implantação](docs/PLATAFORMA-ONBOARDING-CONSTRUCEL.md). O [backend privado](server/onboarding/README.md) foi criado e testado; o recebimento em produção exige hospedá-lo e configurar `ONBOARDING_API_URL` no build do GitHub Pages. Sem essa configuração, a página informa o modo local e não simula envio.
+
+### Instalação na HostGator / cPanel
+
+Domínio informado: `abuhsca.com.br`. A [variante PHP](server/hostgator/README.md) dispensa Node/Docker na hospedagem e mantém dados criptografados fora de `public_html`. `npm run package:hostgator` gera um pacote **privado de primeira instalação**, com convites, para extrair na pasta inicial da conta cPanel. Não alterar DNS/e-mail nem publicar o ZIP. Destino planejado: `https://abuhsca.com.br/onboarding-construcel/`. Requer upload autenticado ao painel e validação antes de considerar o serviço instalado.

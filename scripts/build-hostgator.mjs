@@ -1,0 +1,30 @@
+import { mkdir, copyFile, cp, writeFile } from 'node:fs/promises';
+import { resolve, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { spawnSync } from 'node:child_process';
+import { prepareHostgatorBackend } from './hostgator-package-lib.mjs';
+const root = fileURLToPath(new URL('..', import.meta.url));
+const stamp = new Date().toISOString().replace(/[^0-9]/g, '').slice(0, 17);
+const output = resolve(root, 'deploy-artifacts', `hostgator-construcel-${stamp}`);
+const home = join(output, 'home');
+const build = join(output, 'build');
+const base = '/onboarding-construcel/';
+const origin = 'https://abuhsca.com.br';
+await mkdir(output, { recursive: true, mode: 0o700 });
+const result = spawnSync('npm', ['run', 'build', '--', `--base=${base}`, `--outDir=${build}`, '--emptyOutDir'], {
+  cwd: root, env: { ...process.env, VITE_ONBOARDING_API_URL: `${origin}${base}api/index.php?route=` }, stdio: ['ignore', 'ignore', 'inherit'],
+});
+if (result.status !== 0) throw new Error('Build HostGator falhou.');
+const target = join(home, 'public_html', 'onboarding-construcel');
+await mkdir(target, { recursive: true });
+await copyFile(join(build, 'construcel', 'onboarding', 'index.html'), join(target, 'index.html'));
+await cp(join(build, 'assets'), join(target, 'assets'), { recursive: true });
+await cp(join(build, 'media', 'construcel'), join(target, 'media', 'construcel'), { recursive: true });
+await copyFile(join(root, 'server', 'hostgator', 'public.htaccess'), join(target, '.htaccess'));
+await prepareHostgatorBackend(home, { origin });
+await writeFile(join(home, 'abuhsca-onboarding-private', 'INSTALACAO.txt'), `PRIMEIRA INSTALAÇÃO — ABUHSCA / HOSTGATOR\n\nNo cPanel, abra Gerenciador de Arquivos e vá à pasta inicial da conta, um nível ACIMA de public_html. Envie e extraia este ZIP nessa pasta inicial. O pacote contém somente public_html/onboarding-construcel e abuhsca-onboarding-private. Ele não contém index do site principal nem alterações de DNS/e-mail.\n\nNão extraia dentro de public_html. Se onboarding-construcel ou abuhsca-onboarding-private já existirem, pare e preserve a instalação existente. Não substitua config.php: isso pode tornar dados criptografados ilegíveis.\n\nAtive PHP 8.1+ e SSL válido para abuhsca.com.br. Aguarde a aplicação de .user.ini se necessário.\n\nTeste de saúde: https://abuhsca.com.br/onboarding-construcel/api/index.php?route=/health\nDeve retornar {"ok":true,...}.\n\nAbra https://abuhsca.com.br/onboarding-construcel/ e clique Começar meu onboarding. Na revisão, entre com o convite da cliente, salve um rascunho e envie um arquivo fictício. Em outro navegador, entre com o convite da agência, carregue da nuvem e confira o arquivo. Só então distribua o endereço e o convite de cliente.\n\nOs convites estão em CONVITES-PRIVADOS.txt nesta pasta privada (visualize pelo Gerenciador de Arquivos). Não envie o ZIP nem o convite da agência no grupo. O recebimento não dispara e-mail automático.\n\nApós extrair, apague o ZIP enviado da hospedagem. Mantenha backup privado da configuração e dos dados.\n`);
+const zip = join(output, 'INSTALAR-NA-PASTA-INICIAL-DO-CPANEL.zip');
+const packed = spawnSync('python', ['-c', `import pathlib,zipfile,sys\nroot=pathlib.Path(sys.argv[1])\nwith zipfile.ZipFile(sys.argv[2],'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:\n for p in sorted(root.rglob('*')):\n  if p.relative_to(root).as_posix()=='public_html': continue\n  z.write(p,p.relative_to(root))\n`, home, zip], { stdio: 'inherit' });
+if (packed.status !== 0) throw new Error('Não foi possível gerar o pacote.');
+console.log(`Pacote privado pronto: ${zip}`);
+console.log('Convites e chaves não foram exibidos. Instalar acima de public_html.');

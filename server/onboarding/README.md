@@ -1,5 +1,7 @@
 # Recebimento privado do onboarding Construcel
 
+**Alternativa para o cPanel HostGator informado pelo usuário:** [pacote PHP e instruções](../hostgator/README.md). Esta página documenta a variante Node/Docker, que continua disponível para VPS.
+
 Backend novo, sem dependências npm, Node 24 + SQLite e armazenamento de arquivos em disco persistente. **O código está pronto; publicar o frontend no GitHub Pages não hospeda este servidor. Nenhum servidor público foi provisionado automaticamente.**
 
 ## Implantação concreta

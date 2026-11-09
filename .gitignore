@@ -11,3 +11,6 @@ onboarding-invites-private.txt
 .env.local
 .env.production.local
 /data/
+
+# HostGator bundles contain private installation keys and invitations
+/deploy-artifacts/

@@ -29,3 +29,7 @@ Para ativar, seguir [instruções do servidor](../server/onboarding/README.md): 
 - Integração cliente/servidor local: convite cliente, rascunho na nuvem, upload, protocolo de entrega; sessão independente da agência, restauração e download com os mesmos bytes.
 - Larguras 320, 390, 768 e 1440px, sem transbordamento horizontal ou exceções JavaScript.
 - O teste local não equivale a backend implantado; a hospedagem real ainda precisa ser conectada.
+
+## Destino HostGator confirmado pelo usuário
+
+O usuário informou cPanel e DNS de `abuhsca.com.br`. Foi adicionada variante PHP/OpenSSL com armazenamento criptografado privado, sem banco externo, em `server/hostgator/`. O pacote gerado por `npm run package:hostgator` contém o aplicativo público em `public_html/onboarding-construcel` e a pasta privada fora de `public_html`, incluindo convites distintos. Não altera DNS/e-mail/site principal. A instalação requer upload/extrair na pasta inicial do cPanel; a informação DNS não fornece autenticação. Antes de distribuir o novo endereço, conferir `/health`, SSL, upload real e leitura pela agência. Ver [instruções completas e migração de rascunhos](../server/hostgator/README.md).

@@ -1,0 +1,7 @@
+Options -Indexes
+<IfModule mod_setenvif.c>
+  SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+</IfModule>
+<Files "schema.json">
+  Require all denied
+</Files>
