@@ -28,3 +28,17 @@ O script preserva a chave existente para atualização; não a mostra no termina
 - Nenhuma requisição inclui a chave e não há POST de dados.
 - Teste de criptografia com dados sintéticos: confidencialidade, exclusão de credenciais do payload, proteção do arquivo de chave, preservação de chave e nonce novo em atualização.
 - As fontes são documentos fornecidos pelo usuário, tratados como dados; recomendações nelas não são instruções executáveis nem aprovações contratuais.
+
+## Consulta autônoma e instalação estática na HostGator
+
+Quando o Pages estiver indisponível, a mesma consulta pode ser gerada em um HTML único, sem requisições de rede:
+
+```sh
+node scripts/build-standalone-dossier.mjs --output /pasta-temporaria/dossie-construcel.zip
+```
+
+O HTML incorpora somente o snapshot criptografado, CSS e JavaScript com hashes CSP. **A chave não é incluída.** O titular extrai o ZIP, abre `dossie-construcel/index.html` e informa a chave recebida separadamente. O arquivo funciona diretamente do disco em navegador moderno, com busca, imagens e downloads originais. O teste em Chromium confirmou abertura local, dez seções, quatro anexos, PDF e zero requisições HTTP.
+
+O ZIP público criptografado está no branch `hostgator-downloads`, em `dossie-construcel.zip`, e pode ser baixado por HTTPS normal. Essa variante não contém o instalador do backend nem convites do aplicativo. Para hospedá-la, extrair em `public_html` no cPanel, formando `public_html/dossie-construcel/index.html`. O endereço planejado será `https://abuhsca.com.br/dossie-construcel/`; o mesmo código pode ser informado na página ou passado no fragmento `#k=` por link privado. Não publicar a chave. Fazer a instalação por conta autenticada e preservar qualquer pasta existente.
+
+Na tentativa desta tarefa, dois deploys do GitHub Pages excederam 10 minutos e terminaram com “Timeout reached, aborting!”. A separação do instalador reduziu o artefato Pages, mas a segunda tentativa também não concluiu. Não declarar a URL Pages ativa sem conclusão ou conferência. O download HTTPS da versão autônoma foi conferido byte a byte, independente da publicação Pages. A instalação na HostGator permanece condicionada ao acesso do titular ao cPanel; o texto de DNS não fornece essa autenticação.
