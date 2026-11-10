@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="robots" content="noindex,nofollow"><title>Instalar onboarding na HostGator | ABUHSCA</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body><main><a class="brand" href="../">abuhsca<sup>®</sup></a><p class="eyebrow">CONSTRUCEL · PRIMEIRA INSTALAÇÃO</p><h1>Baixe o aplicativo<br>para a HostGator.</h1><p>Prepare o pacote e salve o ZIP no seu computador. Os convites e a chave privada são gerados no seu navegador, sem envio ao servidor.</p>
+<div class="download"><button type="button" id="prepare">1. Preparar instalador</button><progress id="progress" hidden aria-label="Download do aplicativo"></progress><p id="status" role="status" aria-live="polite">O pacote tem aproximadamente 65 MB. Prefira fazer o download no computador.</p><a id="save" class="save" hidden download="HOSTGATOR-ONBOARDING-CONSTRUCEL.zip">2. Salvar ZIP no computador</a></div>
+<h2>Depois de baixar</h2><ol><li>Abra <strong>cPanel → Gerenciador de Arquivos → pasta inicial da conta</strong>, um nível acima de <code>public_html</code>.</li><li>Envie e extraia o ZIP nessa pasta inicial. O pacote contém a subpasta do aplicativo e uma pasta privada separada.</li><li>Confira as instruções e os convites em <code>abuhsca-onboarding-private</code>. Ative PHP 8.1 ou superior e SSL, e teste o recebimento antes de enviar o link à cliente.</li></ol>
+<aside><strong>Pacote privado e de primeira instalação.</strong><p>Não envie o ZIP no grupo e não o coloque dentro de <code>public_html</code>. Se já houver uma instalação ou dados, preserve a configuração existente: não substitua <code>config.php</code>.</p></aside><p class="note">Preparar ou baixar este pacote não instala nada na HostGator. O endereço final será https://abuhsca.com.br/onboarding-construcel/ após a instalação e os testes.</p></main><script type="module" src="./installer.js"></script></body></html>

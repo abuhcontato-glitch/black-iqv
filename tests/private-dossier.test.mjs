@@ -1,0 +1,14 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {mkdtemp,writeFile,readFile,rm} from 'node:fs/promises';import {tmpdir} from 'node:os';import {join,resolve} from 'node:path';import {spawnSync} from 'node:child_process';import {createDecipheriv} from 'node:crypto';
+test('private dossier encryption keeps the key outside the site and excludes submitted account credentials',async()=>{
+ const dir=await mkdtemp(join(tmpdir(),'private-dossier-test-'));try{
+  const zip=join(dir,'source.zip'),report=join(dir,'report.pdf'),keyFile=join(dir,'private-key.json'),output=join(dir,'record.bin');
+  const draft={schema:1,values:{'empresa.razao':'PRIVATE COMPANY FIXTURE','empresa.email':'test@example.com','acessos.conta-1':'SENTINEL_PASSWORD_PRIVATE_TEST_ONLY'},completed:['empresa'],categoryState:{'marca.logo':'Não possui'},links:{},updatedAt:'2026-11-10T14:17:00.000Z'};
+  await writeFile(join(dir,'fixture.json'),JSON.stringify(draft));await writeFile(report,'TEST REPORT WITHOUT CREDENTIALS');
+  const packed=spawnSync('python3',['-c',"import zipfile,sys\nwith zipfile.ZipFile(sys.argv[1],'w') as z: z.write(sys.argv[2],'fixture/respostas.json')",zip,join(dir,'fixture.json')]);assert.equal(packed.status,0);
+  const args=['scripts/build-construcel-dossier.mjs','--dossier',zip,'--report',report,'--key-file',keyFile,'--output',output];
+  const run=spawnSync(process.execPath,args,{cwd:resolve('.'),encoding:'utf8'});assert.equal(run.status,0,run.stderr);assert(!run.stdout.includes('SENTINEL_PASSWORD'));const access=JSON.parse(await readFile(keyFile,'utf8')),bytes=await readFile(output);assert(!bytes.includes(Buffer.from('PRIVATE COMPANY FIXTURE')));assert(!run.stdout.includes(access.key));
+  const decipher=createDecipheriv('aes-256-gcm',Buffer.from(access.key,'base64url'),bytes.subarray(8,20));decipher.setAAD(bytes.subarray(0,8));decipher.setAuthTag(bytes.subarray(-16));const clear=Buffer.concat([decipher.update(bytes.subarray(20,-16)),decipher.final()]).toString();assert(!clear.includes('SENTINEL_PASSWORD_PRIVATE_TEST_ONLY'));const payload=JSON.parse(clear);assert.equal(payload.stats.fields,3);assert.equal(payload.stats.reserved,1);assert(payload.sections.find(section=>section.id==='acessos').fields.find(field=>field.id==='acessos.conta-1').reserved);
+  const second=spawnSync(process.execPath,args,{cwd:resolve('.'),encoding:'utf8'});assert.equal(second.status,0);assert.equal(JSON.parse(await readFile(keyFile,'utf8')).key,access.key);assert.notDeepEqual(await readFile(output),bytes);
+  const blockedArgs=[...args];blockedArgs[6]=resolve('public/dossie-construcel/secret-key.json');const blocked=spawnSync(process.execPath,blockedArgs,{encoding:'utf8'});assert.notEqual(blocked.status,0);
+ }finally{await rm(dir,{recursive:true,force:true});}
+});

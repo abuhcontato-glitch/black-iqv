@@ -2,6 +2,14 @@
 
 A zona DNS enviada pelo usuário identifica `abuhsca.com.br` no cPanel HostGator. Ela não fornece autenticação ao painel nem confirma a versão PHP, SSL, limites ou pasta raiz. Não alterar A/MX/TXT/DKIM/SPF para esta instalação. O caminho planejado é **https://abuhsca.com.br/onboarding-construcel/**, dentro do site atual.
 
+## Download pelo navegador
+
+Página de download: https://abuhcontato-glitch.github.io/black-iqv/instalar-hostgator/
+
+Clicar **Preparar instalador** e depois **Salvar ZIP no computador**. A página baixa somente um template público sem credenciais e gera convites/chave com Web Crypto no navegador do titular. O ZIP final privado é montado localmente, preservando os arquivos comprimidos originais. Chave e convites não são enviados ao servidor. O template base sozinho não é um instalador completo. Usar o ZIP final gerado, em uma primeira instalação, conforme os passos abaixo.
+
+O workflow gera o template público em `dist/instalar-hostgator/base.zip`; ele não é versionado como binário no Git. Testes verificam download real, integridade ZIP, hashes de convites, permissões privadas e ausência de POST/exfiltração de convites.
+
 ## Pacote de primeira instalação
 
 Executar na raiz do repositório, com Node 24, npm e Python:

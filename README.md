@@ -70,3 +70,9 @@ O onboarding agora inclui dez etapas, anexos/links, salvamento local, revisão e
 ### Instalação na HostGator / cPanel
 
 Domínio informado: `abuhsca.com.br`. A [variante PHP](server/hostgator/README.md) dispensa Node/Docker na hospedagem e mantém dados criptografados fora de `public_html`. `npm run package:hostgator` gera um pacote **privado de primeira instalação**, com convites, para extrair na pasta inicial da conta cPanel. Não alterar DNS/e-mail nem publicar o ZIP. Destino planejado: `https://abuhsca.com.br/onboarding-construcel/`. Requer upload autenticado ao painel e validação antes de considerar o serviço instalado.
+
+Download normal pelo navegador: https://abuhcontato-glitch.github.io/black-iqv/instalar-hostgator/ — preparar o instalador e salvar o ZIP. As credenciais do pacote final são geradas no navegador, não publicadas no GitHub Pages. O workflow disponibiliza apenas o template público sem chaves nem convites.
+
+### Consulta privada do dossiê recebido
+
+A página `/dossie-construcel/` apresenta um snapshot criptografado dos documentos fornecidos pelo usuário. A abertura exige o link privado; a chave fica fora do repositório. Campos de credenciais são reservados e seus valores não integram a página. [Documentação de acesso, fontes e atualização](docs/DOSSIE-PRIVADO-CONSTRUCEL.md).

@@ -23,14 +23,14 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci --no-audit --no-fund
-      - uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          coverage: none
+      - name: Conferir PHP do runner
+        run: php --version && php -l server/hostgator/api.php
       - run: npm test
       - run: npm run build -- --base=/${{ github.event.repository.name }}/
         env:
           VITE_ONBOARDING_API_URL: ${{ vars.ONBOARDING_API_URL }}
+      - name: Gerar instalador público sem credenciais
+        run: node scripts/build-public-hostgator.mjs --output dist/instalar-hostgator/base.zip
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
