@@ -8,7 +8,7 @@ Página de download: https://abuhcontato-glitch.github.io/black-iqv/instalar-hos
 
 Clicar **Preparar instalador** e depois **Salvar ZIP no computador**. A página baixa somente um template público sem credenciais e gera convites/chave com Web Crypto no navegador do titular. O ZIP final privado é montado localmente, preservando os arquivos comprimidos originais. Chave e convites não são enviados ao servidor. O template base sozinho não é um instalador completo. Usar o ZIP final gerado, em uma primeira instalação, conforme os passos abaixo.
 
-O workflow gera o template público em `dist/instalar-hostgator/base.zip`; ele não é versionado como binário no Git. Testes verificam download real, integridade ZIP, hashes de convites, permissões privadas e ausência de POST/exfiltração de convites.
+O template público sem credenciais fica no branch separado `hostgator-downloads`, em `base.zip`, para evitar incluir o instalador grande no artefato do GitHub Pages. A página baixa o arquivo público por raw.githubusercontent.com e gera as credenciais localmente. Para atualizar o instalador, gerar novamente com `scripts/build-public-hostgator.mjs --output /pasta-temporaria/base.zip` e atualizar esse branch, preservando o histórico. Testes verificam download real, integridade ZIP, hashes de convites, permissões privadas e ausência de POST/exfiltração de convites.
 
 ## Pacote de primeira instalação
 

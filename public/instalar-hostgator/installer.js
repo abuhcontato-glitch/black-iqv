@@ -12,7 +12,7 @@ button.addEventListener('click', async () => {
   status.textContent = 'Baixando os arquivos públicos do aplicativo…';
   try {
     if (!crypto.subtle || !crypto.getRandomValues) throw new Error('Abra esta página por HTTPS em um navegador atualizado.');
-    const response = await fetch('./base.zip', { credentials: 'omit' });
+    const response = await fetch('https://raw.githubusercontent.com/abuhcontato-glitch/black-iqv/hostgator-downloads/base.zip', { credentials: 'omit' });
     if (!response.ok) throw new Error('O pacote ainda não está disponível. Atualize esta página e tente novamente.');
     const total = Number(response.headers.get('content-length'));
     const chunks = []; let received = 0;
