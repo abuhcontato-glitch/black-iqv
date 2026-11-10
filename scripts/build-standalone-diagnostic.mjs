@@ -1,0 +1,17 @@
+import { readFile,writeFile,mkdir,chmod } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { resolve,dirname,join } from 'node:path';
+import { spawnSync } from 'node:child_process';
+const i=process.argv.indexOf('--output');if(i<0||!process.argv[i+1])throw Error('Informe --output /pasta/diagnostico.zip');
+const output=resolve(process.argv[i+1]),dir=dirname(output),base='public/diagnostico-construcel';
+let [html,css,js,math,encrypted]=await Promise.all(['index.html','style.css','viewer.js','math.js','record.bin'].map(f=>readFile(join(base,f),f==='record.bin'?undefined:'utf8')));
+js=math.replaceAll('export function','function')+'\n'+js.replace("import { economics, funnel } from './math.js';",'');
+const marker="    const response = await fetch('./record.bin', { credentials: 'omit', cache: 'no-store' }); if (!response.ok) throw new Error();\n    const encrypted = new Uint8Array(await response.arrayBuffer()), header = new TextEncoder().encode('ABUHDS01');";
+if(!js.includes(marker))throw Error('Marcador de carga não encontrado');
+js=js.replace(marker,"    const encrypted = base64(document.querySelector('#encrypted-payload').textContent.trim()), header = new TextEncoder().encode('ABUHDS01');");
+const hash=s=>createHash('sha256').update(s).digest('base64');
+const csp=`default-src 'none'; script-src 'sha256-${hash(js)}'; style-src 'sha256-${hash(css)}'; object-src 'none'; base-uri 'none'; form-action 'none'`;
+html=html.replace(/content="default-src[^\"]*"/,`content="${csp}"`).replace('<link rel="stylesheet" href="./style.css">',`<style>${css}</style>`).replace('<script type="module" src="./viewer.js"></script>',`<div id="encrypted-payload" hidden>${encrypted.toString('base64')}</div><script>${js}</script>`);
+await mkdir(dir,{recursive:true});const file=join(dir,'diagnostico-autonomo.html');await writeFile(file,html);await chmod(file,0o644);
+const py="import zipfile,sys\nwith zipfile.ZipFile(sys.argv[2],'w',zipfile.ZIP_DEFLATED) as z:\n z.write(sys.argv[1],'diagnostico-construcel/index.html')\n i=zipfile.ZipInfo('LEIA-ME.txt');i.external_attr=0o100644<<16\n z.writestr(i,'DIAGNOSTICO PRIVADO\\nExtraia em public_html no cPanel. Deve resultar em public_html/diagnostico-construcel/index.html. Arquivo 0644; pasta 0755. Abra https://abuhsca.com.br/diagnostico-construcel/ com a mesma chave privada do dossie. Nao substitui o site principal nem o dossie original. Tambem pode abrir index.html no computador e informar a chave. A chave nao esta neste pacote.\\n')";
+if(spawnSync('python3',['-c',py,file,output],{stdio:'inherit'}).status)throw Error('Falha ao criar ZIP');console.log('Pacote privado gerado.');
