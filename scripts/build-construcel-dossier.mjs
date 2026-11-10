@@ -5,6 +5,7 @@ import { spawnSync } from 'node:child_process';
 import { steps } from '../src/onboarding-app/model.ts';
 const argument = name => { const index = process.argv.indexOf(name); if (index < 0 || !process.argv[index + 1]) throw new Error(`Informe ${name}.`); return resolve(process.argv[index + 1]); };
 const dossier = argument('--dossier'), report = argument('--report'), keyFile = argument('--key-file');
+const includeAccess = process.argv.includes('--include-access');
 const output = process.argv.includes('--output') ? argument('--output') : resolve('public/dossie-construcel/record.bin');
 if ([dossier, report, keyFile].includes(output)) throw new Error('A saída não pode substituir fontes ou chave.');
 if (keyFile === resolve('.') || keyFile.startsWith(resolve('.') + '/')) throw new Error('A chave deve ficar fora do site e do Git.');
@@ -16,7 +17,7 @@ const sections = steps.map(step => ({
   reviewed: draft.completed.includes(step.id),
   fields: step.fields.map(field => {
     const value = draft.values[`${step.id}.${field.id}`];
-    return { id: `${step.id}.${field.id}`, label: field.label, provided: typeof value === 'string' && value.trim() !== '', reserved: step.id === 'acessos' && Boolean(value), value: step.id === 'acessos' && value ? 'Informação recebida. Conteúdo reservado no arquivo original; credenciais não são exibidas nesta página.' : value || 'Não informado' };
+    return { id: `${step.id}.${field.id}`, label: field.label, provided: typeof value === 'string' && value.trim() !== '', sensitive: step.id === 'acessos' && Boolean(value), reserved: step.id === 'acessos' && Boolean(value) && !includeAccess, value: step.id === 'acessos' && value && !includeAccess ? 'Informação recebida. Conteúdo reservado no arquivo original; credenciais não são exibidas nesta página.' : value || 'Não informado' };
   }),
   categories: (step.categories ?? []).map(category => {
     const key = `${step.id}.${category.id}`;
@@ -25,8 +26,8 @@ const sections = steps.map(step => ({
 }));
 const reportBytes = await readFile(report), zipBytes = await readFile(dossier);
 const payload = {
-  schema: 1, updatedAt: draft.updatedAt, sections, files,
-  stats: { fields: Object.keys(draft.values).length, reviewed: draft.completed.length, attachments: files.length, categoryStates: Object.keys(draft.categoryState).length, links: Object.values(draft.links).filter(value => String(value).trim()).length, reserved: sections.find(section => section.id === 'acessos').fields.filter(field => field.provided).length },
+  schema: 1, accessIncluded: includeAccess, updatedAt: draft.updatedAt, sections, files,
+  stats: { fields: Object.keys(draft.values).length, reviewed: draft.completed.length, attachments: files.length, categoryStates: Object.keys(draft.categoryState).length, links: Object.values(draft.links).filter(value => String(value).trim()).length, reserved: sections.find(section => section.id === 'acessos').fields.filter(field => field.reserved).length },
   sources: { dossierName: 'construcel-dossie-onboarding.zip', reportName: 'ABUHSCA_Relatorio_Onboarding_Construcel_2026-11-10.pdf', dossierSha256: createHash('sha256').update(zipBytes).digest('hex') },
   report: { name: 'Relatorio_Onboarding_Construcel_2026-11-10.pdf', content: reportBytes.toString('base64') },
   summary: [
@@ -42,7 +43,7 @@ const payload = {
     { title: 'Marcação dos materiais', text: 'Categorias com anexos também foram marcadas “Não possui”. Preservamos a resposta original e sinalizamos os pontos para conferência.', owner: 'Construcel + ABUHSCA' },
     { title: 'Ofertas vigentes', text: 'Validar produtos, preço, estoque, validade semanal, parcelamento e frete antes da divulgação.', owner: 'Compras + comercial + aprovadoras' },
     { title: 'Atendimento e funil', text: 'Mapear tempo de resposta, repasse de contatos, acompanhamento de orçamento e atualização do CRM.', owner: 'Atendimento + vendedores + ABUHSCA' },
-    { title: 'Acessos recebidos', text: 'Conferir titularidade e permissões por convite. O recebimento de informações não comprova acesso testado. As credenciais do arquivo original não foram incluídas nesta página.', owner: 'Titulares das contas + ABUHSCA' },
+    { title: 'Acessos recebidos', text: `Conferir titularidade e permissões por convite. O recebimento de informações não comprova acesso testado. ${includeAccess ? 'Os dados de acesso foram incluídos integralmente na consulta criptografada, por solicitação do titular.' : 'As credenciais do arquivo original não foram incluídas nesta página.'}`, owner: 'Titulares das contas + ABUHSCA' },
     { title: 'Escopo e decisões', text: 'Intenções de mudança de marca, novos canais, treinamento e expansão comercial precisam de avaliação e alinhamento. Não foram convertidos em entregas extras do SPRINT.', owner: 'Direção da Construcel + ABUHSCA' },
     { title: 'Data cadastral', text: `O campo “Data de atualização” veio preenchido com ${draft.values['empresa.atualizacao'] || 'data não informada'}. Confirmar se corresponde à fundação ou à atualização dos dados.`, owner: 'Responsável pelo cadastro' },
   ],
@@ -55,4 +56,4 @@ const header = Buffer.from('ABUHDS01'), iv = randomBytes(12), cipher = createCip
 const encrypted = Buffer.concat([header, iv, cipher.update(Buffer.from(JSON.stringify(payload))), cipher.final(), cipher.getAuthTag()]);
 await mkdir(dirname(output), { recursive: true });
 await writeFile(output, encrypted);
-console.log('Dossiê criptografado gerado. Chave e respostas originais não foram publicadas. Credenciais reservadas fora da página.');
+console.log(includeAccess ? 'Dossiê criptografado gerado com os campos de acesso autorizados. Nenhuma credencial foi exibida no terminal.' : 'Dossiê criptografado gerado. Credenciais reservadas fora da página.');

@@ -75,4 +75,4 @@ Download normal pelo navegador: https://abuhcontato-glitch.github.io/black-iqv/i
 
 ### Consulta privada do dossiê recebido
 
-A página `/dossie-construcel/` apresenta um snapshot criptografado dos documentos fornecidos pelo usuário. A abertura exige o link privado; a chave fica fora do repositório. Campos de credenciais são reservados e seus valores não integram a página. [Documentação de acesso, fontes e atualização](docs/DOSSIE-PRIVADO-CONSTRUCEL.md).
+A página `/dossie-construcel/` apresenta um snapshot criptografado dos documentos fornecidos pelo usuário. A abertura exige o link privado; a chave fica fora do repositório. Campos de credenciais são reservados por padrão; mediante solicitação expressa do titular, `--include-access` os inclui integralmente no conteúdo criptografado, visível somente após a abertura com a chave. [Documentação de acesso, fontes e atualização](docs/DOSSIE-PRIVADO-CONSTRUCEL.md).

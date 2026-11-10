@@ -15,7 +15,7 @@ function render(data) {
   const header = element('header', undefined, 'header');
   header.append(anchor('abuhsca®', '../', 'wordmark'));
   const nav = element('nav'); nav.setAttribute('aria-label', 'Seções do dossiê');
-  for (const [text, id] of [['Visão geral', 'visao'], ['Respostas', 'respostas'], ['Materiais', 'materiais'], ['Pendências', 'pendencias']]) nav.append(navLink(text, id));
+  for (const [text, id] of [['Visão geral', 'visao'], ['Respostas', 'respostas'], ['Materiais', 'materiais'], ['Pendências', 'pendencias'], ['Acessos', 'contas-acessos']]) nav.append(navLink(text, id));
   const lock = element('button', 'Bloquear', 'lock'); lock.type = 'button'; lock.onclick = () => { for (const url of objectUrls) URL.revokeObjectURL(url); objectUrls = []; activeKey = ''; app.replaceChildren(); app.hidden = true; gate.hidden = false; status.textContent = 'Página bloqueada.'; keyInput.focus(); };
   header.append(nav, lock); app.append(header);
   const main = element('main'); app.append(main);
@@ -36,8 +36,22 @@ function render(data) {
   const toolbar = element('div', undefined, 'search-bar'); const searchLabel = element('label', 'Buscar nas respostas'); const search = element('input'); search.type = 'search'; search.placeholder = 'Ex.: vendas, equipe, preços…'; searchLabel.append(search); toolbar.append(searchLabel); answers.append(toolbar);
   const answerCards = [];
   for (const item of data.sections) {
-    const article = element('article', undefined, 'answer-section'); const top = element('div', undefined, 'answer-heading'); top.append(element('h3', item.title), badge(item.reviewed ? 'Marcada como revisada pela cliente' : 'Não revisada')); article.append(top);
-    for (const field of item.fields) { const row = element('div', undefined, `answer-row ${field.provided ? '' : 'empty'} ${field.reserved ? 'reserved' : ''}`); row.append(element('h4', field.label), element('p', field.value)); if (field.reserved) row.append(badge('Recebido · conteúdo reservado', 'reserved')); article.append(row); }
+    const article = element('article', undefined, 'answer-section'); if (item.id === 'acessos') article.id = 'contas-acessos'; const top = element('div', undefined, 'answer-heading'); top.append(element('h3', item.title), badge(item.reviewed ? 'Marcada como revisada pela cliente' : 'Não revisada')); article.append(top);
+    if (item.id === 'acessos' && data.accessIncluded) {
+      const all = element('button', 'Copiar todos os acessos', 'button secondary'); all.type = 'button';
+      all.onclick = async () => { try { await navigator.clipboard.writeText(item.fields.filter(field => field.provided).map(field => `${field.label}\n${field.value}`).join('\n\n')); all.textContent = 'Acessos copiados'; } catch { all.textContent = 'Selecione os dados abaixo para copiar'; } }; top.append(all);
+    }
+    for (const field of item.fields) {
+      const row = element('div', undefined, `answer-row ${field.provided ? '' : 'empty'} ${field.reserved ? 'reserved' : ''}`);
+      row.append(element('h4', field.label), element('p', field.value));
+      if (field.reserved) row.append(badge('Recebido · conteúdo reservado', 'reserved'));
+      if (field.sensitive && !field.reserved) {
+        row.classList.add('access-visible');
+        const copy = element('button', 'Copiar dados de acesso', 'button secondary'); copy.type = 'button';
+        copy.onclick = async () => { try { await navigator.clipboard.writeText(field.value); copy.textContent = 'Copiado'; } catch { copy.textContent = 'Selecione o texto para copiar'; } }; row.append(copy);
+      }
+      article.append(row);
+    }
     if (item.categories.length) { const list = element('div', undefined, 'category-list'); for (const category of item.categories) { const row = element('div'); row.append(element('strong', category.label), badge(category.status), element('span', `${category.count} anexo(s)`)); if (category.status === 'Não possui' && category.count > 0) row.append(badge('Há arquivo recebido · conferir marcação', 'warning')); if (category.link) row.append(element('span', category.link)); list.append(row); } article.append(list); }
     answers.append(article); answerCards.push(article);
   }
@@ -48,7 +62,7 @@ function render(data) {
   const pending = section('pendencias', '04 · PARA CONFERIR E AVANÇAR', 'O que ainda precisa chegar.', 'Leitura documental da ABUHSCA, sujeita a alinhamento. Dez etapas marcadas não significam informação completa, permissão concedida ou material aprovado.');
   const list = element('div', undefined, 'pending-list'); data.pending.forEach((item, index) => { const card = element('article'); card.append(element('span', String(index + 1).padStart(2, '0'), 'index')); const text = element('div'); text.append(element('h3', item.title), element('p', item.text), element('small', `Alinhamento: ${item.owner}`)); card.append(text); list.append(card); }); pending.append(list); main.append(pending);
   const source = section('relatorio', '05 · DOCUMENTAÇÃO', 'O relatório de referência.', 'Relatório fornecido junto ao dossiê. Recomendações são propostas; não alteram o contrato ou o cronograma por si só.');
-  source.append(download('Baixar relatório completo em PDF', pdf, data.report.name), element('p', `Fonte: ${data.sources.dossierName} · ${data.sources.reportName}`, 'source-note'), element('p', 'Credenciais e senhas do ZIP original foram excluídas desta página. Consulte o original em armazenamento privado e utilize permissões por convite nas plataformas.', 'security-note')); main.append(source);
+  source.append(download('Baixar relatório completo em PDF', pdf, data.report.name), element('p', `Fonte: ${data.sources.dossierName} · ${data.sources.reportName}`, 'source-note'), element('p', data.accessIncluded ? 'Os e-mails, logins, senhas e demais dados de acesso fornecidos estão disponíveis na seção Contas e acessos após a abertura com a chave privada. Permissões ainda precisam ser conferidas nas plataformas.' : 'Credenciais e senhas do ZIP original foram excluídas desta página. Consulte o original em armazenamento privado e utilize permissões por convite nas plataformas.', 'security-note')); main.append(source);
   const footer = element('footer'); footer.append(element('strong', 'ABUHSCA × CONSTRUCEL'), element('p', 'Consulta privada · compartilhe somente com pessoas autorizadas. Guarde o link recebido para reabrir a página.')); app.append(footer);
   const copy = element('button', 'Copiar link privado', 'button secondary'); copy.type = 'button'; copy.onclick = async () => { try { await navigator.clipboard.writeText(`${location.origin}${location.pathname}#k=${activeKey}`); copy.textContent = 'Link privado copiado'; } catch { copy.textContent = 'Abra novamente o link privado recebido'; } }; footer.append(copy);
   gate.hidden = true; app.hidden = false; document.title = 'Dossiê de onboarding | ABUHSCA × Construcel'; window.scrollTo(0, 0);

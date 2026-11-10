@@ -6,7 +6,7 @@ Página separada em `/dossie-construcel/`. O conteúdo comercial só abre com a 
 
 A página organiza o dossiê e relatório enviados pelo usuário: todas as seções, respostas originais, marcações de materiais, anexos de imagem, PDF de referência e pendências documentais. Campos vazios e revisões marcadas pela cliente não se tornam validações da agência. Textos de análise são identificados como leitura inicial, sujeitos a alinhamento; não modificam contrato ou calendário.
 
-As credenciais em campos de acesso **não foram incluídas no payload da página**. Cada campo recebido aparece como reservado; o arquivo original deve permanecer em armazenamento privado. Nenhuma credencial foi usada para entrar nas plataformas. A página não recebe nem processa alterações nesses acessos.
+No modo padrão, as credenciais em campos de acesso **não são incluídas no payload da página**. Nesse modo, cada campo recebido aparece como reservado; o arquivo original deve permanecer em armazenamento privado. Nenhuma credencial foi usada para entrar nas plataformas. A página não recebe nem processa alterações nesses acessos.
 
 ## Proteção e atualização
 
@@ -46,3 +46,9 @@ Na tentativa desta tarefa, dois deploys do GitHub Pages excederam 10 minutos e t
 ### Permissões da hospedagem compartilhada
 
 O primeiro pacote autônomo preservou indevidamente o modo local `0600` do HTML. A captura do cPanel confirmou `index.html` com `0600` e o acesso HTTP retornou 403. O gerador foi corrigido: HTML público e metadados ZIP usam `0644`; pastas públicas devem usar `0755`. A cópia já instalada pode ser corrigida em cPanel → selecionar `index.html` → Permissões → `0644`, sem alterar seu conteúdo ou a chave. Não aplicar esse modo aos arquivos privados de configuração: estes continuam `0600`, em pasta privada `0700` fora de `public_html`.
+
+## Acessos completos por solicitação expressa
+
+O titular solicitou explicitamente a exibição integral dos e-mails, logins, senhas e demais dados enviados. O snapshot atual foi gerado com `--include-access`. Os nove campos recebidos aparecem com o texto original após a abertura com a chave privada, sem máscaras, com cópia individual e “Copiar todos os acessos”. A chave foi preservada. Os valores permanecem exclusivamente no payload AES-GCM; não estão em texto simples no HTML, JS, ZIP ou repositório. Quem possui a chave pode consultar esses dados. Não usar essa opção sem solicitação expressa do titular.
+
+Pacote atualizado: `dossie-construcel-acessos.zip`, no branch de downloads. Para a instalação já feita na HostGator, substituir `public_html/dossie-construcel/index.html` pelo novo arquivo e manter `0644`. O conteúdo servido na HostGator só muda após essa substituição; o arquivo anterior permanece com campos reservados até então. Os dados foram conferidos com o ZIP original, sem testar logins ou acessar plataformas.
