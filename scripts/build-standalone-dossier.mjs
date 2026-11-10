@@ -1,4 +1,4 @@
-import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { readFile, writeFile, mkdir, chmod } from 'node:fs/promises';
 import { resolve, dirname, join } from 'node:path';
 import { createHash } from 'node:crypto';
 import { spawnSync } from 'node:child_process';
@@ -20,6 +20,7 @@ page = page.replace('<script type="module" src="./viewer.js"></script>', `<div i
 await mkdir(directory, { recursive: true });
 const standalone = join(directory, 'consulta-autonoma.html');
 await writeFile(standalone, page);
-const result = spawnSync('python3', ['-c', `import zipfile,sys\nwith zipfile.ZipFile(sys.argv[2],'w',zipfile.ZIP_DEFLATED) as z:\n z.write(sys.argv[1],'dossie-construcel/index.html')\n z.writestr('LEIA-ME.txt','DOSSIÊ PRIVADO — CONSTRUCEL\\n\\nExtraia o ZIP e abra dossie-construcel/index.html no navegador. Cole a chave fornecida separadamente pela ABUHSCA. A chave não está neste pacote.\\n\\nPara hospedar: envie e extraia dentro de public_html no cPanel, criando public_html/dossie-construcel/index.html. Não substitui o index do site principal. Abra https://abuhsca.com.br/dossie-construcel/ e informe a mesma chave ou use o link privado com #k=. Não publique a chave.\\n\\nEsta é uma página de consulta criptografada, não o instalador do aplicativo de recebimento. As credenciais das plataformas não fazem parte da página.\\n')\n`, standalone, output], { stdio: 'inherit' });
+await chmod(standalone, 0o644);
+const result = spawnSync('python3', ['-c', `import zipfile,sys\nwith zipfile.ZipFile(sys.argv[2],'w',zipfile.ZIP_DEFLATED) as z:\n z.write(sys.argv[1],'dossie-construcel/index.html')\n info=zipfile.ZipInfo('LEIA-ME.txt')\n info.external_attr=(0o100644<<16)\n z.writestr(info,'DOSSIÊ PRIVADO — CONSTRUCEL\\n\\nExtraia o ZIP e abra dossie-construcel/index.html no navegador. Cole a chave fornecida separadamente pela ABUHSCA. A chave não está neste pacote.\\n\\nPara hospedar: envie e extraia dentro de public_html no cPanel, criando public_html/dossie-construcel/index.html. Não substitui o index do site principal. Abra https://abuhsca.com.br/dossie-construcel/ e informe a mesma chave ou use o link privado com #k=. Não publique a chave.\\n\\nEsta é uma página de consulta criptografada, não o instalador do aplicativo de recebimento. As credenciais das plataformas não fazem parte da página.\\n')\n`, standalone, output], { stdio: 'inherit' });
 if (result.status !== 0) throw new Error('Falha ao gerar arquivo da consulta.');
 console.log('Consulta autônoma gerada sem chave nem credenciais no pacote.');
