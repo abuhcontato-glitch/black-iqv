@@ -75,6 +75,7 @@ function readBody(int $maximum): string {
         if (strlen($body) > $maximum) fail(413, 'Solicitação acima do limite.');
     }
     fclose($stream);
+    if (isset($_SERVER['CONTENT_LENGTH']) && strlen($body) !== (int)$_SERVER['CONTENT_LENGTH']) fail(400, 'Solicitação incompleta. Tente novamente; nenhum envio foi confirmado.');
     return $body;
 }
 function inputJson(): array {

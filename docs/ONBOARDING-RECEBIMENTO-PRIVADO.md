@@ -6,6 +6,8 @@ Implementação e pacote de atualização preparados. **Não declarar o serviço
 
 Nesta execução, `https://abuhsca.com.br/onboarding-construcel/`, `api/index.php?route=/health` e `api/index.php?route=/v1/dossier` responderam HTTP 406 com a mensagem ModSecurity. Não há credencial cPanel/SFTP nem convites de produção configurados no ambiente; também não há ferramenta de desktop/sessão autenticada de hospedagem disponível. Assim, não foi possível instalar a atualização, verificar a configuração privada existente ou fazer um recebimento real. Isso não prova que o diretório esteja instalado ou ausente; a proteção respondeu antes de podermos conferir a aplicação.
 
+Ambiente de execução verificado: `ccarenv_b64_Y2NhcmVudl84MGI0ZjYyODFmZjQ4MTkxOTRhYTZkYTE4Yzc0NDIzZQ`. A configuração observada retornou `capabilities: []`; controle de desktop e ferramenta `cua_repl.js` não foram oferecidos. Foi possível testar a aplicação local com Chromium/PHP e consultar HTTP da hospedagem, mas não usar uma sessão autenticada de cPanel.
+
 ## Fluxo implementado
 
 - Convites privados distintos na entrada da cliente e da agência; sem convite em URL, armazenamento de token no navegador ou senhas de redes sociais.
