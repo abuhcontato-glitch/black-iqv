@@ -3,6 +3,14 @@ import { join } from 'node:path';
 import { randomBytes, createHash } from 'node:crypto';
 import { steps, categories } from '../src/onboarding-app/model.ts';
 
+export function onboardingSchema() {
+  return {
+    fields: steps.flatMap(step => step.fields.map(field => `${step.id}.${field.id}`)),
+    required: steps.flatMap(step => step.fields.filter(field => field.required).map(field => `${step.id}.${field.id}`)),
+    steps: steps.map(step => step.id), categories: categories.map(category => category.key),
+  };
+}
+
 export async function prepareHostgatorBackend(home, options = {}) {
   const origin = options.origin ?? 'https://abuhsca.com.br';
   const client = options.clientCode ?? randomBytes(32).toString('base64url');
@@ -18,11 +26,7 @@ export async function prepareHostgatorBackend(home, options = {}) {
   await copyFile(new URL('../server/hostgator/api.htaccess', import.meta.url), join(target, '.htaccess'));
   await copyFile(new URL('../server/hostgator/user.ini', import.meta.url), join(target, '.user.ini'));
   await copyFile(new URL('../server/hostgator/private.htaccess', import.meta.url), join(privatePath, '.htaccess'));
-  const schema = {
-    fields: steps.flatMap(step => step.fields.map(field => `${step.id}.${field.id}`)),
-    required: steps.flatMap(step => step.fields.filter(field => field.required).map(field => `${step.id}.${field.id}`)),
-    steps: steps.map(step => step.id), categories: categories.map(category => category.key),
-  };
+  const schema = onboardingSchema();
   await writeFile(join(target, 'schema.json'), JSON.stringify(schema));
   const origins = [origin];
   if (!options.allowHttp) origins.push('https://www.' + url.hostname, 'https://abuhcontato-glitch.github.io');

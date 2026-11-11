@@ -7,3 +7,4 @@ export const saveDraft=(draft:Draft)=>transaction('draft','readwrite',store=>sto
 export const listFiles=()=>transaction<Attachment[]>('files','readonly',store=>store.getAll());
 export const putFile=(file:Attachment)=>transaction('files','readwrite',store=>store.put(file));
 export const removeFile=(id:string)=>transaction('files','readwrite',store=>store.delete(id));
+export const preserveDraft=(draft:Draft)=>transaction('draft','readwrite',store=>store.put(draft,`recovery-${Date.now()}`));

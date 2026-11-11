@@ -1,0 +1,34 @@
+// Never prints invitations/session tokens. Run only with securely configured environment secrets.
+import {randomBytes,createHash} from 'node:crypto';
+const endpoint=process.env.ONBOARDING_TEST_API_URL;
+const clientCode=process.env.ONBOARDING_CLIENT_INVITE,adminCode=process.env.ONBOARDING_ADMIN_INVITE;
+if(!endpoint||!clientCode||!adminCode)throw new Error('Configure ONBOARDING_TEST_API_URL, ONBOARDING_CLIENT_INVITE e ONBOARDING_ADMIN_INVITE como variáveis/segredos privados. Não cole os convites em conversa, argumentos ou URLs.');
+const address=new URL(endpoint);if(address.protocol!=='https:'&&!(process.env.ONBOARDING_ALLOW_LOCAL_TEST==='1'&&address.hostname==='127.0.0.1'))throw new Error('O teste real exige HTTPS.');
+if(clientCode===adminCode)throw new Error('Os convites devem ser distintos.');
+const call=async(path,token,options={})=>{const response=await fetch(endpoint+path,{...options,signal:AbortSignal.timeout(30000),headers:{...(token?{Authorization:`Bearer ${token}`}:{}) ,...options.headers}});return response;};
+const json=async(response)=>{if(!response.ok)throw new Error(`Servidor recusou o teste: HTTP ${response.status}. Nenhum sucesso foi declarado.`);return response.json();};
+const signIn=async code=>json(await call('/v1/login',undefined,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({code})}));
+const digest=bytes=>createHash('sha256').update(bytes).digest('hex');
+const noAuth=await call('/v1/dossier');if(noAuth.status!==401)throw new Error(`Não foi possível validar autorização da API: HTTP ${noAuth.status}.`);
+const client=await signIn(clientCode);if(client.role!=='client')throw new Error('Convite da cliente com papel incorreto.');
+const admin=await signIn(adminCode);if(admin.role!=='admin')throw new Error('Convite administrativo com papel incorreto.');
+const before=await json(await call('/v1/dossier',client.token));
+if(before.draft!==null||before.files.length||before.version!==0)throw new Error('Teste interrompido: já há um dossiê. Não sobrescrever dados reais. Use uma instalação de validação separada com armazenamento privado próprio, ou valide manualmente sem alterar o dossiê existente.');
+if(process.env.ONBOARDING_ALLOW_EMPTY_TEST!=='YES')throw new Error('Confirme ONBOARDING_ALLOW_EMPTY_TEST=YES somente para uma instalação vazia autorizada.');
+const marker='TESTE-FICTICIO-'+randomBytes(6).toString('hex');
+const draft={schema:1,values:{'empresa.razao':marker,'empresa.fantasia':'CONSTRUCEL — TESTE FICTÍCIO','empresa.contato':'Pessoa fictícia','empresa.email':'teste@example.invalid'},links:{},categoryState:{'marca.manual':'Não se aplica'},completed:[],updatedAt:new Date().toISOString()};
+const saved=await json(await call('/v1/dossier',client.token,{method:'PUT',headers:{'Content-Type':'application/json','If-Match':String(before.version)},body:JSON.stringify(draft)}));
+function testPdf(){const parts=['%PDF-1.4\n'],offsets=[0],objects=['<< /Type /Catalog /Pages 2 0 R >>','<< /Type /Pages /Kids [3 0 R] /Count 1 >>','<< /Type /Page /Parent 2 0 R /MediaBox [0 0 300 300] /Contents 4 0 R >>','<< /Length 0 >>\nstream\n\nendstream'];for(let i=0;i<objects.length;i++){offsets.push(Buffer.byteLength(parts.join('')));parts.push(`${i+1} 0 obj\n${objects[i]}\nendobj\n`);}const start=Buffer.byteLength(parts.join(''));parts.push(`xref\n0 5\n0000000000 65535 f \n${offsets.slice(1).map(n=>String(n).padStart(10,'0')+' 00000 n \n').join('')}trailer\n<< /Size 5 /Root 1 0 R >>\nstartxref\n${start}\n%%EOF`);return Buffer.from(parts.join(''));}
+const fixtures=[{id:randomBytes(16).toString('hex'),name:marker+'.png',category:'marca.logo',bytes:Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGMQsEwGAAEJAK2x6SacAAAAAElFTkSuQmCC','base64')},{id:randomBytes(16).toString('hex'),name:marker+'.pdf',category:'planos.negocio',bytes:testPdf()}];
+for(const file of fixtures)await json(await call('/v1/files',client.token,{method:'POST',headers:{'Content-Type':'application/octet-stream','X-File-Id':file.id,'X-File-Name':encodeURIComponent(file.name),'X-Category':file.category},body:file.bytes}));
+const resumed=await signIn(clientCode);const restored=await json(await call('/v1/dossier',resumed.token));if(restored.draft.values['empresa.razao']!==marker||restored.files.length!==2)throw new Error('A retomada não preservou respostas e anexos.');
+const receipt=await json(await call('/v1/submit',resumed.token,{method:'POST',headers:{'Content-Type':'application/json','If-Match':String(saved.version)},body:JSON.stringify({confirm:true,fileIds:fixtures.map(file=>file.id)})}));
+if(!receipt.receipt||!Number.isFinite(Date.parse(receipt.receivedAt)))throw new Error('Protocolo ou data inválidos.');
+const received=await json(await call('/v1/dossier',admin.token));if(received.draft.values['empresa.razao']!==marker||received.receipt!==receipt.receipt||received.receivedAt!==receipt.receivedAt)throw new Error('A agência não recebeu o mesmo dossiê/protocolo.');
+for(const file of fixtures){if((await call('/v1/files/'+file.id)).status!==401)throw new Error('Download sem autorização não foi bloqueado.');const response=await call('/v1/files/'+file.id,admin.token);if(!response.ok||digest(Buffer.from(await response.arrayBuffer()))!==digest(file.bytes))throw new Error('Arquivo baixado não corresponde ao enviado.');}
+const forbidden=await call('/v1/dossier',admin.token,{method:'PUT',headers:{'Content-Type':'application/json','If-Match':String(saved.version)},body:JSON.stringify(draft)});if(forbidden.status!==403)throw new Error('O papel da agência não foi isolado.');
+// Remove only our fixture, and only if no one edited it while the test was running.
+const unchanged=await json(await call('/v1/dossier',admin.token));if(unchanged.version!==saved.version||unchanged.draft.values['empresa.razao']!==marker||unchanged.files.length!==2||unchanged.files.some(file=>!fixtures.some(test=>test.id===file.id)))throw new Error('Houve outra edição durante o teste. Limpeza automática cancelada para preservar dados; confira os arquivos identificados TESTE-FICTICIO.');
+for(const file of fixtures)await json(await call('/v1/files/'+file.id,admin.token,{method:'DELETE'}));
+await json(await call('/v1/dossier',client.token,{method:'PUT',headers:{'Content-Type':'application/json','If-Match':String(saved.version)},body:JSON.stringify({...draft,values:{},categoryState:{},completed:[]})}));
+console.log(JSON.stringify({environment:address.origin,result:'recebimento HTTP validado',receipt:receipt.receipt,receivedAtBrasilia:new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',dateStyle:'short',timeStyle:'medium'}).format(new Date(receipt.receivedAt)),filesVerified:2,authorization:'401 sem convite; 403 gravação por agência',testData:'arquivos fictícios removidos e respostas limpas',remaining:'Validar também o navegador real, falha de conexão e visual móvel antes de convidar a cliente.'},null,2));

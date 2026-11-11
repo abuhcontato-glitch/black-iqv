@@ -107,7 +107,7 @@ function sanitizeDraft(array $draft): array {
         }
         $status = $draft['categoryState'][$category] ?? '';
         if ($status !== '') {
-            if (!in_array($status, ['Disponível', 'Não possui', 'A providenciar'], true)) fail(400, 'Situação inválida.');
+            if (!in_array($status, ['Disponível', 'Não possui', 'A providenciar', 'Não se aplica'], true)) fail(400, 'Situação inválida.');
             $statuses[$category] = $status;
         }
     }
@@ -178,23 +178,37 @@ try {
     if ($route === '/v1/dossier' && $method === 'GET') {
         $wireDraft = $state['draft'];
         if ($wireDraft !== null) foreach (['values', 'links', 'categoryState'] as $map) $wireDraft[$map] = (object)($wireDraft[$map] ?? []);
-        respond(200, ['version' => $state['version'], 'draft' => $wireDraft, 'status' => $state['status'], 'updatedAt' => $state['updatedAt'], 'files' => array_values($state['files'])]);
+        respond(200, ['version' => $state['version'], 'draft' => $wireDraft, 'status' => $state['status'], 'updatedAt' => $state['updatedAt'], 'receipt' => $state['receipt'] ?? null, 'receivedAt' => $state['receivedAt'] ?? null, 'files' => array_values($state['files'])]);
     }
     if ($route === '/v1/dossier' && $method === 'PUT') {
+        if ($session['role'] !== 'client') fail(403, 'Somente a cliente pode alterar as respostas.');
         $draft = sanitizeDraft(inputJson()); versionMatches();
+        $state['receipt'] = null; $state['receivedAt'] = null;
         $state['draft'] = $draft; ++$state['version']; $state['status'] = 'draft'; $state['updatedAt'] = $draft['updatedAt']; $dirty = true;
         respond(200, ['version' => $state['version'], 'status' => 'draft', 'updatedAt' => $state['updatedAt']]);
     }
     if ($route === '/v1/submit' && $method === 'POST') {
+        if ($session['role'] !== 'client') fail(403, 'Somente a cliente pode concluir o envio.');
         $values = draftValues();
         foreach ($schema['required'] as $field) if (trim((string)($values[$field] ?? '')) === '') fail(422, 'Preencha os dados essenciais da empresa.');
         if (!filter_var($values['empresa.email'] ?? '', FILTER_VALIDATE_EMAIL)) fail(422, 'Informe um e-mail válido.');
         versionMatches(); $input = inputJson();
         if (($input['confirm'] ?? false) !== true) fail(422, 'Confirme a revisão e as pendências.');
+        if (array_key_exists('fileIds', $input)) {
+            if (!is_array($input['fileIds'])) fail(422, 'Confira os arquivos antes de enviar.');
+            $expected = $input['fileIds']; $actual = array_keys($state['files']);
+            sort($expected); sort($actual);
+            if ($expected !== $actual) fail(409, 'Os arquivos no servidor mudaram. Atualize e confira antes de concluir.');
+        }
+        if ($state['status'] !== 'submitted' || empty($state['receivedAt'])) {
+            $state['receipt'] = 'CONSTRUCEL-' . $state['version'];
+            $state['receivedAt'] = gmdate('c');
+        }
         $state['status'] = 'submitted'; $dirty = true;
-        respond(200, ['status' => 'submitted', 'version' => $state['version'], 'receipt' => 'CONSTRUCEL-' . $state['version'], 'receivedAt' => gmdate('c')]);
+        respond(200, ['status' => 'submitted', 'version' => $state['version'], 'receipt' => $state['receipt'], 'receivedAt' => $state['receivedAt']]);
     }
     if ($route === '/v1/files' && $method === 'POST') {
+        if ($session['role'] !== 'client') fail(403, 'Somente a cliente pode enviar materiais.');
         $category = $_SERVER['HTTP_X_CATEGORY'] ?? ''; $id = $_SERVER['HTTP_X_FILE_ID'] ?? '';
         if (!in_array($category, $schema['categories'], true)) fail(400, 'Categoria inválida.');
         if (!preg_match('/^[a-f0-9]{32}$/', $id)) fail(400, 'Identificador de arquivo inválido.');
@@ -209,9 +223,11 @@ try {
         }
         $total = array_sum(array_column($state['files'], 'size'));
         if ($total + $size > 200 * 1024 * 1024) fail(422, 'Limite de 200 MB por dossiê. Use links para arquivos maiores.');
-        $file = ['id' => $id, 'category' => $category, 'name' => $name, 'type' => 'application/octet-stream', 'size' => $size, 'created' => gmdate('c')];
+        $signature = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+        if (($signature === 'png' && !str_starts_with($bytes, "\x89PNG\r\n\x1a\n")) || (in_array($signature, ['jpg', 'jpeg'], true) && !str_starts_with($bytes, "\xff\xd8\xff")) || ($signature === 'pdf' && !str_starts_with($bytes, '%PDF-'))) fail(422, 'O conteúdo do arquivo não corresponde ao formato informado.');
+        $file = ['id' => $id, 'category' => $category, 'name' => $name, 'type' => 'application/octet-stream', 'size' => $size, 'created' => gmdate('c'), 'sha256' => hash('sha256', $bytes)];
         atomicWrite($fileDirectory . '/' . $id, encryptData($bytes));
-        $state['files'][$id] = $file; $dirty = true;
+        $state['files'][$id] = $file; $state['status'] = 'draft'; $state['receipt'] = null; $state['receivedAt'] = null; $dirty = true;
         respond(201, $file);
     }
     if (preg_match('~^/v1/files/([a-f0-9]{32})$~', $route, $match)) {
@@ -226,7 +242,7 @@ try {
         if ($method === 'DELETE') {
             if ($session['role'] !== 'admin') fail(403, 'Remoção de arquivo recebido exige acesso da agência.');
             // Commit metadata first; a crash can leave an encrypted orphan, never a broken live reference.
-            unset($state['files'][$id]); $dirty = true; commitState();
+            unset($state['files'][$id]); $state['status'] = 'draft'; $state['receipt'] = null; $state['receivedAt'] = null; $dirty = true; commitState();
             @unlink($fileDirectory . '/' . $id); respond(200, ['ok' => true]);
         }
     }
