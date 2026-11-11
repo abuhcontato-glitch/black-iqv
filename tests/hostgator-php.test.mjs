@@ -43,6 +43,7 @@ test('HostGator PHP backend: authenticated persistent delivery, encrypted files,
     const client = await signIn(clientCode);
     assert.equal(client.role, 'client');
     const draft = emptyDraft();
+    draft.categoryState['marca.manual']='Não se aplica';
     Object.assign(draft.values, { 'empresa.razao': 'HOSTGATOR-PRIVATE-DATA-FIXTURE', 'empresa.fantasia': 'Construcel', 'empresa.contato': 'Ana', 'empresa.email': 'ana@example.com' });
     const save = expected => call('/v1/dossier', { method: 'PUT', headers: { ...headers(client.token), 'Content-Type': 'application/json', 'If-Match': String(expected) }, body: JSON.stringify(draft) });
     assert.equal((await save(0)).status, 200);
@@ -52,7 +53,7 @@ test('HostGator PHP backend: authenticated persistent delivery, encrypted files,
     assert.equal((await call('/v1/dossier', { method: 'PUT', headers: { ...headers(client.token), 'If-Match': '2' }, body: JSON.stringify(invalid) })).status, 400);
     const id = randomBytes(16).toString('hex');
     const uploadHeaders = { ...headers(client.token), 'Content-Type': 'application/octet-stream', 'X-Category': 'marca.logo', 'X-File-Name': encodeURIComponent('logo-ação.png'), 'X-File-Id': id };
-    const bytes = Buffer.from('PRIVATE-FILE-HOSTGATOR');
+    const bytes = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAADElEQVR4nGMQsEwGAAEJAK2x6SacAAAAAElFTkSuQmCC','base64');
     assert.equal((await call('/v1/files', { method: 'POST', headers: uploadHeaders, body: bytes })).status, 201);
     assert.equal((await call('/v1/files', { method: 'POST', headers: uploadHeaders, body: bytes })).status, 200);
     assert.equal((await call('/v1/files', { method: 'POST', headers: uploadHeaders, body: 'OTHER' })).status, 409);
@@ -66,13 +67,18 @@ test('HostGator PHP backend: authenticated persistent delivery, encrypted files,
     assert(!(await readFile(join(setup.privatePath, 'files', id))).includes(bytes));
     assert.equal((await call(`/v1/files/${id}`, { method: 'DELETE', headers: headers(client.token) })).status, 403);
     assert.equal((await call('/v1/submit', { method: 'POST', headers: { ...headers(client.token), 'If-Match': '2' }, body: JSON.stringify({ confirm: false }) })).status, 422);
+    const badManifest=await call('/v1/submit',{method:'POST',headers:{...headers(client.token),'If-Match':'2'},body:JSON.stringify({confirm:true,fileIds:[]})});
+    assert.equal(badManifest.status,409);
     const delivered = await call('/v1/submit', { method: 'POST', headers: { ...headers(client.token), 'If-Match': '2' }, body: JSON.stringify({ confirm: true }) });
-    assert.equal((await delivered.json()).receipt, 'CONSTRUCEL-2');
+    const receipt=await delivered.json();assert.equal(receipt.receipt,'CONSTRUCEL-2');assert(Number.isFinite(Date.parse(receipt.receivedAt)));
     await stop(); await start();
     const agency = await signIn(adminCode);
     const received = await (await call('/v1/dossier', { headers: headers(agency.token) })).json();
     assert.equal(received.status, 'submitted');
+    assert.equal(received.receipt,receipt.receipt);assert.equal(received.receivedAt,receipt.receivedAt);
+    assert.equal((await call('/v1/dossier',{method:'PUT',headers:{...headers(agency.token),'If-Match':'2'},body:JSON.stringify(draft)})).status,403);
     assert.equal(received.draft.values['empresa.razao'], 'HOSTGATOR-PRIVATE-DATA-FIXTURE');
+    assert.equal(received.draft.categoryState['marca.manual'],'Não se aplica');
     assert.equal(received.files.length, 1);
     assert.equal((await call(`/v1/files/${id}`, { method: 'DELETE', headers: headers(agency.token) })).status, 200);
     assert.equal((await call(`/v1/files/${id}`, { headers: headers(agency.token) })).status, 404);

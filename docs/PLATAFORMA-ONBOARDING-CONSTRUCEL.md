@@ -1,3 +1,7 @@
+# Atualização preparada em 11/11/2026
+
+A correção de autosave no servidor, uploads, retomada e área da agência está descrita em [Recebimento privado](ONBOARDING-RECEBIMENTO-PRIVADO.md). A implantação real continua pendente de acesso HostGator e validação; HTTP 406 foi observado. As seções abaixo registram o histórico da implementação anterior.
+
 # Plataforma de onboarding Construcel
 
 ## Implementação atual

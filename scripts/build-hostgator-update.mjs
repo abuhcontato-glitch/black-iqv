@@ -1,0 +1,22 @@
+// Atualização pública: não lê, gera ou substitui configurações privadas/convites.
+import {mkdir,copyFile,cp,writeFile} from 'node:fs/promises';
+import {join,resolve} from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {spawnSync} from 'node:child_process';
+import {onboardingSchema} from './hostgator-package-lib.mjs';
+const root=fileURLToPath(new URL('..',import.meta.url));
+const output=resolve(root,'deploy-artifacts',`hostgator-atualizacao-${new Date().toISOString().replace(/[^0-9]/g,'').slice(0,17)}`),build=join(output,'build'),home=join(output,'home'),target=join(home,'public_html','onboarding-construcel');
+await mkdir(output,{recursive:true,mode:0o700});
+const result=spawnSync('npm',['run','build','--','--base=/onboarding-construcel/',`--outDir=${build}`,'--emptyOutDir'],{cwd:root,env:{...process.env,VITE_ONBOARDING_API_URL:'https://abuhsca.com.br/onboarding-construcel/api/index.php?route='},stdio:['ignore','ignore','inherit']});
+if(result.status!==0)throw new Error('Compilação falhou; pacote não gerado.');
+await mkdir(join(target,'api'),{recursive:true});
+await copyFile(join(build,'construcel','onboarding','index.html'),join(target,'index.html'));
+await cp(join(build,'assets'),join(target,'assets'),{recursive:true});
+await cp(join(build,'media','construcel'),join(target,'media','construcel'),{recursive:true});
+await copyFile(join(root,'server','hostgator','api.php'),join(target,'api','index.php'));
+await writeFile(join(target,'api','schema.json'),JSON.stringify(onboardingSchema()));
+const zip=join(output,'ATUALIZAR-SOMENTE-ONBOARDING.zip');
+const packed=spawnSync('python',['-c',`import pathlib,zipfile,sys\nr=pathlib.Path(sys.argv[1])\nwith zipfile.ZipFile(sys.argv[2],'w',zipfile.ZIP_DEFLATED,compresslevel=6) as z:\n for p in sorted(r.rglob('*')):\n  if p.is_file():\n   p.chmod(0o644);z.write(p,p.relative_to(r))\n`,home,zip],{stdio:'inherit'});
+if(packed.status!==0)throw new Error('Falha ao gerar ZIP.');
+await writeFile(join(output,'LEIA-ANTES-DE-ATUALIZAR.txt'),`ATUALIZAÇÃO, NÃO PRIMEIRA INSTALAÇÃO\n\n1. Faça backup privado de public_html/onboarding-construcel e da pasta abuhsca-onboarding-private existente.\n2. Envie ATUALIZAR-SOMENTE-ONBOARDING.zip à pasta inicial da conta cPanel, acima de public_html, e extraia ali permitindo substituir apenas os arquivos públicos de onboarding-construcel presentes no ZIP.\n3. Este pacote NÃO contém nem substitui config.php, chaves, convites, arquivos recebidos, DNS, e-mail, site principal, contrato ou cronograma. Não apague a pasta privada nem recrie os convites. Mantém também .htaccess e .user.ini existentes. Requer a instalação PHP inicial e as permissões já configuradas.\n4. Se o aplicativo/API responder 406, peça à HostGator revisão pontual da regra ModSecurity para /onboarding-construcel/ e /onboarding-construcel/api/index.php. Não desative a proteção global.\n5. Confirme o fluxo completo com dados fictícios sem sobrescrever um dossiê real. O health check sozinho NÃO libera o uso.\n\nCliente: https://abuhsca.com.br/onboarding-construcel/\nAgência: https://abuhsca.com.br/onboarding-construcel/?perfil=agencia\nConvites existentes: arquivo privado CONVITES-PRIVADOS.txt da instalação original. Não enviar o convite da agência à cliente. Não colar convites nem senhas em conversa ou URLs.\n\nO estado desta entrega é PREPARADO PARA IMPLANTAÇÃO, até haver validação real de recebimento.\n`);
+console.log(`Atualização pública preparada: ${zip}`);

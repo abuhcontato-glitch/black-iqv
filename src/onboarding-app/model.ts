@@ -26,7 +26,7 @@ export function isPrivateLink(value:string):boolean {try {const url=new URL(valu
 export function missingRequired(draft:Draft):string[] {return steps.flatMap(step=>step.fields.filter(field=>field.required&&!draft.values[fieldKey(step.id,field.id)]?.trim()).map(field=>field.label));}
 export function sectionPending(step:Step,draft:Draft,files:Pick<Attachment,'category'>[]):string[] {
   const missing=step.fields.filter(field=>field.required&&!draft.values[fieldKey(step.id,field.id)]?.trim()).map(field=>field.label);
-  for(const category of step.categories??[]){const key=fieldKey(step.id,category.id);if(!files.some(file=>file.category===key)&&!isPrivateLink(draft.links[key]??'')&&!['Não possui','A providenciar'].includes(draft.categoryState[key]??''))missing.push(category.label);}
+  for(const category of step.categories??[]){const key=fieldKey(step.id,category.id);if(!files.some(file=>file.category===key)&&!isPrivateLink(draft.links[key]??'')&&!['Não possui','A providenciar','Não se aplica'].includes(draft.categoryState[key]??''))missing.push(category.label);}
   return missing;
 }
 export function validateFile(file:Pick<File,'name'|'size'>,existingSize:number):string|null {

@@ -51,7 +51,7 @@ Os rascunhos/anexos locais do GitHub não migram de origem automaticamente. Mant
 
 ## Estado de implantação
 
-O pacote e a API podem ser testados localmente, mas **não estão instalados na HostGator apenas porque o código foi criado**. É necessário acesso autenticado ao cPanel ou que o titular envie/extraia o ZIP. O texto de DNS não concede esse acesso. No ambiente desta tarefa, acesso HTTP ao domínio também está bloqueado pela política de rede; validação pública deverá ser feita quando esse acesso estiver disponível ou pelo titular no navegador.
+O pacote e a API podem ser testados localmente, mas **não estão instalados na HostGator apenas porque o código foi criado**. É necessário acesso autenticado ao cPanel ou que o titular envie/extraia o ZIP. O texto de DNS não concede esse acesso. Na verificação de 11/11/2026, aplicativo e API responderam HTTP 406 do ModSecurity. O ambiente não possui acesso autenticado ao cPanel/SFTP nem convites de produção; por isso o recebimento real não foi validado. Ver a correção e o pacote de atualização que preserva a configuração privada em [Recebimento privado](../../docs/ONBOARDING-RECEBIMENTO-PRIVADO.md).
 
 ## Testes
 
@@ -60,3 +60,7 @@ PHP_BINARY=/caminho/do/php node --test tests/hostgator-php.test.mjs
 ```
 
 Usa servidor PHP real e múltiplos processos: autenticação, CORS, gravação concorrente, conflito de versão, criptografia em repouso, upload/download, reenvio, rejeição de caminho/categoria inválidos, confirmação, papel da agência e persistência após reinício. Sem PHP, esse teste HTTP é marcado como não executado, nunca como aprovado. O teste de proteção de configuração roda em Node. Validar PHP/SSL/permissões/limites novamente na hospedagem real.
+
+## Atualização sem substituir chaves
+
+Para instalação já existente, usar `npm run package:hostgator:update`, não o pacote de primeira instalação. O ZIP de atualização contém somente arquivos públicos e preserva `config.php`, convites, estado criptografado e anexos. A área administrativa fica em `?perfil=agencia` e exige o convite da agência; respostas e anexos continuam protegidos pelo servidor.
