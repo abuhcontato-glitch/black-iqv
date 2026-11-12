@@ -1,24 +1,24 @@
-CONSTRUCEL × ABUHSCA — ENXOVAL COMPLETO
+CONSTRUCEL × ABUHSCA — APRESENTAÇÃO ATUALIZADA EM 12/11
 
-1. Extraia o ZIP inteiro antes de abrir a apresentação.
-2. Abra Construcel-Enxoval-Completo.html no Chrome, Edge ou Safari.
-3. As imagens e copys estão embutidas no HTML; a pasta Videos deve ficar ao lado dele para reproduzir os MP4s.
-4. Em “100 peças”, filtre por canal, semana ou tema. Clique em “Ver carrossel” para percorrer TODAS as lâminas. No diálogo, setas esquerda/direita trocam lâminas; cima/baixo trocam peças; Esc fecha.
-5. Cada copy tem o mesmo código da arte. Os arquivos estão em Copys; todas juntas em Copys/TODAS-AS-COPYS.txt. O cronograma está em Cronograma-editorial.csv.
-6. Landing-Page-Construcel.html apresenta o layout montado. Os formulários preparam o pedido localmente: não enviam dados e precisam de backend/canal comercial para produção.
-7. O catálogo PDF reúne os 132 itens e todas as copys editoriais; as lâminas e os vídeos originais estão nas pastas.
+Extraia o ZIP e abra Construcel-Enxoval-Completo.html no navegador. Mantenha a pasta Videos junto do HTML. A apresentação abre pela estratégia e segue Landing Page, Google Meu Negócio, Instagram, Tráfego, Comercial, Calendário e Indicadores.
 
-O QUE ESTÁ ENTREGUE
-100 peças editoriais: 48 Stories, 17 carrosséis de 4–5 lâminas, 11 posts estáticos, 12 Reels em motion e 12 peças do Perfil da Empresa no Google.
-8 anúncios Meta: 3 carrosséis, 3 vídeos e 2 estáticos.
-8 RSAs Google: 120 títulos e 32 descrições, mais KVs de apresentação (anúncios Search usam texto).
-16 layouts da landing page e um protótipo montado.
-251 PNGs distintos; 15 MP4s verticais 1080x1920, 24 fps, 27s, sem áudio; 132 arquivos de copy; PDF de 133 páginas.
-O KV de cada peça corresponde à primeira arte. As demais lâminas compõem o desdobramento completo. Os quadros dos vídeos ficam em Reels-Quadros.
+ATUALIZAÇÃO RECEBIDA
+Esquenta Black November: 12 a 19/11/2026.
+Feirão: 20 e 21/11/2026; seleção e condições específicas ainda a confirmar.
+Valores da lista do Esquenta: à vista em dinheiro, Pix ou débito.
+27 produtos e fotos fornecidos no documento vinculado no dossiê. A Oster tem preço promo superior ao atual e fica pendente de correção. Não anunciar essa condição sem confirmação.
+26 itens compõem a vitrine demonstrativa, os kits e dois carrosséis de 15 lâminas. Produto, saldo, frete e liberação comercial devem ser conferidos com Ana Paula e Gabriella.
 
-APROVAÇÃO
-Imagens conceituais geradas por IA, não são fotos reais da loja, estoque ou equipe. Identidade azul, branca e amarela/laranja com logo da Construcel. As produções reais solicitadas nos roteiros são uma etapa distinta. Vídeos em motion não são filmagens de Ana Paula ou da loja.
-Preços, produtos, disponibilidade, frete, instalações, horários e história precisam ser validados antes de publicar. Não há preço inventado, envio automático, campanha ativada ou promessa de resultado.
-Os dias D01–D28 são relativos. Datas de postagem dependem da aprovação.
+BIBLIOTECA PRESERVADA
+Os 100 conteúdos editoriais, anúncios, layouts, vídeos e modelos anteriores permanecem no plano. Não confundir imagens conceituais da biblioteca com fotos dos produtos do documento recebido.
 
-Nenhum arquivo foi publicado automaticamente na hospedagem.
+CALENDÁRIO
+Vitrine semanal de quinta a quinta, sem criar preços distintos por dia. Loja: seg–sex 07h30–18h; sábado 07h30–16h; domingo fechado. Horários de distribuição são propostos.
+
+LANDING
+Landing-Page-Construcel.html contém os 26 produtos sem divergência e a fachada enviada. É demonstração: o formulário prepara os dados localmente e não envia pedidos.
+
+DADOS INTERNOS
+A consulta com estoque, catálogo, acervo e respostas completas permanece na página de acesso reservado entregue no chat. O acesso não está embutido neste pacote de apresentação.
+
+Nenhuma campanha de mídia, disparo ou mensagem foi ativada automaticamente.

@@ -13,3 +13,11 @@ A abertura agora apresenta as fases Esquenta e Black Friday, seguida por Landing
 A operação inclui Beatriz, oito vendedores e ABUHSCA; os kits-modelo têm quatro artes (Status e conversa para cada fase), mensagens, ficha comercial e roteiro, com download ZIP gerado no navegador. São 48 artes comerciais adicionais. As ofertas são modelos pendentes de produto/preço/condições/estoque/validade aprovados. A comunicação usa apenas bases autorizadas e prevê descadastro.
 
 O calendário proposto vai de 13 a 27/11/2026, mais acompanhamento em 30/11, e requer validação de horários, dias de operação e condições. Os indicadores aguardam registro e integração; nenhum resultado é presumido. Download de calendário e modelo de registro comercial em CSV.
+
+## Atualização do dossiê de 12/11
+
+O planejamento vinculado no novo dossiê fornece Esquenta Black November 12–19/11 e Feirão em 20–21/11, substituindo as datas antes propostas para 27/11. Os carrosséis têm vigência de quinta a quinta; o calendário passa a manter a mesma vitrine durante a semana e respeita loja fechada no domingo e sábado até 16h. Ana Paula e Gabriella são as aprovadoras informadas.
+
+Foram incorporados 27 produtos com fotografias recebidas, preço atual e promocional e pagamento à vista em dinheiro/Pix/débito. O item E20 (Oster) tem preço promo superior ao atual na fonte e permanece pendente: não integra a landing de ofertas, os dois carrosséis semanais ou os kits liberáveis. O material preserva os valores recebidos, sem corrigir a fonte por suposição.
+
+Há 26 itens para revisão/liberação comercial, dois carrosséis complementares de 15 lâminas e kits por produto com Status, conversa e ficha/copy. Estoque detalhado e demais informações internas permanecem na consulta reservada. O Feirão ainda exige seleção e condições próprias, sem prorrogar a oferta do Esquenta.
