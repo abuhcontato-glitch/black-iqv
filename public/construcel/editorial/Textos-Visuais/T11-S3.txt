@@ -1,0 +1,5 @@
+Estrutura faz parte da operação
+
+A empresa informa quatro depósitos no mesmo local. Mostre a estrutura real, sem superlativos.
+
+CTA: Ver bastidores

@@ -1,0 +1,31 @@
+CONSTRUCEL × ABUHSCA — APRESENTAÇÃO VISUAL
+
+Abra 01-Estrategia.html ou 03-Linha-Editorial.html.
+
+03-Linha-Editorial.html
+Simulação navegável dos canais: 40 posições na grade do Instagram (28 Feed + 12 Reels), 12 sequências de quatro Stories, 12 posts no Google e capas de Reels. São os mesmos 100 desdobramentos, sem ampliar artificialmente o escopo.
+Clique nos posts para ver legendas, todas as lâminas e baixar PNG individual. As interfaces são prévias, sem métricas inventadas ou publicação efetiva.
+
+04-Anuncios.html
+Oito criativos Meta com thumbnails e contexto de anúncio. O play abre um animatic de storyboard com as oito cenas ao longo de 60 segundos, sem áudio. Não é filme final já gravado.
+Google: oito anúncios de pesquisa com 15 títulos e quatro descrições cada, intenção de busca e landing de destino.
+
+05-Roteiros-Gravacao.html
+Oito storyboards / 64 cenas. As pranchas representam enquadramentos propostos para Ana Paula. Cada cena tem plano, distância sugerida, ângulo, lente equivalente, movimento, cenário, fala, ação e texto na tela. As distâncias são referências e precisam ser ajustadas ao equipamento e ao local.
+Os produtos específicos devem ser conferidos pelas imagens reais recebidas, mostradas como referência nos inserts. Os cenários gerados não comprovam instalações, veículos, equipamentos ou funcionários da empresa. Outras pessoas são participações ilustrativas.
+
+ARQUIVOS
+visuais/ contém oito pranchas originais PNG e oito versões JPEG para apresentação.
+visuais/artes/ contém 212 artes em JPG e SVG: 188 arquivos editoriais (incluindo todas as lâminas), 16 formatos Meta e oito capas principais adicionais.
+Thumbnails-PNG.zip contém 24 PNGs de criativos Meta e capas, em 1080x1350 / 1080x1920 conforme o formato. Download separado para manter o pacote de apresentação leve.
+Os SVGs têm imagens incorporadas e podem ser convertidos em PNG. Os botões das páginas fazem a exportação individual em PNG na resolução do formato.
+Textos-Visuais/ contém as legendas correspondentes às prévias.
+Storyboards-8-Filmes.pdf e Criativos-Meta-Google.pdf são versões para apresentação/impressão.
+03-Biblioteca-Artes.html preserva a biblioteca da entrega anterior; a nova direção está na simulação dos canais.
+
+CONDIÇÕES
+Ofertas recebidas do Esquenta: 12 a 19/11/2026, à vista em dinheiro, Pix ou débito. Confirmar disponibilidade e frete. Oster divergente excluída das ofertas.
+Feirão: 20 e 21/11, com seleção e condições próprias a validar.
+A etapa posterior de Black Friday depende de aprovação.
+Não ativar anúncio apenas por haver uma prévia: conferir verba, acessos, geografia, domínio, tags e condições.
+Este pacote contém materiais de comunicação para aprovação e não inclui apontamentos internos de horas ou cronograma operacional privado.

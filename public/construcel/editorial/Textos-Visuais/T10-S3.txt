@@ -1,0 +1,5 @@
+E o volume do pedido?
+
+Quantidade e peso do material podem alterar o frete.
+
+CTA: Conferir volume
