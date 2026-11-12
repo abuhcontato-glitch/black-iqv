@@ -1,0 +1,33 @@
+RSA,Grupo,Nº,Descrição RSA,Caracteres,Validação,Limite
+G01,Loja Ceilândia,1,Materiais para construir ou reformar. Consulte categorias e disponibilidade na Construcel.,90,OK,Até 90 caracteres
+G01,Loja Ceilândia,2,Envie sua lista de materiais e quantidades para solicitar orçamento comercial.,78,OK,Até 90 caracteres
+G01,Loja Ceilândia,3,Loja em Ceilândia Norte. Consulte condições de entrega no DF e Entorno.,71,OK,Até 90 caracteres
+G01,Loja Ceilândia,4,"Preços, estoque e frete são confirmados no atendimento conforme o pedido.",73,OK,Até 90 caracteres
+G02,Materiais e entrega DF,1,Consulte materiais de construção e condições de entrega no Distrito Federal e Entorno.,86,OK,Até 90 caracteres
+G02,Materiais e entrega DF,2,"O frete varia por região e peso. Envie itens, quantidades e destino para cotação.",81,OK,Até 90 caracteres
+G02,Materiais e entrega DF,3,Atendimento comercial da Construcel para listas de construção e reforma.,72,OK,Até 90 caracteres
+G02,Materiais e entrega DF,4,"Disponibilidade, prazos e valores são confirmados conforme a solicitação.",73,OK,Até 90 caracteres
+G03,Pisos,1,Informe ambiente e metragem para consultar pisos disponíveis na Construcel.,75,OK,Até 90 caracteres
+G03,Pisos,2,Compare opções conforme as especificações e indicações dos fabricantes.,71,OK,Até 90 caracteres
+G03,Pisos,3,Loja em Ceilândia Norte. Solicite orçamento e confira condições atuais.,71,OK,Até 90 caracteres
+G03,Pisos,4,"Modelos, preços e disponibilidade são confirmados pelo atendimento comercial.",77,OK,Até 90 caracteres
+G04,Porcelanatos,1,Tem uma referência de porcelanato? Informe metragem e ambiente para consultar opções.,85,OK,Até 90 caracteres
+G04,Porcelanatos,2,"Verifique modelos, acabamentos e indicações de uso conforme o fabricante.",73,OK,Até 90 caracteres
+G04,Porcelanatos,3,Consulte preços e disponibilidade atualizados no atendimento da Construcel.,75,OK,Até 90 caracteres
+G04,Porcelanatos,4,Loja em Ceilândia Norte. Solicite um orçamento para sua obra ou reforma.,72,OK,Até 90 caracteres
+G05,Revestimentos,1,"Revestimentos para cozinha, banheiro e outros ambientes: consulte opções disponíveis.",85,OK,Até 90 caracteres
+G05,Revestimentos,2,Envie sua metragem e referências para solicitar uma cotação de acabamentos.,75,OK,Até 90 caracteres
+G05,Revestimentos,3,"Verifique indicações do fabricante, preço e disponibilidade antes da compra.",76,OK,Até 90 caracteres
+G05,Revestimentos,4,A Construcel está em Ceilândia Norte e atende consultas de reforma e obra.,74,OK,Até 90 caracteres
+G06,Materiais básicos,1,Consulte materiais básicos para construção e reforma na Construcel.,67,OK,Até 90 caracteres
+G06,Materiais básicos,2,"Envie itens, quantidades e local de entrega para solicitar uma cotação.",71,OK,Até 90 caracteres
+G06,Materiais básicos,3,"Cimento, argamassa e outras categorias conforme disponibilidade atual.",70,OK,Até 90 caracteres
+G06,Materiais básicos,4,Frete varia por região e peso. Confira as condições antes de fechar.,68,OK,Até 90 caracteres
+G07,Construtoras,1,"Construtoras podem enviar lista, volumes e local de entrega para cotação comercial.",83,OK,Até 90 caracteres
+G07,Construtoras,2,Informe materiais e quantidades para avaliar disponibilidade e condições.,73,OK,Até 90 caracteres
+G07,Construtoras,3,Atendimento comercial da Construcel para consultas empresariais no DF e Entorno.,80,OK,Até 90 caracteres
+G07,Construtoras,4,"Valores, prazos e condições são confirmados após análise do pedido.",67,OK,Até 90 caracteres
+G08,Condomínios,1,Responsáveis por compras podem solicitar cotação de materiais para manutenção.,78,OK,Até 90 caracteres
+G08,Condomínios,2,"Envie lista, especificações, quantidades e endereço para avaliação do pedido.",77,OK,Até 90 caracteres
+G08,Condomínios,3,Consulte disponibilidade e condições comerciais com a equipe da Construcel.,75,OK,Até 90 caracteres
+G08,Condomínios,4,"Atendimento para condomínios no DF e Entorno, conforme os materiais solicitados.",80,OK,Até 90 caracteres

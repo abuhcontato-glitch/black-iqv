@@ -1,0 +1,31 @@
+CONSTRUCEL × ABUHSCA — ENTREGA DA ESTRATÉGIA · 12/11/2026
+
+ABRA PRIMEIRO: 01-Estrategia.html
+1. Estratégia: direcionamento dos canais, fases, integração comercial, calendário e indicadores.
+2. 02-Landing-Page.html: página do consumidor, formulário no banner, carrossel, fachada, empresa, ofertas, categorias, contato.
+3. 03-Linha-Editorial.html: 12 temas, 100 publicações, artes ampliáveis, todas as lâminas e legendas.
+4. 04-Anuncios.html: oito conceitos Meta + oito RSAs Google, com 120 títulos e 32 descrições.
+5. 05-Roteiros-Gravacao.html: oito filmes de 60 segundos, falas e direção por cena, teleprompter e downloads.
+
+ARQUIVOS GRÁFICOS
+Artes-PNG contém 188 arquivos editoriais (incluindo todas as lâminas) + 16 versões Meta = 204 arquivos gráficos.
+100 publicações = 48 Stories + 28 Feed (17 carrosséis e 11 estáticos) + 12 Reels + 12 Google.
+As capas de Reels não são vídeos finalizados. A produção dos oito filmes depende da visita e da montagem; quatro cortes derivados completam as 12 publicações de Reels.
+Textos contém legendas e copys identificadas por código. Roteiros-TXT contém oito roteiros completos. PDFs permitem apresentar e levar à gravação.
+
+CALENDÁRIO
+Calendario-100-Publicacoes.csv: datas e horários propostos para validação.
+Modelo-Registro-Comercial.csv: estrutura para acompanhamento do atendimento e retorno das vendas; não contém dados de clientes.
+
+CONDIÇÕES RECEBIDAS
+Esquenta: 12 a 19/11/2026. À vista em dinheiro, Pix ou débito. 26 itens utilizáveis para revisão criativa; confirmar disponibilidade, preço final e frete na aprovação.
+A Oster com preço promocional maior que o atual foi excluída das ofertas.
+Feirão: 20 e 21/11; preços e condições específicos ainda precisam ser confirmados.
+Black Friday posterior: proposta de continuidade sujeita à aprovação; não foi inventada tabela promocional.
+A landing retira os preços do Esquenta fora da vigência.
+
+ATIVAÇÃO
+O formulário abre uma mensagem no WhatsApp comercial indicado no material recebido: (61) 99148-9514. O usuário ainda precisa enviar a mensagem. Não há promessa de gravação em CRM ou envio automático.
+Confirmar roteamento desse número, domínio oficial, destino, orçamento, conta e tags antes de ativar os anúncios. O domínio impresso nos materiais é o informado pela empresa; não constitui verificação de site ativo.
+Preços e horários de publicação exigem validação com Ana Paula/Gabriella.
+Roteiros: cronometre a leitura da apresentadora. Os planos somam 60s, mas o tempo real depende da atuação e da edição.

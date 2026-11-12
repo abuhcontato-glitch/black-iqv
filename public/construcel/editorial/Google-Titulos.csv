@@ -1,0 +1,121 @@
+RSA,Grupo,Nº,Título RSA,Caracteres,Validação,Limite
+G01,Loja Ceilândia,1,Construcel em Ceilândia,23,OK,Até 30 caracteres
+G01,Loja Ceilândia,2,Materiais de Construção,23,OK,Até 30 caracteres
+G01,Loja Ceilândia,3,Loja em Ceilândia Norte,23,OK,Até 30 caracteres
+G01,Loja Ceilândia,4,Pisos e Revestimentos,21,OK,Até 30 caracteres
+G01,Loja Ceilândia,5,Consulte Nossas Categorias,26,OK,Até 30 caracteres
+G01,Loja Ceilândia,6,Solicite Seu Orçamento,22,OK,Até 30 caracteres
+G01,Loja Ceilândia,7,Envie Sua Lista de Materiais,28,OK,Até 30 caracteres
+G01,Loja Ceilândia,8,Verifique Disponibilidade,25,OK,Até 30 caracteres
+G01,Loja Ceilândia,9,Materiais Para Sua Obra,23,OK,Até 30 caracteres
+G01,Loja Ceilândia,10,Do Básico ao Acabamento,23,OK,Até 30 caracteres
+G01,Loja Ceilândia,11,Atendimento Comercial,21,OK,Até 30 caracteres
+G01,Loja Ceilândia,12,Visite Nossa Loja,17,OK,Até 30 caracteres
+G01,Loja Ceilândia,13,Compre Com Informação,21,OK,Até 30 caracteres
+G01,Loja Ceilândia,14,Cotação de Materiais,20,OK,Até 30 caracteres
+G01,Loja Ceilândia,15,Converse Com Nossa Equipe,25,OK,Até 30 caracteres
+G02,Materiais e entrega DF,1,Materiais de Construção DF,26,OK,Até 30 caracteres
+G02,Materiais e entrega DF,2,Entrega no DF e Entorno,23,OK,Até 30 caracteres
+G02,Materiais e entrega DF,3,Cote Materiais e Frete,22,OK,Até 30 caracteres
+G02,Materiais e entrega DF,4,Frete Conforme o Pedido,23,OK,Até 30 caracteres
+G02,Materiais e entrega DF,5,Loja em Ceilândia Norte,23,OK,Até 30 caracteres
+G02,Materiais e entrega DF,6,Informe Seu Endereço,20,OK,Até 30 caracteres
+G02,Materiais e entrega DF,7,Consulte Disponibilidade,24,OK,Até 30 caracteres
+G02,Materiais e entrega DF,8,Lista de Materiais da Obra,26,OK,Até 30 caracteres
+G02,Materiais e entrega DF,9,Orçamento Para Reforma,22,OK,Até 30 caracteres
+G02,Materiais e entrega DF,10,Cotação de Materiais,20,OK,Até 30 caracteres
+G02,Materiais e entrega DF,11,Converse Com a Construcel,25,OK,Até 30 caracteres
+G02,Materiais e entrega DF,12,Peça Atendimento Comercial,26,OK,Até 30 caracteres
+G02,Materiais e entrega DF,13,Pisos e Materiais Básicos,25,OK,Até 30 caracteres
+G02,Materiais e entrega DF,14,Informe Peso e Região,21,OK,Até 30 caracteres
+G02,Materiais e entrega DF,15,Condições Sob Consulta,22,OK,Até 30 caracteres
+G03,Pisos,1,Pisos em Ceilândia Norte,24,OK,Até 30 caracteres
+G03,Pisos,2,Consulte Pisos na Construcel,28,OK,Até 30 caracteres
+G03,Pisos,3,Pisos Para Sua Reforma,22,OK,Até 30 caracteres
+G03,Pisos,4,Cote Pisos Para Sua Obra,24,OK,Até 30 caracteres
+G03,Pisos,5,Modelos Sob Consulta,20,OK,Até 30 caracteres
+G03,Pisos,6,Informe Sua Metragem,20,OK,Até 30 caracteres
+G03,Pisos,7,Pisos Para Cada Ambiente,24,OK,Até 30 caracteres
+G03,Pisos,8,Consulte Valores e Estoque,26,OK,Até 30 caracteres
+G03,Pisos,9,"Sala, Cozinha e Quartos",23,OK,Até 30 caracteres
+G03,Pisos,10,Peça Seu Orçamento,18,OK,Até 30 caracteres
+G03,Pisos,11,Acabamentos Para Reformar,25,OK,Até 30 caracteres
+G03,Pisos,12,Converse Com Nossa Equipe,25,OK,Até 30 caracteres
+G03,Pisos,13,Loja em Ceilândia,17,OK,Até 30 caracteres
+G03,Pisos,14,Escolha Com Informação,22,OK,Até 30 caracteres
+G03,Pisos,15,Envie Sua Referência,20,OK,Até 30 caracteres
+G04,Porcelanatos,1,Porcelanato em Ceilândia,24,OK,Até 30 caracteres
+G04,Porcelanatos,2,Porcelanatos na Construcel,26,OK,Até 30 caracteres
+G04,Porcelanatos,3,Consulte Modelos e Preços,25,OK,Até 30 caracteres
+G04,Porcelanatos,4,Cote Seu Porcelanato,20,OK,Até 30 caracteres
+G04,Porcelanatos,5,Texturas e Acabamentos,22,OK,Até 30 caracteres
+G04,Porcelanatos,6,Peça Orçamento na Loja,22,OK,Até 30 caracteres
+G04,Porcelanatos,7,Envie Sua Referência,20,OK,Até 30 caracteres
+G04,Porcelanatos,8,Informe a Metragem,18,OK,Até 30 caracteres
+G04,Porcelanatos,9,Porcelanato Para Reforma,24,OK,Até 30 caracteres
+G04,Porcelanatos,10,Opções Sob Consulta,19,OK,Até 30 caracteres
+G04,Porcelanatos,11,Loja em Ceilândia Norte,23,OK,Até 30 caracteres
+G04,Porcelanatos,12,Compare Acabamentos,19,OK,Até 30 caracteres
+G04,Porcelanatos,13,Consulte Disponibilidade,24,OK,Até 30 caracteres
+G04,Porcelanatos,14,Atendimento da Construcel,25,OK,Até 30 caracteres
+G04,Porcelanatos,15,Para Sua Obra ou Reforma,24,OK,Até 30 caracteres
+G05,Revestimentos,1,Revestimentos em Ceilândia,26,OK,Até 30 caracteres
+G05,Revestimentos,2,Revestimento Para Banheiro,26,OK,Até 30 caracteres
+G05,Revestimentos,3,Revestimento Para Cozinha,25,OK,Até 30 caracteres
+G05,Revestimentos,4,Consulte Modelos Disponíveis,28,OK,Até 30 caracteres
+G05,Revestimentos,5,Cote Seus Revestimentos,23,OK,Até 30 caracteres
+G05,Revestimentos,6,Acabamentos Para Reforma,24,OK,Até 30 caracteres
+G05,Revestimentos,7,Envie Sua Referência,20,OK,Até 30 caracteres
+G05,Revestimentos,8,Informe a Metragem,18,OK,Até 30 caracteres
+G05,Revestimentos,9,Confira Opções da Loja,22,OK,Até 30 caracteres
+G05,Revestimentos,10,Converse Com a Construcel,25,OK,Até 30 caracteres
+G05,Revestimentos,11,Loja em Ceilândia Norte,23,OK,Até 30 caracteres
+G05,Revestimentos,12,Consultar Preços Atuais,23,OK,Até 30 caracteres
+G05,Revestimentos,13,Reforma Com Planejamento,24,OK,Até 30 caracteres
+G05,Revestimentos,14,Atendimento Comercial,21,OK,Até 30 caracteres
+G05,Revestimentos,15,Solicite Seu Orçamento,22,OK,Até 30 caracteres
+G06,Materiais básicos,1,Cimento em Ceilândia,20,OK,Até 30 caracteres
+G06,Materiais básicos,2,Argamassa em Ceilândia,22,OK,Até 30 caracteres
+G06,Materiais básicos,3,Materiais Básicos da Obra,25,OK,Até 30 caracteres
+G06,Materiais básicos,4,Consulte Areia e Brita,22,OK,Até 30 caracteres
+G06,Materiais básicos,5,Envie Sua Lista de Itens,24,OK,Até 30 caracteres
+G06,Materiais básicos,6,Cote Materiais Para Obra,24,OK,Até 30 caracteres
+G06,Materiais básicos,7,Converse Com a Construcel,25,OK,Até 30 caracteres
+G06,Materiais básicos,8,Preço e Estoque Sob Consulta,28,OK,Até 30 caracteres
+G06,Materiais básicos,9,Solicite Orçamento,18,OK,Até 30 caracteres
+G06,Materiais básicos,10,Entrega Sob Consulta,20,OK,Até 30 caracteres
+G06,Materiais básicos,11,Loja em Ceilândia Norte,23,OK,Até 30 caracteres
+G06,Materiais básicos,12,Confira as Categorias,21,OK,Até 30 caracteres
+G06,Materiais básicos,13,Quantidades e Medidas,21,OK,Até 30 caracteres
+G06,Materiais básicos,14,Básicos Para Construção,23,OK,Até 30 caracteres
+G06,Materiais básicos,15,Condições Comerciais,20,OK,Até 30 caracteres
+G07,Construtoras,1,Cotação Para Construtoras,25,OK,Até 30 caracteres
+G07,Construtoras,2,Materiais Para Empresas,23,OK,Até 30 caracteres
+G07,Construtoras,3,Lista de Materiais da Obra,26,OK,Até 30 caracteres
+G07,Construtoras,4,Orçamento Comercial B2B,23,OK,Até 30 caracteres
+G07,Construtoras,5,Envie Seu Pedido de Cotação,27,OK,Até 30 caracteres
+G07,Construtoras,6,Compras Para Obras no DF,24,OK,Até 30 caracteres
+G07,Construtoras,7,Solicite Atendimento B2B,24,OK,Até 30 caracteres
+G07,Construtoras,8,Consulte Itens e Volumes,24,OK,Até 30 caracteres
+G07,Construtoras,9,Condições Sob Análise,21,OK,Até 30 caracteres
+G07,Construtoras,10,Construcel em Ceilândia,23,OK,Até 30 caracteres
+G07,Construtoras,11,Cotação Com Lista Técnica,25,OK,Até 30 caracteres
+G07,Construtoras,12,Informe Prazo e Destino,23,OK,Até 30 caracteres
+G07,Construtoras,13,Converse Com Nossa Equipe,25,OK,Até 30 caracteres
+G07,Construtoras,14,Pedidos Por Volume,18,OK,Até 30 caracteres
+G07,Construtoras,15,Preços Sob Consulta,19,OK,Até 30 caracteres
+G08,Condomínios,1,Materiais Para Condomínios,26,OK,Até 30 caracteres
+G08,Condomínios,2,Cotação Para Condomínios,24,OK,Até 30 caracteres
+G08,Condomínios,3,Compras Para Manutenção,23,OK,Até 30 caracteres
+G08,Condomínios,4,Lista de Materiais Prediais,27,OK,Até 30 caracteres
+G08,Condomínios,5,Envie Sua Lista de Compra,25,OK,Até 30 caracteres
+G08,Condomínios,6,Atendimento Comercial B2B,25,OK,Até 30 caracteres
+G08,Condomínios,7,Cote Itens Para Condomínio,26,OK,Até 30 caracteres
+G08,Condomínios,8,Consulte Disponibilidade,24,OK,Até 30 caracteres
+G08,Condomínios,9,Condições Sob Consulta,22,OK,Até 30 caracteres
+G08,Condomínios,10,Materiais Para Reparos,22,OK,Até 30 caracteres
+G08,Condomínios,11,Construcel em Ceilândia,23,OK,Até 30 caracteres
+G08,Condomínios,12,Informe Volume e Destino,24,OK,Até 30 caracteres
+G08,Condomínios,13,Pedido Empresarial no DF,24,OK,Até 30 caracteres
+G08,Condomínios,14,Solicite Seu Orçamento,22,OK,Até 30 caracteres
+G08,Condomínios,15,Fale Com Nossa Equipe,21,OK,Até 30 caracteres
