@@ -1,28 +1,29 @@
-G03 — Pisos
-"pisos ceilândia";"loja de pisos ceilandia";"comprar piso df";"piso para reforma ceilândia"
+G03 — Porcelanatos
+porcelanato ceilândia modelos
+[porcelanato ceilândia]; "loja de porcelanato ceilândia"; "cotar porcelanato"
 
-TÍTULOS:
-Pisos em Ceilândia Norte
-Consulte Pisos na Construcel
-Pisos Para Sua Reforma
-Cote Pisos Para Sua Obra
-Modelos Sob Consulta
-Informe Sua Metragem
-Pisos Para Cada Ambiente
-Consulte Valores e Estoque
-Sala, Cozinha e Quartos
-Peça Seu Orçamento
-Acabamentos Para Reformar
-Converse Com Nossa Equipe
-Loja em Ceilândia
-Escolha Com Informação
-Envie Sua Referência
+TÍTULOS
+Porcelanatos Na Construcel
+Porcelanato Em Ceilândia
+Qual Acabamento Procura?
+Traga A Referência Do Piso
+Confira A Indicação De Uso
+Consulte Modelos Na Loja
+Porcelanato Para Sua Lista
+Compare Formato E Aparência
+Informe A Metragem
+Cotação De Porcelanato
+Visite A Loja Na QNN 9
+Converse Sobre As Opções
+Preço Conforme Referência
+Consulte Disponibilidade
+Pedido E Frete Sob Consulta
 
-DESCRIÇÕES:
-Informe ambiente e metragem para consultar pisos disponíveis na Construcel.
-Compare opções conforme as especificações e indicações dos fabricantes.
-Loja em Ceilândia Norte. Solicite orçamento e confira condições atuais.
-Modelos, preços e disponibilidade são confirmados pelo atendimento comercial.
+DESCRIÇÕES
+Envie ambiente, referência e metragem. Consulte porcelanatos na Construcel.
+Aparência e aplicação entram na escolha. Confira a ficha do fabricante.
+Loja na QNN 9, Ceilândia Norte. Verifique o modelo antes de se deslocar.
+Preço e quantidade dependem da referência. Peça uma cotação dos itens.
 
-Negativas iniciais: curso; grátis; emprego; apostila; pdf; tutorial; desenho; download (avaliar por grupo)
-Destino: landing page separada; aprovar domínio e URL final antes de ativar.
+DESTINO: https://abuhcontato-glitch.github.io/black-iqv/construcel/editorial/02-Landing-Page.html#categorias
+PENDÊNCIAS: Validar verba, acesso, rastreamento e correspondências. URL pública da landing é prévia válida; confirmar domínio empresarial e destino final antes da ativação.

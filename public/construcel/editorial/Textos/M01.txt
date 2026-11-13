@@ -1,7 +1,14 @@
-M01 · Esquenta e vitrine
-Sua obra tem lista?
+M01 — Piso no Esquenta Black
 
-Esquenta Black November Construcel, de 12 a 19/11. Pisos selecionados por R$ 12,99/m². Valores à vista em dinheiro, Pix ou débito. Consulte produtos, disponibilidade e frete. Envie sua lista para receber uma cotação.
+OBJETIVO: Receber consultas de SKU e metragem dos pisos do Esquenta.
+VERSÃO A
+Tem piso para comprar? No Esquenta da Construcel, o Incopisos branco 45194, 45x45, está por R$ 12,99/m². A condição vale de 12 a 19/11, à vista em dinheiro, Pix ou débito. Envie a metragem para consultar quantidade, disponibilidade e frete.
 
-CTA: Solicitar orçamento
-Roteiro de gravação: V01
+VERSÃO B — Antes de sair para comprar
+Já sabe quantos metros precisa? Consulte o modelo e a quantidade disponível antes de ir à loja. O Incopisos 45194, 45x45, participa do Esquenta por R$ 12,99/m², de 12 a 19/11, à vista em dinheiro, Pix ou débito. Construcel, QNN 9, Ceilândia Norte.
+
+DESCRIÇÃO: Esquenta 12–19/11. Valor à vista.
+HOOK: Piso na lista?
+HIPÓTESE: Preço de entrada versus preparação da visita.
+MÉTRICA: Custo por conversa recebida com modelo e metragem informados.
+APROVAÇÃO: Confirmar SKU, preço, quantidade disponível, validade, unidade, pagamento e frete.

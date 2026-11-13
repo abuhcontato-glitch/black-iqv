@@ -1,5 +1,5 @@
-Vai comprar material elétrico?
+T07-S1 — “Um cabo” ainda é pouca informação.
 
-Comece com a lista do eletricista e as especificações do projeto.
+A compra precisa da especificação que o profissional definiu.
 
-CTA: Organizar lista
+CTA: Conferir a lista

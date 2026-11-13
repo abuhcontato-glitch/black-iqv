@@ -1,7 +1,5 @@
-T12-S3 · Instagram Stories
-O que precisa constar
+T12-S3 — Qual é o prazo da necessidade?
 
-Empresa, responsável, materiais, volumes, local e prazo desejado.
+Informe quando o material é necessário. A operação confirma a possibilidade de atendimento.
 
-CTA: Ver checklist
-Fase editorial: Relacionamento / pós-campanha
+CTA: Informar o prazo desejado

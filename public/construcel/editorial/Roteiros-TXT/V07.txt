@@ -1,44 +1,43 @@
 V07 — Como pedir orçamento e consultar entrega
-60 segundos · 118 palavras · Conversão / WhatsApp / logística
-Captação vertical 9:16; enquadramento central para versão 4:5
-A duração é planejada. Cronometrar a leitura com Ana Paula e ajustar pausas e montagem, preservando as condições comerciais.
+60s · 116 palavras
 
-CENA 01 | 00s–05s | Balcão
-FALA: Quer pedir orçamento sem ficar voltando à conversa porque faltou uma informação?
-CÂMERA: Ana Paula em plano médio no balcão.
-NA TELA: Peça orçamento com a lista completa
+CENA 1 · 0–5s · Balcão
+FALA: Pode mandar essa lista. Foto legível, arquivo ou mensagem: o importante é entender o pedido.
+AÇÃO: Ana Paula em plano médio no balcão.
+TELA: Peça orçamento com a lista completa
 
-CENA 02 | 05s–12s | Lista
-FALA: Envie o nome do produto, a unidade e a quantidade. Se tiver referência, pode mandar também.
-CÂMERA: Detalhe de lista de demonstração com três campos.
-NA TELA: Produto · unidade · quantidade
+CENA 2 · 5–12s · Lista
+FALA: Mantenha o nome do material, a referência e a quantidade que o profissional indicou.
+AÇÃO: Detalhe de lista de demonstração com três campos.
+TELA: Produto · unidade · quantidade
 
-CENA 03 | 12s–20s | Formulário / telefone
-FALA: Informe a região da entrega. Se for uma compra para empresa, identifique a necessidade e o volume.
-CÂMERA: Mostrar região e opção empresa no formulário de demonstração.
-NA TELA: Região + tipo de compra
+CENA 3 · 12–20s · Formulário / telefone
+FALA: Diga se é compra para casa, obra, empresa ou condomínio. E informe a região de entrega.
+AÇÃO: Mostrar região e opção empresa no formulário de demonstração.
+TELA: Região + tipo de compra
 
-CENA 04 | 20s–28s | Atendimento
-FALA: A equipe verifica a disponibilidade e prepara as condições comerciais para você avaliar.
-CÂMERA: B-roll do atendimento; tela sem dados de clientes.
-NA TELA: Disponibilidade e condição confirmadas
+CENA 4 · 20–28s · Atendimento
+FALA: Com essas informações, a equipe consulta os itens e prepara a cotação conforme a disponibilidade.
+AÇÃO: B-roll do atendimento; tela sem dados de clientes.
+TELA: Disponibilidade e condição confirmadas
 
-CENA 05 | 28s–36s | Expedição
-FALA: A Construcel informa entrega no Distrito Federal e Entorno. O frete depende da região e do peso.
-CÂMERA: Planos da expedição e materiais, sem prometer prazo de entrega.
-NA TELA: Consulte frete por pedido
+CENA 5 · 28–36s · Expedição
+FALA: Frete e prazo precisam ser avaliados pela operação. Por isso, o destino faz parte da conversa.
+AÇÃO: Planos da expedição e materiais, sem prometer prazo de entrega.
+TELA: Consulte frete por pedido
 
-CENA 06 | 36s–45s | WhatsApp comercial
-FALA: Quem chama pelo WhatsApp pode encaminhar a lista para o atendimento comercial acompanhar a solicitação.
-CÂMERA: Beatriz recebe uma lista fictícia; se indisponível, filmar mãos do atendente autorizado.
-NA TELA: Envie sua lista
+CENA 6 · 36–45s · WhatsApp comercial
+FALA: Depois de mandar, acompanhe o retorno pelo WhatsApp durante o horário de atendimento.
+AÇÃO: Beatriz recebe uma lista fictícia; se indisponível, filmar mãos do atendente autorizado.
+TELA: Envie sua lista
 
-CENA 07 | 45s–54s | Orçamento
-FALA: Depois, confira o orçamento: itens, quantidades, pagamento, frete e validade. Tire suas dúvidas antes de decidir.
-CÂMERA: Documento fictício de orçamento com campos genéricos, sem preços não aprovados.
-NA TELA: Confira as condições do pedido
+CENA 7 · 45–54s · Orçamento
+FALA: Confira o orçamento: materiais, quantidades e condições. Se algo mudou na obra, avise antes de fechar.
+AÇÃO: Documento fictício de orçamento com campos genéricos, sem preços não aprovados.
+TELA: Confira as condições do pedido
 
-CENA 08 | 54s–60s | Balcão
-FALA: Sua próxima compra pode começar agora, pela lista. Fale com a Construcel.
-CÂMERA: Ana Paula fecha e aponta discretamente para a área do CTA.
-NA TELA: Solicite sua cotação
+CENA 8 · 54–60s · Balcão
+FALA: A lista está pronta? Envie para a Construcel começar a consulta.
+AÇÃO: Ana Paula fecha e aponta discretamente para a área do CTA.
+TELA: Solicite sua cotação
+

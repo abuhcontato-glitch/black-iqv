@@ -1,28 +1,29 @@
-G06 — Materiais básicos
-"cimento ceilândia";"argamassa ceilândia";"materiais básicos construção";"areia brita ceilândia"
+G06 — Argamassa e rejunte
+argamassa rejunte ceilândia referência
+[argamassa ceilândia]; "rejunte ceilândia"; "comprar argamassa ceilândia"
 
-TÍTULOS:
-Cimento em Ceilândia
-Argamassa em Ceilândia
-Materiais Básicos da Obra
-Consulte Areia e Brita
-Envie Sua Lista de Itens
-Cote Materiais Para Obra
-Converse Com a Construcel
-Preço e Estoque Sob Consulta
-Solicite Orçamento
-Entrega Sob Consulta
-Loja em Ceilândia Norte
-Confira as Categorias
-Quantidades e Medidas
-Básicos Para Construção
-Condições Comerciais
+TÍTULOS
+Argamassa E Rejunte
+Consulte Na Construcel
+Confira A Indicação De Uso
+Leve A Lista Do Assentador
+Qual Referência Precisa?
+Argamassa Em Ceilândia
+Rejunte: Consulte Opções
+A Embalagem Traz Indicações
+Peça E Superfície Importam
+Confirme Com O Profissional
+Loja Na QNN 9
+Informe A Quantidade
+Cote A Referência Indicada
+Cor E Aplicação Do Rejunte
+Veja As Condições Do Item
 
-DESCRIÇÕES:
-Consulte materiais básicos para construção e reforma na Construcel.
-Envie itens, quantidades e local de entrega para solicitar uma cotação.
-Cimento, argamassa e outras categorias conforme disponibilidade atual.
-Frete varia por região e peso. Confira as condições antes de fechar.
+DESCRIÇÕES
+Consulte argamassa e rejunte com a referência indicada pelo profissional.
+Peça, superfície e ambiente entram na escolha. Confira a ficha do fabricante.
+Envie referência e quantidade para consultar as opções na Construcel.
+Na QNN 9, Ceilândia Norte. Verifique disponibilidade antes da visita.
 
-Negativas iniciais: curso; grátis; emprego; apostila; pdf; tutorial; desenho; download (avaliar por grupo)
-Destino: landing page separada; aprovar domínio e URL final antes de ativar.
+DESTINO: https://abuhcontato-glitch.github.io/black-iqv/construcel/editorial/02-Landing-Page.html#categorias
+PENDÊNCIAS: Validar verba, acesso, rastreamento e correspondências. URL pública da landing é prévia válida; confirmar domínio empresarial e destino final antes da ativação.

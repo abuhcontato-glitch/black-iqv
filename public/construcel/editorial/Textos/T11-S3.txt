@@ -1,7 +1,5 @@
-T11-S3 · Instagram Stories
-Estrutura faz parte da operação
+T11-S3 — Uma loja. Quatro depósitos.
 
-A empresa informa quatro depósitos no mesmo local. Mostre a estrutura real, sem superlativos.
+A estrutura fica no mesmo local, conforme a operação apresentada pela empresa.
 
-CTA: Ver bastidores
-Fase editorial: Relacionamento / pós-campanha
+CTA: Ver os bastidores

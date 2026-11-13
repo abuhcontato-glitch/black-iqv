@@ -1,0 +1,24 @@
+T07-R1 — “Um cabo” de qual?
+22s
+Conceito: Orientação com Ana Paula na loja
+Objetivo: Receber pedidos elétricos com referência definida
+Hook: Um cabo… de qual?
+
+0–7s
+FALA: Um cabo… de qual? A lista elétrica precisa da especificação completa.
+IMAGEM: Ana Paula mostra três dedos; plano médio com categorias ao fundo.
+TELA: “Um cabo” de qual?
+
+7–15s
+FALA: Confira referência, unidade e quantidade com o profissional responsável pelo projeto.
+IMAGEM: Alternar embalagem de material elétrico e conexões; nenhuma recomendação de instalação.
+TELA: A especificação vem do profissional.
+
+15–22s
+FALA: Com a relação pronta, consulte os itens e as condições na Construcel.
+IMAGEM: Ana Paula fecha com CTA e logo.
+TELA: Conferir a lista técnica
+
+CTA: Conferir a lista técnica
+LEGENDA: A especificação faz parte do pedido. Antes de cotar elétrica, confira referência, unidade e quantidade com o profissional responsável. Depois, mande a relação à Construcel.
+GRAVAÇÃO: Celular vertical, lapela e luz da loja. Aproveitar tomadas do master; gravar o gancho curto quando necessário. Conferir SKU, validade e condições antes de publicar.

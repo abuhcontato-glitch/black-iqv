@@ -1,0 +1,24 @@
+T05-R1 — Virou a embalagem?
+20s
+Conceito: Orientação com Ana Paula na loja
+Objetivo: Ajudar a conferir a especificação do profissional
+Hook: Virou a embalagem?
+
+0–6s
+FALA: Virou a embalagem? É ali que começa a conferência da argamassa.
+IMAGEM: Close de embalagem real e ficha técnica; sem tutorial de aplicação.
+TELA: Virou a embalagem?
+
+6–14s
+FALA: A indicação precisa combinar com a peça, a superfície e o ambiente, conforme o fabricante.
+IMAGEM: Ana Paula compara etiquetas de duas embalagens sem afirmar compatibilidade genérica.
+TELA: A indicação do fabricante entra na escolha.
+
+14–20s
+FALA: Leve a especificação do profissional para consultar a referência e a quantidade.
+IMAGEM: Plano final de Ana Paula em corredor autorizado.
+TELA: Conferir antes da compra
+
+CTA: Conferir antes da compra
+LEGENDA: Antes de levar argamassa, confira a indicação de uso. Ana Paula mostra onde essa informação entra na conversa com o profissional. Para cotar, envie referência e quantidade.
+GRAVAÇÃO: Celular vertical, lapela e luz da loja. Aproveitar tomadas do master; gravar o gancho curto quando necessário. Conferir SKU, validade e condições antes de publicar.

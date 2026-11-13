@@ -1,5 +1,14 @@
-Peça seu orçamento.
+M07 — Envie a lista para cotar
 
-Seu orçamento começa com produto, quantidade e região de entrega. Consulte os itens, as condições e o frete com a equipe.
+OBJETIVO: Receber a versão atual da lista com referências, quantidades e destino.
+VERSÃO A
+Foto legível, arquivo ou mensagem: envie os materiais com referências e quantidades. Diga também a região da entrega. A Construcel consulta os itens e as condições para você avaliar o pedido.
 
-CTA: Saiba mais
+VERSÃO B — Essa lista é a última?
+Antes de pedir outra cotação, confirme o que mudou na obra e o que já foi comprado. Envie a versão atual à Construcel com o destino do pedido. A equipe verifica os itens disponíveis, o preço e a condição de entrega.
+
+DESCRIÇÃO: Envie a versão atual da lista.
+HOOK: Pode mandar essa lista.
+HIPÓTESE: Facilidade de envio versus atualização da lista.
+MÉTRICA: Listas efetivamente recebidas, orçamentos enviados e custo por orçamento.
+APROVAÇÃO: Canal de atendimento, capacidade de retorno, itens e condições atuais; sem prazo automático.

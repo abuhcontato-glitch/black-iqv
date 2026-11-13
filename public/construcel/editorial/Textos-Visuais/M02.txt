@@ -1,5 +1,14 @@
-Seu piso começa na escolha.
+M02 — Da referência à reforma
 
-Vai escolher piso ou porcelanato? Envie sua metragem e as referências do projeto. Consulte os modelos e as condições disponíveis na Construcel.
+OBJETIVO: Levar referências e medidas de reforma ao atendimento.
+VERSÃO A
+A pasta do celular está cheia de ideias para a reforma? Traga as imagens e as medidas à Construcel. Compare os modelos de perto e confira a indicação de uso com quem acompanha a obra. QNN 9, Ceilândia Norte.
 
-CTA: Saiba mais
+VERSÃO B — Compare o pedido inteiro
+O preço por metro quadrado é uma parte da compra. Confira a metragem, a quantidade de caixas e o frete antes de fechar o piso da reforma. Envie sua referência para consultar as condições da Construcel.
+
+DESCRIÇÃO: Traga a imagem e as medidas.
+HOOK: Essa foto conta tudo?
+HIPÓTESE: Identificação com a escolha visual versus avaliação do custo total.
+MÉTRICA: Proporção de contatos que enviam referência e medidas; custo por orçamento.
+APROVAÇÃO: Modelos presentes no dia, indicação do fabricante, disponibilidade, preço e entrega.

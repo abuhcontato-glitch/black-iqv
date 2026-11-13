@@ -1,44 +1,43 @@
 V03 — Cozinha e banheiro: da referência à lista
-60 segundos · 127 palavras · Aplicação / revestimentos
-Captação vertical 9:16; enquadramento central para versão 4:5
-A duração é planejada. Cronometrar a leitura com Ana Paula e ajustar pausas e montagem, preservando as condições comerciais.
+60s · 129 palavras
 
-CENA 01 | 00s–05s | Mostruário
-FALA: Salvou várias referências para reformar? Agora vamos transformar essa ideia em uma lista.
-CÂMERA: Ana Paula mostra um celular com moodboard próprio sem perfis de terceiros.
-NA TELA: Da inspiração à lista
+CENA 1 · 0–5s · Mostruário
+FALA: Bonito. Mas serve aí? A cozinha da referência pode ser bem diferente da sua.
+AÇÃO: Ana Paula mostra um celular com moodboard próprio sem perfis de terceiros.
+TELA: Da inspiração à lista
 
-CENA 02 | 05s–12s | Bancada
-FALA: Comece pelas medidas e pelos materiais que seu projeto pede para o piso e para a parede.
-CÂMERA: Plano detalhe de fita métrica e lista de demonstração.
-NA TELA: Medidas + materiais
+CENA 2 · 5–12s · Bancada
+FALA: Antes de escolher o revestimento, tenha as medidas do ambiente e a orientação do profissional.
+AÇÃO: Plano detalhe de fita métrica e lista de demonstração.
+TELA: Medidas + materiais
 
-CENA 03 | 12s–20s | Amostras
-FALA: Depois, compare visual, acabamento e indicação de uso. A orientação do profissional também faz parte da decisão.
-CÂMERA: Ana Paula aproxima duas amostras; mostrar ficha em vez de prometer aplicação universal.
-NA TELA: Compare o uso indicado
+CENA 3 · 12–20s · Amostras
+FALA: Compare acabamento e formato. A ficha do fabricante é que informa a aplicação do produto.
+AÇÃO: Ana Paula aproxima duas amostras; mostrar ficha em vez de prometer aplicação universal.
+TELA: Compare o uso indicado
 
-CENA 04 | 20s–28s | E16
-FALA: O revestimento Cecafi Atract da seleção está por dezenove e noventa o metro quadrado no Esquenta.
-CÂMERA: Close do E16, 32x57 Atract 143291; inserir referência completa em tela.
-NA TELA: Cecafi Atract 143291 · R$ 19,90/m²
+CENA 4 · 20–28s · E16
+FALA: Este Atract da Cecafi, referência um quatro três dois nove um, está por dezenove e noventa o metro quadrado.
+AÇÃO: Close do E16, 32x57 Atract 143291; inserir referência completa em tela.
+TELA: Cecafi Atract 143291 · R$ 19,90/m²
 
-CENA 05 | 28s–36s | Mostruário
-FALA: Essa condição vale de doze a dezenove de novembro, à vista em dinheiro, Pix ou débito.
-CÂMERA: Plano médio; lettering de validade e pagamento.
-NA TELA: 12–19/11 · à vista
+CENA 5 · 28–36s · Mostruário
+FALA: A condição é do Esquenta, de doze a dezenove de novembro, à vista em dinheiro, Pix ou débito.
+AÇÃO: Plano médio; lettering de validade e pagamento.
+TELA: 12–19/11 · à vista
 
-CENA 06 | 36s–45s | Lista / telefone
-FALA: A foto ajuda na referência. Para cotar, precisamos também das quantidades e do local de entrega.
-CÂMERA: Insert de formulário de demonstração com campos corretos.
-NA TELA: Quantidade + região
+CENA 6 · 36–45s · Lista / telefone
+FALA: Quando pedir orçamento, envie a referência, a metragem e a região da entrega.
+AÇÃO: Insert de formulário de demonstração com campos corretos.
+TELA: Quantidade + região
 
-CENA 07 | 45s–54s | Loja
-FALA: Mande sua lista para a Construcel e consulte os modelos, o saldo e as condições de frete.
-CÂMERA: B-roll do balcão e do mostruário; sem cliente identificável.
-NA TELA: Consulte modelos e disponibilidade
+CENA 7 · 45–54s · Loja
+FALA: A equipe consulta os itens e as condições. A disponibilidade e o frete precisam ser confirmados.
+AÇÃO: B-roll do balcão e do mostruário; sem cliente identificável.
+TELA: Consulte modelos e disponibilidade
 
-CENA 08 | 54s–60s | Bancada
-FALA: Seu projeto começa na ideia. O orçamento começa com informação. Fale com a nossa equipe.
-CÂMERA: Ana Paula fecha ao lado das amostras.
-NA TELA: Solicite sua cotação
+CENA 8 · 54–60s · Bancada
+FALA: Pode trazer aquela imagem salva no celular. A escolha começa com a referência, mas precisa caber no seu projeto.
+AÇÃO: Ana Paula fecha ao lado das amostras.
+TELA: Solicite sua cotação
+

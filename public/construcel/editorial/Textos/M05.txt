@@ -1,7 +1,14 @@
-M05 · Hidráulica e elétrica
-Três dados. Uma cotação.
+M05 — A referência faz diferença
 
-Hidráulica e elétrica pedem especificações claras. Envie a lista do profissional, as medidas, as unidades e as quantidades. A equipe consulta os itens disponíveis e as condições comerciais para sua obra.
+OBJETIVO: Identificar o item hidráulico ou elétrico solicitado com referência e medida.
+VERSÃO A
+Uma conexão pode parecer igual na foto. Confirme tipo, medida e quantidade com o profissional e envie a referência à Construcel. A equipe consulta o material e as condições disponíveis.
 
-CTA: Solicitar orçamento
-Roteiro de gravação: V05
+VERSÃO B — Tem a foto da embalagem?
+Código, medida ou uma foto legível ajudam a identificar o que está no pedido. Reúna essas informações para consultar materiais hidráulicos e elétricos na Construcel. A especificação técnica deve seguir o projeto.
+
+DESCRIÇÃO: Foto, medida e referência.
+HOOK: Qual é a medida?
+HIPÓTESE: Medida da peça versus identificação por referência.
+MÉTRICA: Percentual de contatos com referência identificável e orçamento concluído.
+APROVAÇÃO: Categoria, modelo, indicação e disponibilidade; não oferecer orientação de instalação improvisada.

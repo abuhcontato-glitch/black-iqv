@@ -1,7 +1,5 @@
-T03-F2 · Instagram Feed
-A referência do projeto vale ouro
+T03-F2 — Manda a imagem que você salvou.
 
-Tem uma foto do porcelanato que procura? Envie a referência, a metragem e o ambiente de aplicação. Nossa equipe poderá verificar alternativas disponíveis e as condições comerciais. A seleção depende do catálogo vigente.
+Vale foto, referência do fabricante ou nome do modelo. Junte a metragem e diga onde pretende usar. A consulta começa mais clara quando a escolha tem nome e contexto.
 
-CTA: Peça orçamento / Link da bio
-Fase editorial: Esquenta
+CTA: Enviar referência

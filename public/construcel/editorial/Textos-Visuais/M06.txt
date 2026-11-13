@@ -1,5 +1,14 @@
-Construcel. De perto.
+M06 — É na QNN 9, em Ceilândia
 
-Conheça a Construcel, em Ceilândia Norte. Uma loja com quatro depósitos no mesmo local. Da construção ao acabamento, envie sua lista.
+OBJETIVO: Gerar consultas de localização e intenção de visita à loja da QNN 9.
+VERSÃO A
+Talvez você conheça a fachada. Dentro da Construcel, a compra vai dos materiais básicos ao acabamento e às utilidades para o lar. Venha comparar sua referência na QNN 9, Ceilândia Norte.
 
-CTA: Saiba mais
+VERSÃO B — Uma história de família
+A Decel começou em 1977, com os cobogós da família de Ana Paula. A Construcel veio em 2010 e hoje está na QNN 9, em Ceilândia Norte. Conheça a loja e consulte os materiais da sua próxima compra.
+
+DESCRIÇÃO: Conheça a loja na QNN 9.
+HOOK: Já entrou aqui?
+HIPÓTESE: Proximidade da loja versus história familiar comprovada.
+MÉTRICA: Pedidos de localização/rota e contatos que declaram intenção de visita.
+APROVAÇÃO: Endereço e horários atuais; filmar áreas e pessoas autorizadas, sem inventar avaliações.

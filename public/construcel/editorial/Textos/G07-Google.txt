@@ -1,28 +1,29 @@
-G07 — Construtoras
-"fornecedor materiais construtora df";"cotação materiais de construção empresa";"materiais para construtora df";"orçamento materiais para obra empresa"
+G07 — Cotação de materiais
+orçamento lista material construção ceilândia
+[orçamento material construção ceilândia]; "cotar lista materiais"; "construcel orçamento"
 
-TÍTULOS:
-Cotação Para Construtoras
-Materiais Para Empresas
-Lista de Materiais da Obra
-Orçamento Comercial B2B
-Envie Seu Pedido de Cotação
-Compras Para Obras no DF
-Solicite Atendimento B2B
-Consulte Itens e Volumes
-Condições Sob Análise
-Construcel em Ceilândia
-Cotação Com Lista Técnica
-Informe Prazo e Destino
-Converse Com Nossa Equipe
-Pedidos Por Volume
-Preços Sob Consulta
+TÍTULOS
+Sua Lista Para Cotação
+Envie Foto Ou Arquivo
+Orçamento Na Construcel
+Essa É A Lista Atual?
+Cote Os Materiais Da Obra
+Informe A Região De Entrega
+Referência E Quantidade
+Pedido Pelo WhatsApp
+Confira As Condições
+Converse Com A Construcel
+Consulta Antes Da Compra
+Lista Legível Ajuda A Cotar
+Materiais E Frete Na Conta
+Orçamento Para Avaliar
+Loja Em Ceilândia Norte
 
-DESCRIÇÕES:
-Construtoras podem enviar lista, volumes e local de entrega para cotação comercial.
-Informe materiais e quantidades para avaliar disponibilidade e condições.
-Atendimento comercial da Construcel para consultas empresariais no DF e Entorno.
-Valores, prazos e condições são confirmados após análise do pedido.
+DESCRIÇÕES
+Lista pronta? Envie foto legível ou arquivo com referências e quantidades.
+Informe a região de entrega para consultar o pedido, as condições e o frete.
+Confira a versão atual com o profissional antes de pedir outra cotação.
+A equipe consulta os itens disponíveis e retorna durante o atendimento.
 
-Negativas iniciais: curso; grátis; emprego; apostila; pdf; tutorial; desenho; download (avaliar por grupo)
-Destino: landing page separada; aprovar domínio e URL final antes de ativar.
+DESTINO: https://abuhcontato-glitch.github.io/black-iqv/construcel/editorial/02-Landing-Page.html#orcamento
+PENDÊNCIAS: Validar verba, acesso, rastreamento e correspondências. URL pública da landing é prévia válida; confirmar domínio empresarial e destino final antes da ativação.

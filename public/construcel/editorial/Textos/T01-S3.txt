@@ -1,7 +1,6 @@
-T01-S3 · Instagram Stories
-Sua lista. Seu orçamento.
+T01-S3 — A metragem já está anotada?
 
-Separe produto, medida, quantidade e região de entrega. Com essas informações, a Construcel consulta os itens e prepara a cotação. Preços e disponibilidade são confirmados no atendimento.
+Ela ajuda a conferir quantas caixas entram no orçamento.
 
-CTA: Enviar lista
-Fase editorial: Esquenta
+CTA: Responder à enquete
+STICKER PROPOSTO: Já tenho / Ainda vou medir

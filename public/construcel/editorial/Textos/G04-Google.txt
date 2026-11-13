@@ -1,28 +1,29 @@
-G04 — Porcelanatos
-"porcelanato ceilândia";"loja porcelanato df";"porcelanato para sala";"porcelanato em ceilândia"
+G04 — Revestimentos
+revestimento cozinha banheiro ceilândia
+[revestimento ceilândia]; "revestimento cozinha ceilândia"; "revestimento banheiro"
 
-TÍTULOS:
-Porcelanato em Ceilândia
-Porcelanatos na Construcel
-Consulte Modelos e Preços
-Cote Seu Porcelanato
-Texturas e Acabamentos
-Peça Orçamento na Loja
-Envie Sua Referência
-Informe a Metragem
-Porcelanato Para Reforma
-Opções Sob Consulta
-Loja em Ceilândia Norte
-Compare Acabamentos
-Consulte Disponibilidade
-Atendimento da Construcel
-Para Sua Obra ou Reforma
+TÍTULOS
+Revestimentos Na Construcel
+Reforma Da Cozinha?
+Vai Reformar O Banheiro?
+Traga As Medidas Da Parede
+Compare Suas Referências
+Cote Piso E Revestimento
+Veja O Acabamento De Perto
+Consulte A Aplicação
+Modelos E Preços Na QNN 9
+Revestimento Em Ceilândia
+Envie A Imagem Do Modelo
+Consulta Pelo WhatsApp
+Condições Da Referência
+Materiais Para Sua Reforma
+Confirme Quantidade E Frete
 
-DESCRIÇÕES:
-Tem uma referência de porcelanato? Informe metragem e ambiente para consultar opções.
-Verifique modelos, acabamentos e indicações de uso conforme o fabricante.
-Consulte preços e disponibilidade atualizados no atendimento da Construcel.
-Loja em Ceilândia Norte. Solicite um orçamento para sua obra ou reforma.
+DESCRIÇÕES
+Reformando cozinha ou banheiro? Leve referências e medidas à Construcel.
+Consulte revestimentos na QNN 9. Confira a aplicação com o profissional.
+Do modelo ao pedido: envie referência e quantidade para consultar condições.
+Disponibilidade, preço e frete são confirmados conforme os itens da compra.
 
-Negativas iniciais: curso; grátis; emprego; apostila; pdf; tutorial; desenho; download (avaliar por grupo)
-Destino: landing page separada; aprovar domínio e URL final antes de ativar.
+DESTINO: https://abuhcontato-glitch.github.io/black-iqv/construcel/editorial/02-Landing-Page.html#categorias
+PENDÊNCIAS: Validar verba, acesso, rastreamento e correspondências. URL pública da landing é prévia válida; confirmar domínio empresarial e destino final antes da ativação.

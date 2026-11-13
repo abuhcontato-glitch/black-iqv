@@ -1,0 +1,24 @@
+T09-R1 — Essa lista é a última?
+20s
+Conceito: Organização com Ana Paula na loja
+Objetivo: Evitar cotação baseada em relação antiga
+Hook: Essa lista é a última?
+
+0–6s
+FALA: Essa lista é a última? A obra avança e a compra pode mudar.
+IMAGEM: Ana Paula mostra um celular com moodboard próprio sem perfis de terceiros.
+TELA: Essa lista é a última?
+
+6–14s
+FALA: Confirme com o profissional os itens atuais e o que já foi comprado.
+IMAGEM: Plano detalhe de fita métrica e lista de demonstração.
+TELA: Confira o que mudou na etapa da obra.
+
+14–20s
+FALA: Depois, envie a versão revisada à Construcel para cotar a próxima etapa.
+IMAGEM: B-roll do balcão e do mostruário; sem cliente identificável.
+TELA: Revisar antes de cotar
+
+CTA: Revisar antes de cotar
+LEGENDA: Antes da próxima compra, confira o que mudou na obra e o que já foi adquirido. Envie a versão atual para a Construcel consultar os itens da etapa.
+GRAVAÇÃO: Celular vertical, lapela e luz da loja. Aproveitar tomadas do master; gravar o gancho curto quando necessário. Conferir SKU, validade e condições antes de publicar.

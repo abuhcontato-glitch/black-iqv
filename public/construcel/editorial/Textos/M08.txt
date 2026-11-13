@@ -1,7 +1,14 @@
-M08 · Empresas e Feirão
-Sua empresa precisa de materiais?
+M08 — Cotação para obra e condomínio
 
-Compra para construtora ou condomínio? Envie especificações, volumes e local de entrega para avaliação comercial. O Feirão Construcel acontece em 20 e 21/11; consulte a seleção e as condições específicas do evento.
+OBJETIVO: Receber pedidos B2B com especificação, volume, destino e prazo desejado.
+VERSÃO A
+Na compra profissional, disponibilidade, quantidade e entrega também entram na conta. Envie referências, volumes, destino e prazo desejado à Construcel. As condições são avaliadas para cada solicitação.
 
-CTA: Solicitar orçamento
-Roteiro de gravação: V08
+VERSÃO B — A manutenção tem uma lista?
+Para cotar materiais de condomínio, reúna referências e quantidades e informe quando o serviço precisa acontecer. A Construcel consulta disponibilidade e condições de entrega. Não há desconto empresarial automático.
+
+DESCRIÇÃO: Condições por solicitação.
+HOOK: Só preço não fecha compra.
+HIPÓTESE: Compra para execução de obra versus manutenção de condomínio.
+MÉTRICA: Contatos B2B identificados, pedidos completos e propostas emitidas.
+APROVAÇÃO: Condições por solicitação, disponibilidade e prazo possível. Feirão, se citado, depende de seleção própria aprovada.

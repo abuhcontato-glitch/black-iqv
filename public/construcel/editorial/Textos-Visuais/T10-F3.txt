@@ -1,5 +1,5 @@
-Pedido organizado, cotação mais clara
+T10-F3 — Pode chegar em qual dia?
 
-Uma lista precisa, com unidades e local de entrega, ajuda a equipe a consultar o pedido com menos dúvidas. Antes de fechar, confirme preço, disponibilidade, frete e prazo de acordo com as condições atuais.
+Essa resposta precisa da avaliação da entrega. Ao pedir orçamento, informe o local, os materiais e o prazo que você precisa. A equipe confirma o que é possível antes do fechamento.
 
-CTA: Peça orçamento / Link da bio
+CTA: Consultar prazo e condição

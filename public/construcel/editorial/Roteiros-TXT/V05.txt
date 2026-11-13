@@ -1,44 +1,43 @@
 V05 — Hidráulica e elétrica: três dados para cotar
-60 segundos · 121 palavras · Educativo / instalações
-Captação vertical 9:16; enquadramento central para versão 4:5
-A duração é planejada. Cronometrar a leitura com Ana Paula e ajustar pausas e montagem, preservando as condições comerciais.
+60s · 118 palavras
 
-CENA 01 | 00s–05s | Loja
-FALA: Vai cotar hidráulica ou elétrica? Separe três informações antes de chamar a loja.
-CÂMERA: Ana Paula mostra três dedos; plano médio com categorias ao fundo.
-NA TELA: Três dados para a cotação
+CENA 1 · 0–5s · Loja
+FALA: Qual é a medida? Essa informação faz diferença na hora de pedir material hidráulico.
+AÇÃO: Ana Paula mostra três dedos; plano médio com categorias ao fundo.
+TELA: Três dados para a cotação
 
-CENA 02 | 05s–12s | Produtos confirmados
-FALA: Primeiro: qual é o item e qual é a especificação indicada pelo profissional responsável?
-CÂMERA: Detalhes de conexão, embalagem ou placa real; sem mostrar instalação energizada.
-NA TELA: 1 · Item e especificação
+CENA 2 · 5–12s · Produtos confirmados
+FALA: Uma conexão pode parecer igual a outra. Confira o tipo e a bitola com o profissional responsável.
+AÇÃO: Detalhes de conexão, embalagem ou placa real; sem mostrar instalação energizada.
+TELA: 1 · Item e especificação
 
-CENA 03 | 12s–20s | Bancada
-FALA: Segundo: a medida, a unidade e a quantidade. Uma descrição incompleta pode deixar a cotação com dúvidas.
-CÂMERA: Mostrar lista fictícia preenchida corretamente.
-NA TELA: 2 · Medida, unidade e quantidade
+CENA 3 · 12–20s · Bancada
+FALA: O mesmo cuidado vale para elétrica: mantenha a especificação, a unidade e a quantidade na lista.
+AÇÃO: Mostrar lista fictícia preenchida corretamente.
+TELA: 2 · Medida, unidade e quantidade
 
-CENA 04 | 20s–28s | Bancada
-FALA: Terceiro: o local de entrega e o prazo que você deseja. A disponibilidade será conferida pela equipe.
-CÂMERA: Ana Paula aponta campo de região num exemplo de pedido.
-NA TELA: 3 · Região e necessidade
+CENA 4 · 20–28s · Bancada
+FALA: Vai precisar entregar? Inclua o bairro e o local da obra na consulta.
+AÇÃO: Ana Paula aponta campo de região num exemplo de pedido.
+TELA: 3 · Região e necessidade
 
-CENA 05 | 28s–36s | Categorias
-FALA: Na elétrica, siga a lista do profissional. Na hidráulica, confira também medidas e compatibilidades do projeto.
-CÂMERA: Alternar embalagem de material elétrico e conexões; nenhuma recomendação de instalação.
-NA TELA: Siga a orientação técnica
+CENA 5 · 28–36s · Categorias
+FALA: A escolha técnica segue o projeto. Aqui, a equipe verifica os produtos e as condições disponíveis.
+AÇÃO: Alternar embalagem de material elétrico e conexões; nenhuma recomendação de instalação.
+TELA: Siga a orientação técnica
 
-CENA 06 | 36s–45s | Produto / telefone
-FALA: Pode mandar a referência do produto ou uma foto da embalagem para ajudar na identificação.
-CÂMERA: Celular com foto de produto próprio; evitar dados e contatos reais na tela.
-NA TELA: Referência ajuda a identificar
+CENA 6 · 36–45s · Produto / telefone
+FALA: Se tiver foto da peça ou da embalagem, pode enviar junto. Ela ajuda a identificar a referência.
+AÇÃO: Celular com foto de produto próprio; evitar dados e contatos reais na tela.
+TELA: Referência ajuda a identificar
 
-CENA 07 | 45s–54s | Atendimento
-FALA: A Construcel consulta os itens, o saldo e as condições comerciais. Assim, sua conversa começa mais organizada.
-CÂMERA: Vendedor e Ana Paula no balcão; plano aberto curto.
-NA TELA: Consulte disponibilidade
+CENA 7 · 45–54s · Atendimento
+FALA: Com o pedido completo, o atendimento consegue entender melhor o que precisa conferir.
+AÇÃO: Vendedor e Ana Paula no balcão; plano aberto curto.
+TELA: Consulte disponibilidade
 
-CENA 08 | 54s–60s | Loja
-FALA: Sua lista está pronta? Envie para a equipe e solicite uma cotação.
-CÂMERA: Ana Paula fecha com CTA e logo.
-NA TELA: Solicite orçamento no WhatsApp
+CENA 8 · 54–60s · Loja
+FALA: Antes de comprar no escuro, separe essas informações e consulte a Construcel.
+AÇÃO: Ana Paula fecha com CTA e logo.
+TELA: Solicite orçamento no WhatsApp
+

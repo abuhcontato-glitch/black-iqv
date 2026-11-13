@@ -1,5 +1,5 @@
-Mande a etapa e a lista
+T09-S4 — Mande a versão atual.
 
-Nossa equipe consulta materiais conforme o momento da obra.
+Diga a etapa da obra e o que precisa cotar agora.
 
-CTA: Solicitar orçamento
+CTA: Enviar a lista revisada

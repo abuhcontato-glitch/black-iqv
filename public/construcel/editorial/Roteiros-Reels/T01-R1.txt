@@ -1,0 +1,24 @@
+T01-R1 — Piso na lista?
+25s
+Conceito: Oferta verificável com Ana Paula na loja
+Objetivo: Gerar consulta de referência e metragem com condição verificável
+Hook: Piso na lista?
+
+0–8s
+FALA: Piso na lista? O Esquenta da Construcel vai de doze a dezenove de novembro.
+IMAGEM: Plano médio na entrada; Ana Paula olha para a câmera.
+TELA: Piso na lista?
+
+8–18s
+FALA: Tem piso selecionado por doze e noventa e nove o metro quadrado. Confirme a referência participante.
+IMAGEM: Close do modelo branco 45194 e etiqueta aprovada; Ana Paula aponta sem cobrir o produto.
+TELA: Esquenta 12–19/11. Confira modelo e condição.
+
+18–25s
+FALA: É à vista em dinheiro, Pix ou débito. Mande a metragem para consultar quantidade, disponibilidade e frete.
+IMAGEM: Ana Paula fecha olhando para câmera; corte final com logo e contato.
+TELA: Ver os modelos
+
+CTA: Ver os modelos
+LEGENDA: Ana Paula mostra os modelos do Esquenta e explica o que vale conferir antes da compra. Anote a referência, veja a metragem e consulte a condição vigente. Esquenta 12–19/11, à vista em dinheiro, Pix ou débito; disponibilidade e frete sob consulta.
+GRAVAÇÃO: Celular vertical, lapela e luz da loja. Aproveitar tomadas do master; gravar o gancho curto quando necessário. Conferir SKU, validade e condições antes de publicar.

@@ -1,5 +1,14 @@
-Do básico ao acabamento.
+M04 — Confira a lista da obra
 
-Informe produtos, unidades e quantidades. A Construcel recebe sua lista e consulta materiais básicos e argamassas conforme a disponibilidade.
+OBJETIVO: Receber listas de materiais básicos antes do deslocamento para compra.
+VERSÃO A
+Material faltando pode parar o serviço. Antes da próxima compra, confira a lista com o profissional: produto, unidade e quantidade. A Construcel consulta os básicos disponíveis e as condições do pedido.
 
-CTA: Saiba mais
+VERSÃO B — Antes de sair, consulte
+Vai buscar cimento, tijolo, argamassa ou outro básico? Envie a relação para conferir os itens antes de se deslocar. Se precisar de entrega, informe o destino para consultar o frete. Construcel, Ceilândia Norte.
+
+DESCRIÇÃO: Consulte os itens antes de sair.
+HOOK: Faltou bem na hora?
+HIPÓTESE: Situação de obra versus conveniência de consultar antes da viagem.
+MÉTRICA: Conversas com lista recebida e taxa de passagem a orçamento.
+APROVAÇÃO: Disponibilidade por item, quantidades, condição de retirada e logística.

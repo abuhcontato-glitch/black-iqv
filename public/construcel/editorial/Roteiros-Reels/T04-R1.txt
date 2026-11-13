@@ -1,0 +1,24 @@
+T04-R1 — Faltou bem na hora?
+25s
+Conceito: Conveniência com Ana Paula na loja
+Objetivo: Receber listas de compra com informações úteis
+Hook: Faltou bem na hora?
+
+0–8s
+FALA: Faltou bem na hora? Antes da próxima compra, confira a lista com quem executa o serviço.
+IMAGEM: Ana Paula com lista em primeiro plano; loja ao fundo.
+TELA: Faltou bem na hora?
+
+8–18s
+FALA: Produto, referência e quantidade precisam aparecer juntos. Se vai entregar, informe a região.
+IMAGEM: Insert de lista fictícia legível, com medidas e unidades.
+TELA: Revisão da lista antes da próxima compra.
+
+18–25s
+FALA: Mande para a Construcel consultar os itens disponíveis antes de você sair.
+IMAGEM: Plano final de Ana Paula em corredor autorizado.
+TELA: Enviar a lista
+
+CTA: Enviar a lista
+LEGENDA: Lista revisada antes de comprar: material, especificação e quantidade. Se vai precisar de entrega, inclua a região da obra. Envie para a Construcel conferir disponibilidade e condições.
+GRAVAÇÃO: Celular vertical, lapela e luz da loja. Aproveitar tomadas do master; gravar o gancho curto quando necessário. Conferir SKU, validade e condições antes de publicar.

@@ -1,28 +1,29 @@
-G05 — Revestimentos
-"revestimento banheiro ceilândia";"revestimento cozinha df";"revestimentos ceilândia";"material acabamento reforma df"
+G05 — Materiais básicos
+cimento tijolo areia materiais básicos ceilândia
+[materiais básicos ceilândia]; "cimento ceilândia"; "tijolo ceilândia"; "areia ceilândia"
 
-TÍTULOS:
-Revestimentos em Ceilândia
-Revestimento Para Banheiro
-Revestimento Para Cozinha
-Consulte Modelos Disponíveis
-Cote Seus Revestimentos
-Acabamentos Para Reforma
-Envie Sua Referência
-Informe a Metragem
-Confira Opções da Loja
-Converse Com a Construcel
-Loja em Ceilândia Norte
-Consultar Preços Atuais
-Reforma Com Planejamento
-Atendimento Comercial
-Solicite Seu Orçamento
+TÍTULOS
+Básicos Na Lista Da Obra
+Cimento E Tijolo Na Compra
+Consulte Itens Disponíveis
+Conferiu A Lista Atual?
+Materiais Na Construcel
+Seu Pedido Com Quantidade
+Cote Antes De Sair
+Compra Na QNN 9
+Básicos Em Ceilândia Norte
+Envie A Lista Do Profissional
+Confira Unidade E Referência
+Consulta De Material E Frete
+Condições Para O Seu Pedido
+Retirada Ou Entrega?
+Fale Com O Atendimento
 
-DESCRIÇÕES:
-Revestimentos para cozinha, banheiro e outros ambientes: consulte opções disponíveis.
-Envie sua metragem e referências para solicitar uma cotação de acabamentos.
-Verifique indicações do fabricante, preço e disponibilidade antes da compra.
-A Construcel está em Ceilândia Norte e atende consultas de reforma e obra.
+DESCRIÇÕES
+Confirme sua lista com o profissional. A Construcel consulta os itens disponíveis.
+Cimento, tijolo e outros básicos: informe produto, unidade e quantidade.
+Precisa de entrega? Envie região e volumes para consultar frete e prazo.
+Antes de ir à loja, consulte o material. Estamos na QNN 9, Ceilândia Norte.
 
-Negativas iniciais: curso; grátis; emprego; apostila; pdf; tutorial; desenho; download (avaliar por grupo)
-Destino: landing page separada; aprovar domínio e URL final antes de ativar.
+DESTINO: https://abuhcontato-glitch.github.io/black-iqv/construcel/editorial/02-Landing-Page.html#categorias
+PENDÊNCIAS: Validar verba, acesso, rastreamento e correspondências. URL pública da landing é prévia válida; confirmar domínio empresarial e destino final antes da ativação.

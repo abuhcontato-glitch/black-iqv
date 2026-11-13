@@ -1,0 +1,24 @@
+T10-R1 — E para chegar à obra?
+25s
+Conceito: Redução de incerteza com Ana Paula na loja
+Objetivo: Consultar material e condição de entrega juntos
+Hook: E para chegar à obra?
+
+0–8s
+FALA: E para chegar à obra? O frete também precisa entrar na conta.
+IMAGEM: Ana Paula em plano médio no balcão.
+TELA: E para chegar à obra?
+
+8–18s
+FALA: Mande a região, os materiais e as quantidades. Peso e volume fazem parte da consulta.
+IMAGEM: Planos da expedição e materiais, sem prometer prazo de entrega.
+TELA: Peso, volume e destino entram no frete.
+
+18–25s
+FALA: A Construcel confirma disponibilidade, condições e prazo antes do fechamento do pedido.
+IMAGEM: Ana Paula fecha e aponta discretamente para a área do CTA.
+TELA: Consultar a entrega
+
+CTA: Consultar a entrega
+LEGENDA: O orçamento fica mais claro com o bairro, os itens e as quantidades. Frete e prazo precisam ser confirmados antes da compra. Envie o pedido com a região de entrega.
+GRAVAÇÃO: Celular vertical, lapela e luz da loja. Aproveitar tomadas do master; gravar o gancho curto quando necessário. Conferir SKU, validade e condições antes de publicar.

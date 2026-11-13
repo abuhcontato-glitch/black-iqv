@@ -1,5 +1,5 @@
-Construtoras: envie a lista da obra
+T12-F1 — Preço é uma parte da cotação.
 
-A Construcel recebe consultas de materiais para obras no DF e Entorno. Para preparar uma cotação empresarial, informe itens, especificações, quantidades, local e prazo desejado. Condições comerciais dependem de análise do pedido.
+Quem compra para obra precisa conferir também especificação, quantidade, disponibilidade e condições de entrega. Envie a relação de materiais à Construcel e informe o destino e o prazo desejado. A equipe avalia cada solicitação.
 
-CTA: Solicite cotação empresarial
+CTA: Solicitar cotação empresarial

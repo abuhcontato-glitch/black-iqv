@@ -1,5 +1,6 @@
-Sua empresa compra materiais?
+T12-S1 — Compra para obra ou condomínio?
 
-Construtoras e condomínios podem enviar listas para consulta comercial.
+O pedido precisa de referência, quantidade e destino.
 
-CTA: Pedir cotação
+CTA: Identificar a compra
+STICKER PROPOSTO: Obra / Condomínio

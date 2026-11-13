@@ -1,0 +1,24 @@
+T12-R1 — Só preço não fecha compra.
+25s
+Conceito: Compra profissional com Ana Paula na loja
+Objetivo: Receber solicitações profissionais com contexto
+Hook: Só preço não fecha compra.
+
+0–8s
+FALA: Só preço não fecha compra. Para obra ou condomínio, a cotação precisa do pedido completo.
+IMAGEM: Ana Paula em balcão com lista de compras empresarial fictícia.
+TELA: Só preço não fecha compra.
+
+8–18s
+FALA: Informe especificação, quantidade, destino e o prazo desejado.
+IMAGEM: Mostrar mapa ilustrativo sem prometer raio ou prazo.
+TELA: Especificação, volume, destino e prazo.
+
+18–25s
+FALA: A Construcel avalia disponibilidade e condições de cada solicitação. Envie a relação para o atendimento comercial.
+IMAGEM: Ana Paula finaliza com logo e contato.
+TELA: Cotar o pedido profissional
+
+CTA: Cotar o pedido profissional
+LEGENDA: Na compra profissional, especificação, quantidade e entrega também precisam fechar. Envie a lista da empresa ou do condomínio e informe o prazo desejado para avaliação comercial.
+GRAVAÇÃO: Celular vertical, lapela e luz da loja. Aproveitar tomadas do master; gravar o gancho curto quando necessário. Conferir SKU, validade e condições antes de publicar.

@@ -1,0 +1,24 @@
+T06-R1 — Qual é a medida?
+22s
+Conceito: Erro comum com Ana Paula na loja
+Objetivo: Facilitar a identificação do material hidráulico
+Hook: Qual é a medida?
+
+0–7s
+FALA: Qual é a medida? Uma foto ajuda, mas não substitui a especificação da peça.
+IMAGEM: Ana Paula mostra três dedos; plano médio com categorias ao fundo.
+TELA: Qual é a medida?
+
+7–15s
+FALA: Para cotar hidráulica, confirme tipo, bitola e quantidade com o profissional.
+IMAGEM: Detalhes de conexão, embalagem ou placa real; sem mostrar instalação energizada.
+TELA: Tipo de peça, medida e quantidade.
+
+15–22s
+FALA: Mande os dados e a referência para a Construcel consultar os materiais.
+IMAGEM: Celular com foto de produto próprio; evitar dados e contatos reais na tela.
+TELA: Enviar a especificação
+
+CTA: Enviar a especificação
+LEGENDA: A peça pode parecer igual na foto. Antes de comprar hidráulica, confirme tipo, medida e quantidade com o profissional. Com esses dados, a Construcel consulta os itens da lista.
+GRAVAÇÃO: Celular vertical, lapela e luz da loja. Aproveitar tomadas do master; gravar o gancho curto quando necessário. Conferir SKU, validade e condições antes de publicar.

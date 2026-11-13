@@ -1,28 +1,29 @@
-G08 — Condomínios
-"materiais para manutenção condomínio df";"comprar material condomínio ceilândia";"cotação materiais condomínio";"fornecedor materiais condominio df"
+G08 — Compras profissionais
+cotação materiais construtora condomínio DF
+"cotação materiais construtora"; "material construção condomínio"; "fornecimento materiais obra df"
 
-TÍTULOS:
+TÍTULOS
+Cotação Para Obra E Empresa
 Materiais Para Condomínios
-Cotação Para Condomínios
-Compras Para Manutenção
-Lista de Materiais Prediais
-Envie Sua Lista de Compra
-Atendimento Comercial B2B
-Cote Itens Para Condomínio
-Consulte Disponibilidade
-Condições Sob Consulta
-Materiais Para Reparos
-Construcel em Ceilândia
-Informe Volume e Destino
-Pedido Empresarial no DF
-Solicite Seu Orçamento
-Fale Com Nossa Equipe
+Compra Profissional No DF
+Lista Com Especificações
+Informe Volumes E Destino
+Condições Por Solicitação
+Prazo Desejado Da Obra
+Consulta De Disponibilidade
+Compras Na Construcel
+Seu Pedido B2B Completo
+Manutenção Do Condomínio?
+Cote Material E Entrega
+Preço É Parte Da Conta
+Atendimento Na QNN 9
+Envie A Relação De Materiais
 
-DESCRIÇÕES:
-Responsáveis por compras podem solicitar cotação de materiais para manutenção.
-Envie lista, especificações, quantidades e endereço para avaliação do pedido.
-Consulte disponibilidade e condições comerciais com a equipe da Construcel.
-Atendimento para condomínios no DF e Entorno, conforme os materiais solicitados.
+DESCRIÇÕES
+Para obra, empresa ou condomínio: envie referências, quantidades e destino.
+Informe o prazo desejado. A operação avalia a possibilidade de atendimento.
+Confira especificação, disponibilidade e entrega antes de fechar a compra.
+As condições são avaliadas por pedido. Consulte o atendimento da Construcel.
 
-Negativas iniciais: curso; grátis; emprego; apostila; pdf; tutorial; desenho; download (avaliar por grupo)
-Destino: landing page separada; aprovar domínio e URL final antes de ativar.
+DESTINO: https://abuhcontato-glitch.github.io/black-iqv/construcel/editorial/02-Landing-Page.html#orcamento
+PENDÊNCIAS: Validar verba, acesso, rastreamento e correspondências. URL pública da landing é prévia válida; confirmar domínio empresarial e destino final antes da ativação.

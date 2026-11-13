@@ -1,44 +1,43 @@
 V06 — Quem é a Construcel: história e estrutura
-60 segundos · 121 palavras · Institucional / confiança
-Captação vertical 9:16; enquadramento central para versão 4:5
-A duração é planejada. Cronometrar a leitura com Ana Paula e ajustar pausas e montagem, preservando as condições comerciais.
+60s · 130 palavras
 
-CENA 01 | 00s–05s | Fachada
-FALA: Quem está por trás da Construcel? Eu sou a Ana Paula. Vem conhecer nossa loja.
-CÂMERA: Plano médio de Ana Paula na fachada, sem bloquear entrada e sem veículos em primeiro plano.
-NA TELA: Ana Paula · Construcel
+CENA 1 · 0–5s · Fachada
+FALA: Já entrou aqui? Talvez você conheça essa fachada da QNN nove, em Ceilândia Norte.
+AÇÃO: Plano médio de Ana Paula na fachada, sem bloquear entrada e sem veículos em primeiro plano.
+TELA: Ana Paula · Construcel
 
-CENA 02 | 05s–12s | Loja / detalhe
-FALA: A história da nossa família começou com a Decel, em mil novecentos e setenta e sete.
-CÂMERA: Ana Paula em off sobre detalhes do trabalho; timeline gráfica, sem inventar foto antiga.
-NA TELA: História familiar · Decel · 1977
+CENA 2 · 5–12s · Loja / detalhe
+FALA: A história da família começou antes: em mil novecentos e setenta e sete, com a Decel e os cobogós do meu pai.
+AÇÃO: Ana Paula em off sobre detalhes do trabalho; timeline gráfica, sem inventar foto antiga.
+TELA: História familiar · Decel · 1977
 
-CENA 03 | 12s–20s | Fachada / entrada
-FALA: A Construcel surgiu em dois mil e dez e segue aqui, em Ceilândia Norte.
-CÂMERA: Travelling de entrada e identificação visual real.
-NA TELA: Construcel · 2010 · Ceilândia Norte
+CENA 3 · 12–20s · Fachada / entrada
+FALA: A Construcel veio em dois mil e dez. São capítulos diferentes da nossa trajetória.
+AÇÃO: Travelling de entrada e identificação visual real.
+TELA: Construcel · 2010 · Ceilândia Norte
 
-CENA 04 | 20s–28s | Loja e depósitos
-FALA: Temos uma loja e quatro depósitos no mesmo local. Essa é a estrutura que apresentamos para vocês.
-CÂMERA: Captar os depósitos autorizados; não afirmar tamanho ou capacidade não documentada.
-NA TELA: 1 loja · 4 depósitos
+CENA 4 · 20–28s · Loja e depósitos
+FALA: Hoje, temos uma loja e quatro depósitos no mesmo local. Essa é a estrutura que a gente apresenta aqui.
+AÇÃO: Captar os depósitos autorizados; não afirmar tamanho ou capacidade não documentada.
+TELA: 1 loja · 4 depósitos
 
-CENA 05 | 28s–36s | Corredores
-FALA: Nossa equipe recebe consultas de materiais básicos, acabamentos e utilidades para o lar.
-CÂMERA: Planos curtos das três categorias confirmadas.
-NA TELA: Básico · acabamentos · utilidades
+CENA 5 · 28–36s · Corredores
+FALA: O atendimento vai dos materiais básicos aos pisos, revestimentos e utilidades para o lar.
+AÇÃO: Planos curtos das três categorias confirmadas.
+TELA: Básico · acabamentos · utilidades
 
-CENA 06 | 36s–45s | Balcão / WhatsApp
-FALA: Na loja, os vendedores ajudam a organizar os orçamentos. No WhatsApp, também temos atendimento comercial.
-CÂMERA: Planos reais de vendedores e Beatriz, mediante disponibilidade e autorização.
-NA TELA: Loja + atendimento comercial
+CENA 6 · 36–45s · Balcão / WhatsApp
+FALA: Na loja e no WhatsApp, a equipe recebe os pedidos e consulta as condições de cada compra.
+AÇÃO: Planos reais de vendedores e Beatriz, mediante disponibilidade e autorização.
+TELA: Loja + atendimento comercial
 
-CENA 07 | 45s–54s | Balcão
-FALA: O pedido começa pela sua necessidade e pela lista. Depois conferimos os itens e as condições para cotar.
-CÂMERA: Ana Paula recebe lista fictícia e conversa com vendedor.
-NA TELA: Sua lista é o começo
+CENA 7 · 45–54s · Balcão
+FALA: Se já tem uma lista ou uma referência, pode trazer para conversar com a gente.
+AÇÃO: Ana Paula recebe lista fictícia e conversa com vendedor.
+TELA: Sua lista é o começo
 
-CENA 08 | 54s–60s | Entrada
-FALA: Construcel, na QNN nove. Venha conhecer ou fale com a equipe pelo WhatsApp.
-CÂMERA: Ana Paula fecha na fachada ou entrada; logo e contato no final.
-NA TELA: QNN 9 · Ceilândia Norte
+CENA 8 · 54–60s · Entrada
+FALA: Estamos na QNN nove. Venha conhecer o que tem do lado de dentro dessa fachada.
+AÇÃO: Ana Paula fecha na fachada ou entrada; logo e contato no final.
+TELA: QNN 9 · Ceilândia Norte
+

@@ -1,7 +1,5 @@
-T10-S2 · Instagram Stories
-O endereço ajuda muito
+T10-S2 — Em qual bairro é a entrega?
 
-Informe região, endereço de destino e acesso do local para consulta logística.
+Informe o destino na primeira mensagem do orçamento.
 
-CTA: Enviar local
-Fase editorial: Relacionamento / pós-campanha
+CTA: Enviar a região

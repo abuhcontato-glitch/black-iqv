@@ -1,5 +1,5 @@
-E o volume do pedido?
+T10-S3 — Tem material pesado na lista?
 
-Quantidade e peso do material podem alterar o frete.
+A quantidade e o volume também precisam ser informados.
 
-CTA: Conferir volume
+CTA: Conferir o pedido

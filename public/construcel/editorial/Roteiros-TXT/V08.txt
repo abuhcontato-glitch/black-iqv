@@ -1,44 +1,43 @@
 V08 — Empresas, condomínios e convite para o Feirão
-60 segundos · 123 palavras · B2B / Feirão · versão de convite até 21/11
-Captação vertical 9:16; enquadramento central para versão 4:5
-A duração é planejada. Cronometrar a leitura com Ana Paula e ajustar pausas e montagem, preservando as condições comerciais.
+60s · 123 palavras
 
-CENA 01 | 00s–05s | Balcão
-FALA: Você compra materiais para construtora ou condomínio? A Construcel também recebe a sua lista.
-CÂMERA: Ana Paula em balcão com lista de compras empresarial fictícia.
-NA TELA: Compras para empresas e condomínios
+CENA 1 · 0–5s · Balcão
+FALA: Só preço não fecha compra. Quem compra para obra precisa olhar o pedido inteiro.
+AÇÃO: Ana Paula em balcão com lista de compras empresarial fictícia.
+TELA: Compras para empresas e condomínios
 
-CENA 02 | 05s–12s | Lista B2B
-FALA: Informe as especificações, as unidades e os volumes. Quanto mais clara a lista, melhor começa a análise.
-CÂMERA: Close de lista empresarial de demonstração.
-NA TELA: Especificação + volume
+CENA 2 · 5–12s · Lista B2B
+FALA: Separe a referência de cada material, a unidade e a quantidade que a empresa precisa.
+AÇÃO: Close de lista empresarial de demonstração.
+TELA: Especificação + volume
 
-CENA 03 | 12s–20s | Balcão
-FALA: Diga onde será a entrega e o prazo desejado. A equipe confere o que consegue atender.
-CÂMERA: Mostrar mapa ilustrativo sem prometer raio ou prazo.
-NA TELA: Local + necessidade
+CENA 3 · 12–20s · Balcão
+FALA: Informe também o local da obra e o prazo desejado. A possibilidade de entrega precisa ser confirmada.
+AÇÃO: Mostrar mapa ilustrativo sem prometer raio ou prazo.
+TELA: Local + necessidade
 
-CENA 04 | 20s–28s | Atendimento
-FALA: Preço, pagamento, disponibilidade e frete são avaliados no atendimento. Não existe condição automática para toda compra.
-CÂMERA: Ana Paula conversa com vendedor; sem exibir tabela interna.
-NA TELA: Condições por solicitação
+CENA 4 · 20–28s · Atendimento
+FALA: Com esse contexto, a Construcel avalia a cotação e as condições comerciais da solicitação.
+AÇÃO: Ana Paula conversa com vendedor; sem exibir tabela interna.
+TELA: Condições por solicitação
 
-CENA 05 | 28s–36s | Entrada
-FALA: E nos dias vinte e vinte e um de novembro teremos o Feirão Construcel.
-CÂMERA: Plano médio com lettering de data; gravar sem anunciar preço ainda não fornecido.
-NA TELA: Feirão · 20 e 21/11
+CENA 5 · 28–36s · Entrada
+FALA: E anote: nosso Feirão está marcado para vinte e vinte e um de novembro.
+AÇÃO: Plano médio com lettering de data; gravar sem anunciar preço ainda não fornecido.
+TELA: Feirão · 20 e 21/11
 
-CENA 06 | 36s–45s | Loja
-FALA: Para saber os produtos e condições do evento, consulte nossa equipe. A seleção será confirmada separadamente.
-CÂMERA: B-roll da loja; não reutilizar etiqueta de preço do Esquenta como oferta do Feirão.
-NA TELA: Consulte a programação
+CENA 6 · 36–45s · Loja
+FALA: Os produtos e as condições do evento serão confirmados pela loja. O preço do Esquenta não se estende automaticamente.
+AÇÃO: B-roll da loja; não reutilizar etiqueta de preço do Esquenta como oferta do Feirão.
+TELA: Consulte a programação
 
-CENA 07 | 45s–54s | Balcão / WhatsApp
-FALA: Você pode encaminhar sua lista antes da visita e combinar o acompanhamento da cotação com o atendimento.
-CÂMERA: Ana Paula recebe lista; corte para mãos no WhatsApp profissional.
-NA TELA: Envie a lista da sua empresa
+CENA 7 · 45–54s · Balcão / WhatsApp
+FALA: Se a relação da empresa ou do condomínio já está pronta, pode enviar para o atendimento.
+AÇÃO: Ana Paula recebe lista; corte para mãos no WhatsApp profissional.
+TELA: Envie a lista da sua empresa
 
-CENA 08 | 54s–60s | Entrada
-FALA: Construtora, condomínio ou reforma: fale com a Construcel. Vamos começar pela sua necessidade.
-CÂMERA: Ana Paula finaliza com logo e contato.
-NA TELA: Solicite cotação empresarial
+CENA 8 · 54–60s · Entrada
+FALA: Vamos conferir o pedido e conversar sobre as condições que a operação pode atender.
+AÇÃO: Ana Paula finaliza com logo e contato.
+TELA: Solicite cotação empresarial
+

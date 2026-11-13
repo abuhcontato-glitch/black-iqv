@@ -1,5 +1,5 @@
-Unifique as informações
+T09-S3 — Tem uma lista antiga no grupo?
 
-Produto, unidade, quantidade e prazo ajudam a cotar.
+Vale confirmar se medidas e quantidades continuam valendo.
 
-CTA: Montar lista
+CTA: Atualizar a lista

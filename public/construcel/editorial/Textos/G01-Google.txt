@@ -1,28 +1,29 @@
-G01 — Loja Ceilândia
-[material de construção ceilândia];"materiais de construção ceilândia";"loja de material de construção ceilandia";"construcel ceilândia"
+G01 — Loja de materiais de construção
+loja de material de construção ceilândia
+[material de construção ceilândia]; "loja de construção ceilândia"; "construcel ceilândia"
 
-TÍTULOS:
-Construcel em Ceilândia
-Materiais de Construção
-Loja em Ceilândia Norte
-Pisos e Revestimentos
-Consulte Nossas Categorias
-Solicite Seu Orçamento
-Envie Sua Lista de Materiais
-Verifique Disponibilidade
+TÍTULOS
+Construcel Em Ceilândia
+Loja Na QNN 9
 Materiais Para Sua Obra
-Do Básico ao Acabamento
-Atendimento Comercial
-Visite Nossa Loja
-Compre Com Informação
-Cotação de Materiais
-Converse Com Nossa Equipe
+Conheça A Construcel
+Construção E Acabamento
+Visite Em Ceilândia Norte
+Consulte Antes De Sair
+Envie Sua Lista De Compra
+Pisos E Revestimentos
+Materiais Básicos Na Lista
+Veja Opções Na Loja
+Consulte Preço E Referência
+Seu Pedido Pelo WhatsApp
+Entrega Sob Consulta
+Confira Nosso Horário
 
-DESCRIÇÕES:
-Materiais para construir ou reformar. Consulte categorias e disponibilidade na Construcel.
-Envie sua lista de materiais e quantidades para solicitar orçamento comercial.
-Loja em Ceilândia Norte. Consulte condições de entrega no DF e Entorno.
-Preços, estoque e frete são confirmados no atendimento conforme o pedido.
+DESCRIÇÕES
+Na QNN 9, Ceilândia Norte. Consulte materiais e condições para sua obra.
+Já tem a lista? Envie referências e quantidades para consultar os itens.
+Compare materiais na loja. Confira disponibilidade antes da visita.
+Informe o destino para consultar frete e prazo no DF e Entorno.
 
-Negativas iniciais: curso; grátis; emprego; apostila; pdf; tutorial; desenho; download (avaliar por grupo)
-Destino: landing page separada; aprovar domínio e URL final antes de ativar.
+DESTINO: https://abuhcontato-glitch.github.io/black-iqv/construcel/editorial/02-Landing-Page.html#categorias
+PENDÊNCIAS: Validar verba, acesso, rastreamento e correspondências. URL pública da landing é prévia válida; confirmar domínio empresarial e destino final antes da ativação.

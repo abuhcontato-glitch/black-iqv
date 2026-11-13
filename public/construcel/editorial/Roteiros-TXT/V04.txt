@@ -1,44 +1,43 @@
 V04 — Materiais básicos e argamassa: a lista bem feita
-60 segundos · 123 palavras · Educativo / básicos e argamassa
-Captação vertical 9:16; enquadramento central para versão 4:5
-A duração é planejada. Cronometrar a leitura com Ana Paula e ajustar pausas e montagem, preservando as condições comerciais.
+60s · 118 palavras
 
-CENA 01 | 00s–05s | Loja
-FALA: Sua obra está na base ou no acabamento? A lista muda em cada etapa.
-CÂMERA: Ana Paula com lista em primeiro plano; loja ao fundo.
-NA TELA: Em qual etapa sua obra está?
+CENA 1 · 0–5s · Loja
+FALA: Faltou bem na hora? Quem toca obra conhece o transtorno de parar para comprar um item.
+AÇÃO: Ana Paula com lista em primeiro plano; loja ao fundo.
+TELA: Em qual etapa sua obra está?
 
-CENA 02 | 05s–12s | Básicos / depósito
-FALA: Cimento, tijolo, areia e brita aparecem em muitos pedidos. Mas unidade e quantidade precisam estar claras.
-CÂMERA: Filmar somente itens realmente presentes e autorizados no dia.
-NA TELA: Produto + unidade + quantidade
+CENA 2 · 5–12s · Básicos / depósito
+FALA: Antes de sair, confira com o profissional o que precisa entrar na próxima compra.
+AÇÃO: Filmar somente itens realmente presentes e autorizados no dia.
+TELA: Produto + unidade + quantidade
 
-CENA 03 | 12s–20s | Argamassa
-FALA: Na argamassa, confira a indicação de uso, o revestimento e a orientação técnica do fabricante.
-CÂMERA: Close de embalagem real e ficha técnica; sem tutorial de aplicação.
-NA TELA: Confira a indicação do fabricante
+CENA 3 · 12–20s · Argamassa
+FALA: No caso da argamassa, por exemplo, o nome e a indicação da embalagem fazem parte da escolha.
+AÇÃO: Close de embalagem real e ficha técnica; sem tutorial de aplicação.
+TELA: Confira a indicação do fabricante
 
-CENA 04 | 20s–28s | Embalagens
-FALA: Não escolha só pelo nome da categoria. A especificação do produto ajuda a evitar uma compra equivocada.
-CÂMERA: Ana Paula compara etiquetas de duas embalagens sem afirmar compatibilidade genérica.
-NA TELA: Especificação importa
+CENA 4 · 20–28s · Embalagens
+FALA: O produto precisa atender à especificação da peça, da superfície e do ambiente. Não decida só pelo preço.
+AÇÃO: Ana Paula compara etiquetas de duas embalagens sem afirmar compatibilidade genérica.
+TELA: Especificação importa
 
-CENA 05 | 28s–36s | Balcão
-FALA: Traga a lista do profissional que acompanha sua obra. Nossa equipe consulta os materiais que você precisa.
-CÂMERA: Insert de lista fictícia legível, com medidas e unidades.
-NA TELA: Use a lista técnica
+CENA 5 · 28–36s · Balcão
+FALA: Na lista, mantenha referência, unidade e quantidade. Uma foto legível também ajuda.
+AÇÃO: Insert de lista fictícia legível, com medidas e unidades.
+TELA: Use a lista técnica
 
-CENA 06 | 36s–45s | Expedição
-FALA: Informe também onde o pedido será entregue. Peso, volume e região entram na consulta do frete.
-CÂMERA: Detalhe de carregamento ou área de expedição em situação autorizada.
-NA TELA: Frete conforme o pedido
+CENA 6 · 36–45s · Expedição
+FALA: Se precisar de entrega, informe a região. Peso e volume entram na consulta de frete.
+AÇÃO: Detalhe de carregamento ou área de expedição em situação autorizada.
+TELA: Frete conforme o pedido
 
-CENA 07 | 45s–54s | Atendimento
-FALA: Nós verificamos disponibilidade e condições comerciais. O orçamento deve refletir o que está na sua lista.
-CÂMERA: Vendedor consulta sistema com tela protegida; mostrar mãos e produtos.
-NA TELA: Condições confirmadas na cotação
+CENA 7 · 45–54s · Atendimento
+FALA: A Construcel confere os materiais disponíveis e prepara a cotação conforme o pedido.
+AÇÃO: Vendedor consulta sistema com tela protegida; mostrar mãos e produtos.
+TELA: Condições confirmadas na cotação
 
-CENA 08 | 54s–60s | Loja
-FALA: Básico ou acabamento: comece pela informação. Envie sua lista para a Construcel.
-CÂMERA: Plano final de Ana Paula em corredor autorizado.
-NA TELA: Envie sua lista no WhatsApp
+CENA 8 · 54–60s · Loja
+FALA: Revisou a lista? Manda para a gente consultar antes de você se deslocar.
+AÇÃO: Plano final de Ana Paula em corredor autorizado.
+TELA: Envie sua lista no WhatsApp
+
