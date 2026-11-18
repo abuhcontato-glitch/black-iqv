@@ -1,5 +1,0 @@
-T02-S4 — Tem uma referência salva?
-
-Traga a imagem e a metragem à QNN 9. Vamos consultar as opções.
-
-CTA: Ver localização

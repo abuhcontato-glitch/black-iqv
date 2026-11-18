@@ -1,5 +1,0 @@
-T03-S2 — É para qual ambiente?
-
-Sala, banheiro e área externa podem pedir especificações diferentes.
-
-CTA: Contar o ambiente
